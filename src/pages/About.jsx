@@ -3,94 +3,51 @@ import { employees } from '../data/employees'
 export default function About() {
   return (
     <div>
-      <section className="py-20 lg:py-28 section-dark relative overflow-hidden">
-        <div className="orb w-[500px] h-[500px] bg-[#6C3AFF] -top-40 right-0" />
-        <div className="orb w-[400px] h-[400px] bg-[#FF3366] bottom-0 -left-40" />
-        <div className="absolute inset-0 grid-pattern" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#FF3366] mb-4">Our Story</p>
-          <h1 className="font-display font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-6">
-            The Team Behind
-            <br />
-            <span className="gradient-text">AI Employees</span>
-          </h1>
-          <p className="text-lg text-white/50 max-w-2xl mx-auto">
-            We believe every business deserves a world-class team — regardless of budget.
-          </p>
+      <section className="py-20 lg:py-28 section-dark halftone">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-neon font-extrabold uppercase tracking-[0.2em] text-sm mb-3">Our Story</p>
+          <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl uppercase text-white mb-4">The Team Behind<br /><span className="text-neon text-glow">AI Employees</span></h1>
+          <p className="text-gray-300 text-lg max-w-xl mx-auto">Every business deserves a world-class team — regardless of budget.</p>
         </div>
       </section>
 
-      {/* Mission */}
-      <section className="py-20 lg:py-24 section-darker">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-[#00D4FF] mb-4">Mission</p>
-              <h2 className="font-display font-black text-3xl sm:text-4xl text-white mb-6">Closing the AI Gap</h2>
-              <p className="text-white/50 leading-relaxed mb-4">
-                77% of businesses say AI is transformational, but only 5% actually use it. The gap isn't desire — it's complexity.
-              </p>
-              <p className="text-white/50 leading-relaxed mb-4">
-                We built AI Employees to close that gap. Sign up, tell us about your business, and get an entire AI workforce — ready to work — in under 60 seconds.
-              </p>
-              <p className="text-white/40 leading-relaxed">
-                No technical setup. No prompt engineering. No hiring. Just results.
-              </p>
-            </div>
-            <div className="glass-card-strong p-8 space-y-8">
-              {[
-                { value: '11', label: 'Specialized AI Employees', gradient: 'from-[#FF3366] to-[#FF6B35]' },
-                { value: '9', label: 'Business Domains Covered', gradient: 'from-[#6C3AFF] to-[#00D4FF]' },
-                { value: '24/7', label: 'Always On, Never Absent', gradient: 'from-[#00CC88] to-[#00D4FF]' },
-                { value: '<60s', label: 'Setup Time', gradient: 'from-[#FFBE0B] to-[#FF6B35]' },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className={`font-display font-black text-4xl bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent`}>{stat.value}</div>
-                  <div className="text-sm text-white/40 mt-1">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+      {/* Pain point — like Marblism */}
+      <section className="py-20 section-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-black text-3xl sm:text-4xl lg:text-5xl uppercase text-white mb-6">You Want to Scale, But...</h2>
+          <div className="relative inline-block comic-panel rounded-2xl p-4 max-w-md mx-auto">
+            <img src="/characters/cecil.png" alt="Overwhelmed business owner" className="w-full rounded-xl" />
+            <div className="absolute top-4 left-4 speech-bubble text-xs px-3 py-1.5">100+ unread emails</div>
+            <div className="absolute top-1/3 right-2 speech-bubble text-xs px-3 py-1.5">Social media? What social media?</div>
+            <div className="absolute bottom-16 left-4 speech-bubble text-xs px-3 py-1.5">Everything pushed to "next week"</div>
           </div>
+          <h3 className="font-black text-2xl sm:text-3xl uppercase text-white mt-10">You're Wearing Too Many Hats:</h3>
+          <p className="text-gray-300 text-lg mt-2">CEO, marketer, sales rep, support agent, accountant...</p>
         </div>
       </section>
 
-      {/* Employee Profiles */}
-      <section className="py-20 lg:py-24 section-dark relative overflow-hidden">
-        <div className="orb w-[400px] h-[400px] bg-[#00D4FF] top-1/3 -right-40" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#FFBE0B] mb-4">The Team</p>
-            <h2 className="font-display font-black text-4xl sm:text-5xl text-white mb-6">
-              Meet Your <span className="gradient-text-blue">11 Employees</span>
-            </h2>
-            <p className="text-lg text-white/50 max-w-2xl mx-auto">
-              Each with deep expertise, distinct personalities, and real tools. They collaborate, cross-review, and learn your business.
-            </p>
+      {/* Meet the team — Marblism style cards */}
+      <section className="py-20 section-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <div className="speech-bubble inline-block mb-6 text-sm">Stop Juggling. Meet Your New AI Team</div>
+            <h2 className="font-black text-4xl sm:text-5xl uppercase text-white">Your <span className="text-neon text-glow">11 Employees</span></h2>
           </div>
 
-          <div className="space-y-4">
+          {/* Character cards with images and first-person quotes */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {employees.map((emp) => (
-              <div key={emp.name} className="glass-card p-6 lg:p-8 flex flex-col md:flex-row gap-6 items-start hover:bg-white/[0.06] transition-all duration-300">
-                <div
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-black text-2xl shrink-0"
-                  style={{ background: emp.gradientCSS, boxShadow: `0 8px 30px ${emp.shadowColor}` }}
-                >
-                  {emp.initial}
+              <div key={emp.name} className="comic-panel rounded-xl overflow-hidden">
+                <div className="aspect-square overflow-hidden">
+                  <img src={emp.image} alt={emp.name} className="w-full h-full object-cover" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="font-display font-black text-2xl text-white">{emp.name}</h3>
-                    <span className="px-3 py-0.5 text-xs font-semibold text-white/80 rounded-full" style={{ background: emp.gradientCSS }}>
-                      {emp.role}
-                    </span>
-                  </div>
-                  <p className="text-white/50 leading-relaxed mb-2">{emp.description}</p>
-                  <p className="text-sm text-white/30 italic mb-4">"{emp.personality}"</p>
-                  <div className="flex flex-wrap gap-2">
-                    {emp.skills.map((skill) => (
-                      <span key={skill} className="px-3 py-1 text-[11px] font-medium rounded-md bg-white/[0.05] text-white/40 border border-white/[0.06]">
-                        {skill}
-                      </span>
+                <div className="p-5">
+                  <h3 className="font-black text-white uppercase text-lg">{emp.name}</h3>
+                  <p className="text-neon text-xs font-bold uppercase tracking-wide mb-3">{emp.role}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed italic">"{emp.description}"</p>
+                  <div className="flex flex-wrap gap-1.5 mt-3">
+                    {emp.skills.slice(0, 3).map((s) => (
+                      <span key={s} className="px-2 py-0.5 text-[10px] font-bold text-neon/70 bg-neon/[0.06] border border-neon/10 rounded">{s}</span>
                     ))}
                   </div>
                 </div>
@@ -100,36 +57,29 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 lg:py-24 section-darker">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-white text-center mb-12">
-            What We <span className="gradient-text">Stand For</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      {/* Stats */}
+      <section className="py-16 section-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: 'Accessibility', desc: 'Every business deserves AI that works. No technical skills required.', gradient: 'from-[#6C3AFF] to-[#00D4FF]' },
-              { title: 'Quality', desc: 'Production-ready output that meets professional standards, not rough drafts.', gradient: 'from-[#FF3366] to-[#FF6B35]' },
-              { title: 'Privacy', desc: 'Bank-grade encryption, row-level security, GDPR compliance. We never sell your data.', gradient: 'from-[#00CC88] to-[#00D4FF]' },
-            ].map((v) => (
-              <div key={v.title} className="glass-card p-7">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${v.gradient} flex items-center justify-center mb-5`}>
-                  <span className="text-white font-black text-lg">{v.title[0]}</span>
-                </div>
-                <h3 className="font-bold text-white text-lg mb-2">{v.title}</h3>
-                <p className="text-sm text-white/40 leading-relaxed">{v.desc}</p>
+              { v: '11', l: 'AI Employees' }, { v: '9', l: 'Business Domains' },
+              { v: '24/7', l: 'Always On' }, { v: '<60s', l: 'Setup Time' },
+            ].map((s) => (
+              <div key={s.l} className="comic-panel rounded-xl p-6 text-center">
+                <div className="font-black text-4xl text-neon text-glow">{s.v}</div>
+                <div className="text-xs font-bold text-gray-400 uppercase tracking-wide mt-2">{s.l}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-24 gradient-bg-animated relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern" />
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-white mb-4">Ready to Meet Your Team?</h2>
-          <p className="text-lg text-white/50 mb-8">Start your free trial and put all 11 AI employees to work today.</p>
-          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-10 py-4">Start Free Trial</a>
+      <section className="py-20 section-neon">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-black text-4xl sm:text-5xl uppercase text-black mb-4">Welcome to Your New Life.</h2>
+          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-4 bg-black text-neon font-black uppercase border-3 border-black shadow-[4px_4px_0_rgba(0,0,0,0.3)] hover:shadow-[2px_2px_0_rgba(0,0,0,0.3)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+            Meet Your AI Team
+          </a>
         </div>
       </section>
     </div>

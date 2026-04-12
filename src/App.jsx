@@ -1,10 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Pricing from './pages/Pricing'
-import Compare from './pages/Compare'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
@@ -12,6 +11,7 @@ import Help from './pages/Help'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Refund from './pages/Refund'
+import Employee from './pages/Employee'
 
 export default function App() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/compare" element={<Compare />} />
+            <Route path="/compare" element={<Navigate to="/pricing" replace />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
@@ -31,6 +31,7 @@ export default function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/refund" element={<Refund />} />
+            <Route path="/employee/:slug" element={<Employee />} />
           </Routes>
         </main>
         <Footer />
