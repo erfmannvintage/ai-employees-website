@@ -10,12 +10,27 @@ export default function Refund() {
   ]
   return (
     <div>
-      <section className="py-20 section-dark halftone"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h1 className="font-black text-5xl sm:text-6xl uppercase text-white">Refund Policy</h1><p className="text-gray-500 mt-3">Last updated: April 12, 2026</p></div></section>
-      <section className="py-16 section-100"><div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="comic-panel rounded-xl p-6 glow-neon"><h3 className="font-black text-lg text-white uppercase">30-Day Money-Back Guarantee</h3><p className="text-gray-300 text-sm mt-2">Not satisfied within 30 days? Full refund. No hoops.</p></div>
-        {sections.slice(1).map((s) => <div key={s.t}><h2 className="font-bold text-lg text-white mb-2">{s.t}</h2><p className="text-gray-400 text-sm leading-relaxed">{s.c}</p></div>)}
-        <p className="text-gray-500 text-sm">Questions? <Link to="/contact" className="text-neon hover:underline">Contact us</Link>.</p>
-      </div></section>
+      <section className="py-20 section-cream halftone">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-black text-5xl sm:text-6xl uppercase text-ink">Refund Policy</h1>
+          <p className="text-ink-ghost mt-3">Last updated: April 12, 2026</p>
+        </div>
+      </section>
+      <section className="py-16 section-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="comic-panel rounded-xl p-6">
+            <h3 className="font-black text-lg text-ink uppercase">30-Day Money-Back Guarantee</h3>
+            <p className="text-ink-muted text-sm mt-2">Not satisfied within 30 days? Full refund. No hoops.</p>
+          </div>
+          {sections.slice(1).map((s) => (
+            <div key={s.t}>
+              <h2 className="font-bold text-lg text-ink mb-2">{s.t}</h2>
+              <p className="text-ink-faint text-sm leading-relaxed">{s.c}</p>
+            </div>
+          ))}
+          <p className="text-ink-ghost text-sm">Questions? <Link to="/contact" className="text-pop-red hover:underline">Contact us</Link>.</p>
+        </div>
+      </section>
     </div>
   )
 }

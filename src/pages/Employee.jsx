@@ -133,8 +133,8 @@ export default function Employee() {
   if (!emp || !detail) {
     return (
       <div className="py-40 text-center">
-        <h1 className="font-black text-4xl text-white uppercase">Employee Not Found</h1>
-        <Link to="/about" className="text-neon mt-4 inline-block hover:underline">View all employees &rarr;</Link>
+        <h1 className="font-black text-4xl text-ink uppercase">Employee Not Found</h1>
+        <Link to="/about" className="text-pop-red mt-4 inline-block hover:underline">View all employees &rarr;</Link>
       </div>
     )
   }
@@ -142,15 +142,15 @@ export default function Employee() {
   return (
     <div>
       {/* Hero */}
-      <section className="py-16 lg:py-24 section-dark halftone">
+      <section className="py-16 lg:py-24 section-cream halftone">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <p className="text-neon font-extrabold uppercase tracking-[0.2em] text-sm mb-3">{emp.role}</p>
-              <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl uppercase text-white mb-4">
-                Meet <span className="text-neon text-glow">{emp.name}</span>
+              <p className="text-pop-red font-extrabold uppercase tracking-[0.2em] text-sm mb-3">{emp.role}</p>
+              <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl uppercase text-ink mb-4">
+                Meet <span className="text-pop-red">{emp.name}</span>
               </h1>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8 italic">
+              <p className="text-ink-muted text-lg leading-relaxed mb-8 italic">
                 "{detail.tagline}"
               </p>
               <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-neon">
@@ -165,16 +165,16 @@ export default function Employee() {
       </section>
 
       {/* What they do */}
-      <section className="py-16 lg:py-20 section-100">
+      <section className="py-16 lg:py-20 section-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-black text-3xl text-white uppercase mb-8">
+          <h2 className="font-black text-3xl text-ink uppercase mb-8">
             What {emp.name} Does for You
           </h2>
           <div className="space-y-4">
             {detail.what.map((item, i) => (
               <div key={i} className="comic-panel-subtle rounded-xl p-5 flex items-start gap-4">
-                <span className="text-neon font-black text-lg shrink-0">✓</span>
-                <p className="text-gray-300 leading-relaxed">{item}</p>
+                <span className="text-pop-red font-black text-lg shrink-0">&#10003;</span>
+                <p className="text-ink-muted leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
@@ -182,28 +182,28 @@ export default function Employee() {
       </section>
 
       {/* Skills */}
-      <section className="py-16 section-dark">
+      <section className="py-16 section-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-black text-2xl text-white uppercase mb-6">Core Skills</h2>
+          <h2 className="font-black text-2xl text-ink uppercase mb-6">Core Skills</h2>
           <div className="flex flex-wrap gap-3">
             {emp.skills.map((s) => (
-              <span key={s} className="px-4 py-2 text-sm font-bold text-neon border-2 border-neon/30 rounded-lg bg-neon/[0.05]">{s}</span>
+              <span key={s} className="px-4 py-2 text-sm font-bold text-pop-red border-2 border-pop-red/30 rounded-lg bg-pop-red/[0.05]">{s}</span>
             ))}
           </div>
         </div>
       </section>
 
       {/* Who it's for */}
-      <section className="py-16 section-100">
+      <section className="py-16 section-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-black text-2xl text-white uppercase mb-4">Who {emp.name} Is For</h2>
+          <h2 className="font-black text-2xl text-ink uppercase mb-4">Who {emp.name} Is For</h2>
           <div className="comic-panel rounded-xl p-6">
-            <p className="text-gray-300 leading-relaxed text-lg">{detail.who}</p>
+            <p className="text-ink-muted leading-relaxed text-lg">{detail.who}</p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA — keep neon */}
       <section className="py-16 section-neon">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-black text-3xl sm:text-4xl uppercase text-black mb-4">
@@ -217,16 +217,16 @@ export default function Employee() {
       </section>
 
       {/* Other employees */}
-      <section className="py-16 section-dark">
+      <section className="py-16 section-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-black text-2xl text-white uppercase mb-6 text-center">Meet the Rest of the Team</h2>
+          <h2 className="font-black text-2xl text-ink uppercase mb-6 text-center">Meet the Rest of the Team</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {employees.filter((e) => e.name.toLowerCase() !== slug).map((e) => (
               <Link key={e.name} to={`/employee/${e.name.toLowerCase()}`} className="comic-panel-subtle rounded-xl overflow-hidden group">
                 <div className="aspect-square overflow-hidden"><img src={e.image} alt={e.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform" /></div>
                 <div className="p-3">
-                  <h3 className="font-bold text-white text-sm uppercase">{e.name}</h3>
-                  <p className="text-neon text-[10px] font-bold uppercase">{e.role}</p>
+                  <h3 className="font-bold text-ink text-sm uppercase">{e.name}</h3>
+                  <p className="text-pop-red text-[10px] font-bold uppercase">{e.role}</p>
                 </div>
               </Link>
             ))}

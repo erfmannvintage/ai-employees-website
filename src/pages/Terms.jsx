@@ -15,8 +15,22 @@ export default function Terms() {
   ]
   return (
     <div>
-      <section className="py-20 section-dark halftone"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h1 className="font-black text-5xl sm:text-6xl uppercase text-white">Terms of Service</h1><p className="text-gray-500 mt-3">Last updated: April 12, 2026</p></div></section>
-      <section className="py-16 section-100"><div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">{sections.map((s) => <div key={s.t}><h2 className="font-bold text-lg text-white mb-2">{s.t}</h2><p className="text-gray-400 text-sm leading-relaxed">{s.c}</p></div>)}</div></section>
+      <section className="py-20 section-cream halftone">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-black text-5xl sm:text-6xl uppercase text-ink">Terms of Service</h1>
+          <p className="text-ink-ghost mt-3">Last updated: April 12, 2026</p>
+        </div>
+      </section>
+      <section className="py-16 section-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          {sections.map((s) => (
+            <div key={s.t}>
+              <h2 className="font-bold text-lg text-ink mb-2">{s.t}</h2>
+              <p className="text-ink-faint text-sm leading-relaxed">{s.c}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   )
 }

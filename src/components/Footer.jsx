@@ -11,95 +11,75 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-200 border-t-2 border-dark-400">
+    <footer className="bg-white border-t-3 border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
 
-          {/* Follow Us — with icons like Marblism */}
+          {/* Follow Us */}
           <div>
-            <h4 className="font-bold text-white text-sm mb-5">Follow us</h4>
+            <h4 className="font-bold text-ink text-sm mb-5">Follow us</h4>
             <ul className="space-y-3">
               {socials.map((s) => (
                 <li key={s.name}>
-                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-neon transition-colors group">
-                    <span className="w-8 h-8 rounded-lg bg-dark-400 group-hover:bg-neon/10 flex items-center justify-center transition-colors">
+                  <a href={s.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-ink-muted hover:text-ink transition-colors group">
+                    <span className="w-8 h-8 rounded-lg bg-ink flex items-center justify-center text-white group-hover:bg-neon group-hover:text-black transition-colors">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">{s.icon}</svg>
                     </span>
-                    <span className="text-sm">{s.name}</span>
+                    <span className="text-sm font-medium">{s.name}</span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* AI Employees column */}
-          <div className="col-span-1">
-            <h4 className="font-bold text-white text-sm mb-5">AI Employees</h4>
+          {/* AI Employees */}
+          <div>
+            <h4 className="font-bold text-ink text-sm mb-5">AI Employees</h4>
             <ul className="space-y-2">
               {employees.slice(0, 6).map((e) => (
-                <li key={e.name}>
-                  <Link to={`/employee/${e.name.toLowerCase()}`} className="text-sm text-gray-400 hover:text-neon transition-colors">
-                    AI {e.role}
-                  </Link>
-                </li>
+                <li key={e.name}><Link to={`/employee/${e.name.toLowerCase()}`} className="text-sm text-ink-muted hover:text-ink transition-colors">AI {e.role}</Link></li>
               ))}
             </ul>
           </div>
 
-          {/* More Employees */}
-          <div className="col-span-1">
-            <h4 className="font-bold text-white text-sm mb-5">&nbsp;</h4>
+          <div>
+            <h4 className="font-bold text-ink text-sm mb-5">&nbsp;</h4>
             <ul className="space-y-2">
               {employees.slice(6).map((e) => (
-                <li key={e.name}>
-                  <Link to={`/employee/${e.name.toLowerCase()}`} className="text-sm text-gray-400 hover:text-neon transition-colors">
-                    AI {e.role}
-                  </Link>
-                </li>
+                <li key={e.name}><Link to={`/employee/${e.name.toLowerCase()}`} className="text-sm text-ink-muted hover:text-ink transition-colors">AI {e.role}</Link></li>
               ))}
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h4 className="font-bold text-white text-sm mb-5">Company</h4>
+            <h4 className="font-bold text-ink text-sm mb-5">Company</h4>
             <ul className="space-y-2">
-              {[
-                { to: '/pricing', label: 'Pricing' },
-                { to: '/about', label: 'About' },
-                { to: '/blog', label: 'Blog' },
-                { to: '/help', label: 'Help Centre' },
-                { to: '/contact', label: 'Contact' },
-              ].map((l) => (
-                <li key={l.to}><Link to={l.to} className="text-sm text-gray-400 hover:text-neon transition-colors">{l.label}</Link></li>
+              {[{ to: '/pricing', l: 'Pricing' }, { to: '/about', l: 'About' }, { to: '/blog', l: 'Blog' }, { to: '/help', l: 'Help Centre' }, { to: '/contact', l: 'Contact' }].map((x) => (
+                <li key={x.to}><Link to={x.to} className="text-sm text-ink-muted hover:text-ink transition-colors">{x.l}</Link></li>
               ))}
             </ul>
           </div>
 
           {/* Legal */}
           <div>
-            <h4 className="font-bold text-white text-sm mb-5">Legal</h4>
+            <h4 className="font-bold text-ink text-sm mb-5">Legal</h4>
             <ul className="space-y-2">
-              {[
-                { to: '/terms', label: 'Terms of Service' },
-                { to: '/privacy', label: 'Privacy Policy' },
-                { to: '/refund', label: 'Refund Policy' },
-              ].map((l) => (
-                <li key={l.to}><Link to={l.to} className="text-sm text-gray-400 hover:text-neon transition-colors">{l.label}</Link></li>
+              {[{ to: '/terms', l: 'Terms of Service' }, { to: '/privacy', l: 'Privacy Policy' }, { to: '/refund', l: 'Refund Policy' }].map((x) => (
+                <li key={x.to}><Link to={x.to} className="text-sm text-ink-muted hover:text-ink transition-colors">{x.l}</Link></li>
               ))}
             </ul>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-dark-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t-2 border-light-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-neon border-2 border-black rounded-md flex items-center justify-center">
-              <span className="text-black font-black text-[9px]">AI</span>
+            <div className="w-7 h-7 bg-neon border-2 border-ink rounded-md flex items-center justify-center">
+              <span className="text-ink font-black text-[9px]">AI</span>
             </div>
-            <span className="font-black text-sm text-white uppercase">AI Employees</span>
+            <span className="font-black text-sm text-ink">AI Employees</span>
           </div>
-          <p className="text-xs text-gray-500">&copy; {new Date().getFullYear()} AI Employees. All rights reserved.</p>
+          <p className="text-xs text-ink-ghost">&copy; {new Date().getFullYear()} AI Employees. All rights reserved.</p>
         </div>
       </div>
     </footer>

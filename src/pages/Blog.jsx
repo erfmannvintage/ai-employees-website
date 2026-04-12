@@ -10,14 +10,14 @@ const posts = [
 export default function Blog() {
   return (
     <div>
-      <section className="py-20 lg:py-28 section-dark halftone">
+      <section className="py-20 lg:py-28 section-cream halftone">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-neon font-extrabold uppercase tracking-[0.2em] text-sm mb-3">Blog</p>
-          <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl uppercase text-white mb-4">Insights & <span className="text-neon text-glow">Strategies</span></h1>
+          <p className="text-pop-red font-extrabold uppercase tracking-[0.2em] text-sm mb-3">Blog</p>
+          <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl uppercase text-ink mb-4">Insights & <span className="text-pop-red">Strategies</span></h1>
         </div>
       </section>
 
-      <section className="py-20 section-100">
+      <section className="py-20 section-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {posts.map((p) => (
@@ -26,13 +26,13 @@ export default function Blog() {
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <span className={`px-2.5 py-0.5 text-[10px] font-bold uppercase rounded ${p.color} ${p.color.includes('neon') ? 'text-black' : 'text-white'}`}>{p.cat}</span>
-                    <span className="text-xs text-gray-500">{p.time}</span>
+                    <span className="text-xs text-ink-ghost">{p.time}</span>
                   </div>
-                  <h2 className="font-bold text-white text-lg leading-snug mb-3 group-hover:text-neon transition-colors">{p.title}</h2>
-                  <p className="text-sm text-gray-400 leading-relaxed mb-4">{p.excerpt}</p>
+                  <h2 className="font-bold text-ink text-lg leading-snug mb-3 group-hover:text-pop-red transition-colors">{p.title}</h2>
+                  <p className="text-sm text-ink-faint leading-relaxed mb-4">{p.excerpt}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-xs text-gray-500">{p.date}</span>
-                    <span className="text-sm font-bold text-neon">Read &rarr;</span>
+                    <span className="text-xs text-ink-ghost">{p.date}</span>
+                    <span className="text-sm font-bold text-pop-red">Read &rarr;</span>
                   </div>
                 </div>
               </article>
@@ -41,13 +41,13 @@ export default function Blog() {
         </div>
       </section>
 
-      <section className="py-16 section-dark">
+      <section className="py-16 section-cream">
         <div className="max-w-lg mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="comic-panel rounded-xl p-8 glow-neon">
-            <h2 className="font-black text-2xl text-white uppercase mb-2">Stay in the Loop</h2>
-            <p className="text-gray-400 text-sm mb-5">AI workforce insights. No spam.</p>
+          <div className="comic-panel rounded-xl p-8">
+            <h2 className="font-black text-2xl text-ink uppercase mb-2">Stay in the Loop</h2>
+            <p className="text-ink-faint text-sm mb-5">AI workforce insights. No spam.</p>
             <form className="flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input type="email" placeholder="you@company.com" className="flex-1 px-4 py-3 bg-dark-300 border-2 border-dark-400 rounded-lg text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-neon" />
+              <input type="email" placeholder="you@company.com" className="flex-1 px-4 py-3 bg-light border-2 border-light-200 rounded-lg text-sm text-ink placeholder:text-ink-ghost focus:outline-none focus:border-pop-red" />
               <button type="submit" className="btn-neon text-sm px-5 py-3">Subscribe</button>
             </form>
           </div>
