@@ -198,6 +198,56 @@ function Features() {
   )
 }
 
+function PlatformStats() {
+  const stats = [
+    { value: '30+', label: 'Certifications', desc: 'Google Ads, HubSpot, Semrush, ACCA, ACA, CIMA, GAIQ, and more' },
+    { value: '80+', label: 'Frameworks Mastered', desc: 'SPIN, MEDDIC, AARRR, PESTLE, Porter\'s Five Forces, hub-and-spoke SEO' },
+    { value: '15+', label: 'Auto-Collaboration Pairs', desc: 'Predefined cross-employee workflows — Flora→Poppi, Hugh→Rupert, Ava→Angela' },
+    { value: '6', label: 'Weekly Auto-Research', desc: 'Bowie, Angela, Rupert, Mabel, and Ava run research tasks automatically every week' },
+  ]
+
+  const integrations = [
+    { cat: 'Social Platforms', items: 'TikTok, Instagram, Facebook, X, YouTube, LinkedIn' },
+    { cat: 'Analytics', items: 'GA4, YouTube Analytics, Search Console — all live access' },
+    { cat: 'Financial Tools', items: 'Stripe, QuickBooks, Sage, Xero' },
+    { cat: 'Legal Databases', items: 'gov.uk, ICO, legislation.gov.uk, ASA, Companies House' },
+    { cat: 'Lead Sources', items: '7 free data sources, 33 industry mappings' },
+    { cat: 'Automation', items: '5 content chains, automated employee-to-employee triggers' },
+  ]
+
+  return (
+    <section className="py-28 lg:py-36 section-cream halftone-red">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <p className="text-pop-blue font-semibold uppercase tracking-[0.2em] text-xs mb-4">The Numbers</p>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-ink">
+            Not Just AI. <span className="text-pop-blue">Certified Experts.</span>
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+          {stats.map((s) => (
+            <div key={s.label} className="comic-panel-static rounded-2xl p-7 text-center">
+              <div className="font-black text-4xl sm:text-5xl text-pop-blue">{s.value}</div>
+              <div className="font-bold text-ink text-sm uppercase mt-2">{s.label}</div>
+              <p className="text-ink-faint text-xs mt-2 leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {integrations.map((int) => (
+            <div key={int.cat} className="comic-panel-subtle rounded-xl p-6">
+              <h3 className="font-bold text-ink text-sm uppercase tracking-wider mb-2">{int.cat}</h3>
+              <p className="text-ink-muted text-sm leading-relaxed">{int.items}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function SocialProof() {
   const testimonials = [
     { quote: "I replaced 3 freelancers with AI Employees. My marketing runs 24/7 now and the quality is genuinely better.", name: 'Sarah K.', role: 'E-commerce Founder' },
@@ -327,6 +377,7 @@ export default function Home() {
       <EmployeeGrid />
       <HowItWorks />
       <Features />
+      <PlatformStats />
       <SocialProof />
       <PricingPreview />
       <FinalCTA />
