@@ -1,124 +1,35 @@
 export default function Terms() {
   return (
     <div>
-      <section className="py-16 lg:py-24 bg-paper-warm halftone-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display font-black text-5xl sm:text-6xl text-ink mb-4">Terms of Service</h1>
-          <p className="text-ink-muted">Last updated: April 12, 2026</p>
+      <section className="py-20 lg:py-28 section-dark relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-display font-black text-5xl sm:text-6xl text-white mb-4">Terms of Service</h1>
+          <p className="text-white/30">Last updated: April 12, 2026</p>
         </div>
       </section>
-
-      <section className="py-16 lg:py-20 bg-paper">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">1. Agreement to Terms</h2>
-              <p className="text-ink-light leading-relaxed">
-                By accessing or using AI Employees ("the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Service.
-              </p>
+      <section className="py-16 lg:py-20 section-darker">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          {[
+            { title: '1. Agreement to Terms', content: 'By accessing or using AI Employees ("the Service"), you agree to these Terms. If you do not agree, do not use the Service.' },
+            { title: '2. Description of Service', content: 'AI Employees provides an AI-powered workforce platform with 11 specialized AI employees for business operations including marketing, sales, support, content, analytics, legal, advertising, research, and finance.' },
+            { title: '3. Account Registration', content: 'You must be 18+, provide accurate information, maintain account security, notify us of unauthorised use, and accept responsibility for all account activities.' },
+            { title: '4. Subscription & Billing', content: 'Tiered plans billed monthly or annually. 14-day free trial for new accounts. Payment via Stripe. Auto-renewal unless cancelled. You may change or cancel anytime.' },
+            { title: '5. Acceptable Use', content: 'Do not: use for unlawful purposes, generate harmful content, reverse-engineer the Service, interfere with servers, send spam, share credentials, or resell without authorisation.' },
+            { title: '6. AI-Generated Content', content: 'Content is provided as-is. Review before publication. You retain ownership and are responsible for accuracy and legal compliance.' },
+            { title: '7. Intellectual Property', content: 'The Service is owned by AI Employees and protected by IP laws. Your subscription grants a limited, non-exclusive, non-transferable licence.' },
+            { title: '8. Limitation of Liability', content: 'We are not liable for indirect, incidental, special, or consequential damages. Total liability shall not exceed amounts paid in the preceding 12 months.' },
+            { title: '9. Service Availability', content: 'We target 99.9% uptime but do not guarantee uninterrupted service. Maintenance may cause temporary suspension.' },
+            { title: '10. Termination', content: 'We may suspend accounts for Terms violations. Data is retained 30 days post-termination, then permanently deleted.' },
+            { title: '11. Governing Law', content: 'Governed by laws of England and Wales. Disputes subject to exclusive jurisdiction of English courts.' },
+            { title: '12. Changes', content: 'We may update these Terms. Material changes communicated via email or platform. Continued use constitutes acceptance.' },
+            { title: '13. Contact', content: 'Questions? Email legal@aiemployees.com.' },
+          ].map((s) => (
+            <div key={s.title}>
+              <h2 className="font-bold text-xl text-white mb-3">{s.title}</h2>
+              <p className="text-white/40 leading-relaxed text-[15px]">{s.content}</p>
             </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">2. Description of Service</h2>
-              <p className="text-ink-light leading-relaxed">
-                AI Employees provides an AI-powered workforce platform that offers 11 specialized AI employees for business operations including marketing, sales, customer support, content creation, analytics, legal compliance, advertising, research, and financial management.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">3. Account Registration</h2>
-              <p className="text-ink-light leading-relaxed mb-3">To use the Service, you must:</p>
-              <ul className="list-disc pl-5 space-y-2 text-ink-light">
-                <li>Be at least 18 years of age</li>
-                <li>Provide accurate and complete registration information</li>
-                <li>Maintain the security of your account credentials</li>
-                <li>Notify us immediately of any unauthorised use of your account</li>
-                <li>Be responsible for all activities that occur under your account</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">4. Subscription & Billing</h2>
-              <ul className="list-disc pl-5 space-y-2 text-ink-light">
-                <li>The Service offers tiered subscription plans billed monthly or annually</li>
-                <li>A free trial period of 14 days is available for new accounts</li>
-                <li>Payment is processed securely through Stripe</li>
-                <li>Subscriptions automatically renew unless cancelled before the renewal date</li>
-                <li>You may upgrade, downgrade, or cancel your subscription at any time</li>
-                <li>Refunds are available per our Refund Policy</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">5. Acceptable Use</h2>
-              <p className="text-ink-light leading-relaxed mb-3">You agree NOT to:</p>
-              <ul className="list-disc pl-5 space-y-2 text-ink-light">
-                <li>Use the Service for any unlawful purpose</li>
-                <li>Generate content that is harmful, threatening, abusive, or defamatory</li>
-                <li>Attempt to reverse-engineer, decompile, or disassemble the Service</li>
-                <li>Interfere with or disrupt the Service or its servers</li>
-                <li>Use the Service to send spam or unsolicited communications</li>
-                <li>Share your account credentials with third parties</li>
-                <li>Resell access to the Service without authorisation</li>
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">6. AI-Generated Content</h2>
-              <p className="text-ink-light leading-relaxed">
-                Content generated by AI employees is provided as-is. While we strive for accuracy and quality, AI-generated content should be reviewed before publication or use in critical business decisions. You retain ownership of content you create using the Service, and you are responsible for ensuring its accuracy and compliance with applicable laws.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">7. Intellectual Property</h2>
-              <p className="text-ink-light leading-relaxed">
-                The Service, including its design, features, and underlying technology, is owned by AI Employees and protected by intellectual property laws. Your subscription grants you a limited, non-exclusive, non-transferable licence to use the Service.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">8. Limitation of Liability</h2>
-              <p className="text-ink-light leading-relaxed">
-                To the maximum extent permitted by law, AI Employees shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Service. Our total liability shall not exceed the amount you paid us in the 12 months preceding the claim.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">9. Service Availability</h2>
-              <p className="text-ink-light leading-relaxed">
-                We strive to maintain 99.9% uptime but do not guarantee uninterrupted service. We may temporarily suspend the Service for maintenance, updates, or emergency repairs. We will provide reasonable notice when possible.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">10. Termination</h2>
-              <p className="text-ink-light leading-relaxed">
-                We reserve the right to suspend or terminate your account if you violate these Terms. Upon termination, your right to use the Service ceases immediately. Your data will be retained for 30 days after termination, after which it will be permanently deleted.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">11. Governing Law</h2>
-              <p className="text-ink-light leading-relaxed">
-                These Terms shall be governed by and construed in accordance with the laws of England and Wales. Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">12. Changes to Terms</h2>
-              <p className="text-ink-light leading-relaxed">
-                We may update these Terms from time to time. Material changes will be communicated via email or through the platform. Continued use of the Service after changes constitutes acceptance of the updated Terms.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="font-display font-black text-2xl text-ink mb-3">13. Contact</h2>
-              <p className="text-ink-light leading-relaxed">
-                For questions about these Terms, contact us at <strong>legal@aiemployees.com</strong>.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>

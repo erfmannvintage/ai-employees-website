@@ -3,111 +3,92 @@ import { employees } from '../data/employees'
 export default function About() {
   return (
     <div>
-      {/* Hero */}
-      <section className="py-16 lg:py-24 bg-paper-warm halftone-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-display font-black text-5xl sm:text-6xl text-ink mb-4">
-            The Story Behind{' '}
-            <span className="text-pop-pink">AI Employees</span>
+      <section className="py-20 lg:py-28 section-dark relative overflow-hidden">
+        <div className="orb w-[500px] h-[500px] bg-[#6C3AFF] -top-40 right-0" />
+        <div className="orb w-[400px] h-[400px] bg-[#FF3366] bottom-0 -left-40" />
+        <div className="absolute inset-0 grid-pattern" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#FF3366] mb-4">Our Story</p>
+          <h1 className="font-display font-black text-5xl sm:text-6xl lg:text-7xl text-white mb-6">
+            The Team Behind
+            <br />
+            <span className="gradient-text">AI Employees</span>
           </h1>
-          <p className="text-lg text-ink-light max-w-2xl mx-auto">
+          <p className="text-lg text-white/50 max-w-2xl mx-auto">
             We believe every business deserves a world-class team — regardless of budget.
           </p>
         </div>
       </section>
 
       {/* Mission */}
-      <section className="py-16 lg:py-20 bg-paper">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <section className="py-20 lg:py-24 section-darker">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display font-black text-3xl text-ink mb-4">Our Mission</h2>
-              <p className="text-ink-light leading-relaxed mb-4">
-                77% of businesses say AI is transformational, but only 5% actually use it. The gap isn't desire — it's complexity. Setting up AI tools, hiring prompt engineers, integrating APIs... it's overwhelming.
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#00D4FF] mb-4">Mission</p>
+              <h2 className="font-display font-black text-3xl sm:text-4xl text-white mb-6">Closing the AI Gap</h2>
+              <p className="text-white/50 leading-relaxed mb-4">
+                77% of businesses say AI is transformational, but only 5% actually use it. The gap isn't desire — it's complexity.
               </p>
-              <p className="text-ink-light leading-relaxed mb-4">
+              <p className="text-white/50 leading-relaxed mb-4">
                 We built AI Employees to close that gap. Sign up, tell us about your business, and get an entire AI workforce — ready to work — in under 60 seconds.
               </p>
-              <p className="text-ink-light leading-relaxed">
+              <p className="text-white/40 leading-relaxed">
                 No technical setup. No prompt engineering. No hiring. Just results.
               </p>
             </div>
-            <div className="bg-paper-warm rounded-xl border-3 border-ink p-8 shadow-[6px_6px_0_var(--color-ink)]">
-              <div className="space-y-6">
-                <div>
-                  <div className="font-display font-black text-4xl text-pop-pink">11</div>
-                  <div className="text-sm font-semibold text-ink-muted">Specialized AI Employees</div>
+            <div className="glass-card-strong p-8 space-y-8">
+              {[
+                { value: '11', label: 'Specialized AI Employees', gradient: 'from-[#FF3366] to-[#FF6B35]' },
+                { value: '9', label: 'Business Domains Covered', gradient: 'from-[#6C3AFF] to-[#00D4FF]' },
+                { value: '24/7', label: 'Always On, Never Absent', gradient: 'from-[#00CC88] to-[#00D4FF]' },
+                { value: '<60s', label: 'Setup Time', gradient: 'from-[#FFBE0B] to-[#FF6B35]' },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className={`font-display font-black text-4xl bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent`}>{stat.value}</div>
+                  <div className="text-sm text-white/40 mt-1">{stat.label}</div>
                 </div>
-                <div>
-                  <div className="font-display font-black text-4xl text-pop-blue">9</div>
-                  <div className="text-sm font-semibold text-ink-muted">Business Domains Covered</div>
-                </div>
-                <div>
-                  <div className="font-display font-black text-4xl text-pop-green">24/7</div>
-                  <div className="text-sm font-semibold text-ink-muted">Always On, Never Absent</div>
-                </div>
-                <div>
-                  <div className="font-display font-black text-4xl text-pop-purple">&lt;60s</div>
-                  <div className="text-sm font-semibold text-ink-muted">Setup Time</div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Team */}
-      <section className="py-16 lg:py-20 bg-paper-cool">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="font-display font-black text-4xl sm:text-5xl text-ink mb-4">
-              Meet the Team
+      {/* Employee Profiles */}
+      <section className="py-20 lg:py-24 section-dark relative overflow-hidden">
+        <div className="orb w-[400px] h-[400px] bg-[#00D4FF] top-1/3 -right-40" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#FFBE0B] mb-4">The Team</p>
+            <h2 className="font-display font-black text-4xl sm:text-5xl text-white mb-6">
+              Meet Your <span className="gradient-text-blue">11 Employees</span>
             </h2>
-            <p className="text-lg text-ink-light max-w-2xl mx-auto">
-              11 AI employees, each with deep expertise, distinct personalities, and real tools.
-              They collaborate, cross-review work, and learn your business.
+            <p className="text-lg text-white/50 max-w-2xl mx-auto">
+              Each with deep expertise, distinct personalities, and real tools. They collaborate, cross-review, and learn your business.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {employees.map((emp, i) => (
-              <div
-                key={emp.name}
-                className={`bg-white rounded-xl border-3 border-ink p-6 lg:p-8 shadow-[5px_5px_0_var(--color-ink)] ${
-                  i % 2 === 0 ? '' : 'md:flex-row-reverse'
-                } flex flex-col md:flex-row gap-6 items-start`}
-              >
-                {/* Avatar */}
-                <div className="shrink-0">
-                  <div
-                    className="w-20 h-20 rounded-xl border-3 border-ink flex items-center justify-center text-4xl shadow-[3px_3px_0_var(--color-ink)]"
-                    style={{ backgroundColor: emp.bgColor }}
-                  >
-                    {emp.emoji}
-                  </div>
+          <div className="space-y-4">
+            {employees.map((emp) => (
+              <div key={emp.name} className="glass-card p-6 lg:p-8 flex flex-col md:flex-row gap-6 items-start hover:bg-white/[0.06] transition-all duration-300">
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-black text-2xl shrink-0"
+                  style={{ background: emp.gradientCSS, boxShadow: `0 8px 30px ${emp.shadowColor}` }}
+                >
+                  {emp.initial}
                 </div>
-
-                {/* Info */}
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="font-display font-black text-2xl text-ink">{emp.name}</h3>
-                    <span
-                      className="px-3 py-0.5 text-sm font-bold text-white rounded-full border-2 border-ink"
-                      style={{ backgroundColor: emp.color }}
-                    >
+                    <h3 className="font-display font-black text-2xl text-white">{emp.name}</h3>
+                    <span className="px-3 py-0.5 text-xs font-semibold text-white/80 rounded-full" style={{ background: emp.gradientCSS }}>
                       {emp.role}
                     </span>
                   </div>
-                  <p className="text-ink-light leading-relaxed mb-3">{emp.description}</p>
-                  <p className="text-sm text-ink-muted italic mb-4">"{emp.personality}"</p>
-
-                  {/* Skills */}
+                  <p className="text-white/50 leading-relaxed mb-2">{emp.description}</p>
+                  <p className="text-sm text-white/30 italic mb-4">"{emp.personality}"</p>
                   <div className="flex flex-wrap gap-2">
                     {emp.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 text-xs font-semibold rounded-md border-2 border-ink bg-paper-warm text-ink"
-                      >
+                      <span key={skill} className="px-3 py-1 text-[11px] font-medium rounded-md bg-white/[0.05] text-white/40 border border-white/[0.06]">
                         {skill}
                       </span>
                     ))}
@@ -120,58 +101,35 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-16 lg:py-20 bg-paper halftone-bg">
+      <section className="py-20 lg:py-24 section-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-ink text-center mb-12">
-            What We Stand For
+          <h2 className="font-display font-black text-3xl sm:text-4xl text-white text-center mb-12">
+            What We <span className="gradient-text">Stand For</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              {
-                title: 'Accessibility',
-                desc: 'Every business — from solopreneurs to enterprises — deserves AI that works. No technical skills required.',
-                color: 'bg-pop-blue',
-              },
-              {
-                title: 'Quality',
-                desc: 'Not rough drafts. Not generic output. Production-ready work that meets professional standards.',
-                color: 'bg-pop-pink',
-              },
-              {
-                title: 'Privacy',
-                desc: 'Your data is yours. Bank-grade encryption, row-level security, GDPR compliance. We never sell your data.',
-                color: 'bg-pop-green',
-              },
+              { title: 'Accessibility', desc: 'Every business deserves AI that works. No technical skills required.', gradient: 'from-[#6C3AFF] to-[#00D4FF]' },
+              { title: 'Quality', desc: 'Production-ready output that meets professional standards, not rough drafts.', gradient: 'from-[#FF3366] to-[#FF6B35]' },
+              { title: 'Privacy', desc: 'Bank-grade encryption, row-level security, GDPR compliance. We never sell your data.', gradient: 'from-[#00CC88] to-[#00D4FF]' },
             ].map((v) => (
-              <div key={v.title} className="bg-white rounded-lg border-3 border-ink p-6 shadow-[4px_4px_0_var(--color-ink)]">
-                <div className={`${v.color} w-12 h-12 rounded-lg border-2 border-ink flex items-center justify-center mb-4`}>
+              <div key={v.title} className="glass-card p-7">
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${v.gradient} flex items-center justify-center mb-5`}>
                   <span className="text-white font-black text-lg">{v.title[0]}</span>
                 </div>
-                <h3 className="font-bold text-lg text-ink mb-2">{v.title}</h3>
-                <p className="text-sm text-ink-muted leading-relaxed">{v.desc}</p>
+                <h3 className="font-bold text-white text-lg mb-2">{v.title}</h3>
+                <p className="text-sm text-white/40 leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 lg:py-20 bg-ink">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-white mb-4">
-            Ready to Meet Your Team?
-          </h2>
-          <p className="text-lg text-white/60 mb-8">
-            Start your free trial and put all 11 AI employees to work today.
-          </p>
-          <a
-            href="https://artifactly-ai-employees.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-4 bg-pop-pink text-white text-lg font-bold rounded-lg border-3 border-white/30 shadow-[5px_5px_0_rgba(255,255,255,0.2)] hover:shadow-[2px_2px_0_rgba(255,255,255,0.2)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
-          >
-            Start Free Trial
-          </a>
+      <section className="py-20 lg:py-24 gradient-bg-animated relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern" />
+        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-display font-black text-3xl sm:text-4xl text-white mb-4">Ready to Meet Your Team?</h2>
+          <p className="text-lg text-white/50 mb-8">Start your free trial and put all 11 AI employees to work today.</p>
+          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-10 py-4">Start Free Trial</a>
         </div>
       </section>
     </div>
