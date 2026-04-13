@@ -39,30 +39,15 @@ function Hero() {
               ))}
             </div>
           </div>
-          {/* Pop-art office scene */}
-          <div style={{ position: 'relative', height: 520 }}>
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(108,58,255,0.08), rgba(0,102,255,0.06), rgba(0,204,102,0.04))', borderRadius: 40 }} />
-            <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', width: 220, zIndex: 2 }}>
-              <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '0 20px 60px rgba(108,58,255,0.2)', border: '3px solid #fff' }}><img src="/characters/poppi.png" alt="Poppi" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} /></div>
+          {/* Pop-art office scene — AI generated */}
+          <div style={{ position: 'relative' }}>
+            <div style={{ borderRadius: 24, overflow: 'hidden', border: '4px solid #1a1a2e', boxShadow: '8px 8px 0 #1a1a2e' }}>
+              <img src="/hero-office-2.png" alt="AI Employees working in pop-art office" style={{ width: '100%', display: 'block' }} />
             </div>
-            <div style={{ position: 'absolute', bottom: 40, left: 0, width: 180, zIndex: 3 }}>
-              <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 16px 50px rgba(0,0,0,0.15)', border: '3px solid #fff' }}><img src="/characters/cecil.png" alt="Cecil" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} /></div>
-            </div>
-            <div style={{ position: 'absolute', bottom: 20, right: 0, width: 180, zIndex: 3 }}>
-              <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 16px 50px rgba(0,0,0,0.15)', border: '3px solid #fff' }}><img src="/characters/flora.png" alt="Flora" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} /></div>
-            </div>
-            <div style={{ position: 'absolute', top: 60, left: 30, width: 140, zIndex: 1 }}>
-              <div style={{ borderRadius: 16, overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.1)', border: '2px solid #fff' }}><img src="/characters/hugh.png" alt="Hugh" style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block' }} /></div>
-            </div>
-            <div style={{ position: 'absolute', top: 40, right: 20, width: 140, zIndex: 1 }}>
-              <div style={{ borderRadius: 16, overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.1)', border: '2px solid #fff' }}><img src="/characters/ava.png" alt="Ava" style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block' }} /></div>
-            </div>
-            <div style={{ position: 'absolute', bottom: -16, left: -16, background: '#fff', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.12)', border: '1px solid #eee', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, zIndex: 10 }}>
+            {/* Floating badge */}
+            <div style={{ position: 'absolute', bottom: -16, left: -16, background: '#fff', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.12)', border: '3px solid #1a1a2e', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, zIndex: 10 }}>
               <div style={{ width: 40, height: 40, background: '#00CC66', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700 }}>11</div>
               <div><div style={{ fontWeight: 700, fontSize: 14, color: '#1a1a2e' }}>AI Employees</div><div style={{ fontSize: 11, color: '#9999aa' }}>Active & learning</div></div>
-            </div>
-            <div style={{ position: 'absolute', top: 10, right: -10, background: '#fff', borderRadius: 14, boxShadow: '0 8px 30px rgba(0,0,0,0.1)', border: '1px solid #eee', padding: '10px 16px', zIndex: 10 }}>
-              <div style={{ fontSize: 11, color: '#00CC66', fontWeight: 700 }}>✓ Flora published 3 posts</div><div style={{ fontSize: 10, color: '#9999aa', marginTop: 2 }}>Just now</div>
             </div>
           </div>
         </div>
@@ -208,7 +193,13 @@ function CrossReview() {
   return (
     <section style={{ background: '#fff', padding: '100px 0' }}>
       <div style={cx}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+        {/* Top: image + text side by side */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center', marginBottom: 48 }}>
+          <div>
+            <div style={{ borderRadius: 24, overflow: 'hidden', border: '4px solid #1a1a2e', boxShadow: '6px 6px 0 #6C3AFF' }}>
+              <img src="/hero-collab.png" alt="AI employees collaborating" style={{ width: '100%', display: 'block' }} />
+            </div>
+          </div>
           <div>
             <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Cross-Team Collaboration</p>
             <h2 style={{ fontSize: 40, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: 20 }}>Every task is reviewed by 1-3 peers before approval.</h2>
@@ -219,7 +210,9 @@ function CrossReview() {
               When a peer flags an issue, the correction is stored <strong style={{ color: '#1a1a2e' }}>permanently</strong> in the original employee's brain with "Do not repeat this issue." They literally learn from each other.
             </p>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        </div>
+        {/* Bottom: review pairs */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
             {pairs.map((p) => (
               <div key={p.from} style={{ background: '#fafafa', borderRadius: 16, padding: 20, border: '1px solid #eee', borderLeft: '4px solid #6C3AFF' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
@@ -231,7 +224,6 @@ function CrossReview() {
               </div>
             ))}
           </div>
-        </div>
       </div>
     </section>
   )
@@ -248,6 +240,9 @@ function LearningSystem() {
 
       <div style={{ ...cx, position: 'relative', zIndex: 1 }}>
         <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 60px' }}>
+          <div style={{ width: 120, height: 120, borderRadius: 24, overflow: 'hidden', border: '3px solid #00CC66', margin: '0 auto 24px', boxShadow: '0 0 40px rgba(0,204,102,0.2)' }}>
+            <img src="/hero-learning.png" alt="AI learning" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </div>
           <p style={{ color: '#00CC66', fontWeight: 600, fontSize: 14, marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Self-Learning System</p>
           <h2 style={{ fontSize: 48, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.12 }}>They get smarter every single day. Automatically.</h2>
           <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginTop: 16 }}>5-layer learning pipeline. The longer you use them, the better they understand your business.</p>
