@@ -65,20 +65,63 @@ function Hero() {
   )
 }
 
+function PainPoints() {
+  const pains = [
+    { problem: 'Your inbox has 100+ unread emails', solution: 'Cecil triages every email, drafts replies, achieves Inbox Zero daily, and runs your MailerLite campaigns.' },
+    { problem: 'Social media hasn\'t been updated in weeks', solution: 'Flora creates 10+ posts/day across 6 platforms with AI-generated images, video content, and trend-aligned scheduling.' },
+    { problem: 'Leads are falling through the cracks', solution: 'Hugh discovers leads from 7 free data sources across 33 industries, runs multi-touch outreach sequences, and manages your entire pipeline.' },
+    { problem: 'You\'re guessing at your numbers', solution: 'Ava connects live to your GA4, YouTube Analytics, and Search Console. Attribution modelling, cohort analysis, predictive audiences — not just dashboards.' },
+    { problem: 'Blog hasn\'t been touched in months', solution: 'Mabel writes SEO-optimized articles using hub-and-spoke architecture, AEO for featured snippets, and GEO for AI search results. 15+ Semrush certifications.' },
+    { problem: 'Finances are in a spreadsheet you never open', solution: 'Angela manages Corporation Tax, VAT, R&D credits, MTD compliance via Stripe, QuickBooks, Xero, and Sage. ACA, ACCA, CIMA qualified.' },
+    { problem: 'You signed contracts without reading them', solution: 'Rupert reviews every clause, drafts your terms/privacy/refund policies, monitors UK GDPR, Consumer Rights Act, EU AI Act, and PECR compliance.' },
+    { problem: 'Ad spend is a black hole', solution: 'Raymond holds all 9 Google Ads certifications plus Meta Ads. Manages Search, Display, Shopping, PMax with his 5-pillar architecture for maximum ROAS.' },
+  ]
+
+  return (
+    <section style={{ background: '#fff', ...sectionPad }}>
+      <div style={cx}>
+        <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 60px' }}>
+          <p style={label('#FF3366')}>Sound Familiar?</p>
+          <h2 style={heading()}>You want to scale your business, but...</h2>
+          <p style={{ ...body, marginTop: 16 }}>You're wearing too many hats: CEO, marketer, sales rep, support agent, content creator, bookkeeper, legal reviewer. Here's what changes when you hire your AI team:</p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
+          {pains.map((p) => (
+            <div key={p.problem} style={{ background: '#fafafa', borderRadius: 20, padding: 28, border: '1px solid #eee' }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
+                <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(255,51,102,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
+                  <span style={{ color: '#FF3366', fontSize: 14, fontWeight: 700 }}>✕</span>
+                </div>
+                <div>
+                  <h3 style={{ fontWeight: 700, color: '#FF3366', fontSize: 15, marginBottom: 8 }}>{p.problem}</h3>
+                  <p style={{ color: '#3d3d5c', fontSize: 14, lineHeight: 1.65 }}>
+                    <span style={{ color: '#00CC66', fontWeight: 700 }}>→</span> {p.solution}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function WhatYouGet() {
   const tools = [
-    { title: 'Chat with Voice & Vibe Mode', desc: 'Talk to any employee via text or voice. Vibe Mode lets them work autonomously — just set a goal and let them run.' },
-    { title: 'Business Profile (100+ Fields)', desc: 'Your name, niche, audience, competitors, brand voice, products, social accounts, and more. The more you fill in, the smarter every employee becomes.' },
-    { title: 'Data Hub', desc: 'Upload your business knowledge — emails, sales calls, competitor docs, marketing materials. Employees reference this in every task.' },
-    { title: 'Custom Skills', desc: 'Teach employees YOUR specific workflows. "When a lead comes in, do X then Y then Z." Stored permanently in their brain.' },
-    { title: 'Content Calendar', desc: 'Visual calendar showing every piece of content across all platforms. Flora, Mabel, and Poppi coordinate here automatically.' },
-    { title: 'Campaign Templates', desc: '6 pre-built campaign types: Waitlist, New Subscriber, Free Trial, Retention, Win-Back, and Custom. Poppi orchestrates and assigns tasks to the right employees.' },
-    { title: 'Lead Discovery Engine', desc: 'Hugh finds leads from 7 free data sources across 33 industry mappings. OpenStreetMap, Google Places, social media, directories, and more.' },
-    { title: 'Blog CMS', desc: 'Mabel writes, edits, and publishes SEO content directly. Hub-and-spoke architecture, keyword research, Search Console integration.' },
-    { title: 'Daily Action Plans', desc: 'Every morning, your dashboard shows 4 numbered steps for you. Evening summary of what the team accomplished. Runs automatically.' },
-    { title: 'Approval Queue', desc: 'Review and approve employee work before it goes live. Click to approve, edit, or reject. Nothing publishes without your say-so.' },
-    { title: 'Command Centre', desc: 'Build custom automations: "When X happens, trigger Y." Connect employee workflows to external tools via webhooks (Zapier, Make, n8n).' },
-    { title: 'Media Library', desc: 'Centralized image and video storage. AI-generated images from Gemini, uploaded assets, organized in categories. Employees access this in every task.' },
+    { title: 'Chat with Voice & Vibe Mode', desc: 'Talk to any employee via text or voice. Vibe Mode lets them work autonomously — set a goal and they plan, execute, and deliver without hand-holding. Every employee has it.' },
+    { title: 'Business Profile (100+ Fields)', desc: 'Name, niche, audience, competitors, brand voice, products, social accounts, integration credentials (Stripe, QuickBooks, etc.), and more. The more you fill in, the smarter every employee becomes. This IS the AI training — no prompt engineering needed.' },
+    { title: 'Data Hub & Custom Skills', desc: 'Upload your business knowledge — emails, sales calls, competitor docs, marketing materials. Then teach employees YOUR workflows with Custom Skills: "When a lead comes in, do X then Y then Z." Stored permanently in their brain.' },
+    { title: 'Content Calendar & Blog CMS', desc: 'Visual calendar showing every piece of content across all platforms. Flora, Mabel, and Poppi coordinate here. Mabel writes and publishes SEO content via built-in Blog CMS with hub-and-spoke architecture and Search Console integration.' },
+    { title: 'Campaign Templates & Orchestration', desc: '6 pre-built campaigns: Waitlist, New Subscriber, Free Trial, Retention, Win-Back, Custom. Poppi breaks each campaign into employee tasks with plain English explanations — then orchestrates execution across the team automatically.' },
+    { title: 'Lead Discovery Engine', desc: 'Hugh finds leads from 7 free sources: OpenStreetMap, Google Places, social media via Gemini, directory scraping (LAPADA, BADA, Antiques Atlas), Wikidata, website enrichment (emails, phones, social links). Covers 33 industry mappings from restaurants to real estate to yoga studios. Plus optional Companies House API.' },
+    { title: 'Multi-Account Email Manager', desc: 'Connect unlimited email accounts — Gmail, Outlook, Yahoo, Zoho, iCloud, or any SMTP server. Cecil manages all your inboxes from one place. Send, receive, triage, draft replies, and run MailerLite campaigns.' },
+    { title: 'AI Image & Video Generation', desc: 'Gemini-powered image generation for social posts, blog graphics, and marketing materials. Remotion video pipeline for TikTok-native explainer and slideshow videos. Flora automatically generates visuals for every social post.' },
+    { title: 'Daily Action Plans & Team Overview', desc: 'Every morning, your Dashboard shows 4 numbered steps: approve work, check Team Chat, review your plan, check leads. Evening summary of what the team accomplished. "What Your Team Is Working On Today" shows every employee\'s current task.' },
+    { title: 'Approval Queue', desc: 'Nothing publishes without your say-so. Review every piece of employee work before it goes live. Click to approve, edit, or reject. Filter by status (Pending, Flagged, Passed). Delete anything you don\'t want.' },
+    { title: 'Command Centre & Webhooks', desc: 'Build custom automations with plain English: "When X happens, trigger Y." Name your automation, add dynamic steps, assign employees. Webhook endpoints connect to Zapier, Make, n8n — HMAC-SHA256 signed, auto-disable after 10 failures. 11 event types.' },
+    { title: 'Proactive Monitoring', desc: 'Employees don\'t wait for instructions. Angela monitors cash flow runway weekly. Ava detects traffic anomalies daily. Basil watches for churn signals. Rupert tracks compliance deadlines. Bowie scans competitors. Hugh checks pipeline health. All automatic.' },
   ]
 
   return (
@@ -268,12 +311,12 @@ function ContentChains() {
 
 function Integrations() {
   const integrations = [
-    { cat: 'Email & Calendar', items: ['Gmail', 'Google Calendar', 'MailerLite'], desc: 'Cecil manages your inbox and calendar. Sends emails, schedules meetings, runs newsletter campaigns.' },
-    { cat: 'Analytics', items: ['GA4', 'YouTube Analytics', 'Search Console'], desc: 'Ava has live access to your Google Analytics, YouTube metrics, and Search Console data. Real-time, not reports.' },
-    { cat: 'Social Media', items: ['TikTok', 'Instagram', 'Facebook', 'X', 'YouTube', 'LinkedIn'], desc: 'Flora posts platform-native content across all 6 channels with optimal timing and format specs for each.' },
-    { cat: 'Finance', items: ['Stripe', 'QuickBooks', 'Xero', 'Sage'], desc: 'Angela connects to your accounting tools for real-time financial data. Corporation Tax, VAT, R&D credits, MTD compliance.' },
-    { cat: 'Legal', items: ['gov.uk', 'ICO', 'legislation.gov.uk', 'ASA', 'Companies House'], desc: 'Rupert accesses 5 legal databases for up-to-date compliance, regulation, and case law intelligence.' },
-    { cat: 'Automation', items: ['Webhooks', 'Zapier', 'Make', 'n8n'], desc: 'Connect to 5,000+ external tools via webhook endpoints. HMAC-SHA256 signed, auto-disable after failures.' },
+    { cat: 'Email & Calendar', items: ['Gmail', 'Outlook', 'Yahoo', 'Zoho', 'iCloud', 'SMTP', 'Google Calendar', 'MailerLite'], desc: 'Connect unlimited email accounts — any provider. Cecil manages all inboxes, drafts replies, runs MailerLite campaigns (newsletters, sequences, automations). Google Calendar for scheduling, meeting management, and focus time blocking.' },
+    { cat: 'Analytics', items: ['GA4 (Live)', 'YouTube Analytics', 'Search Console'], desc: 'Ava has live Marketer-level access to your Google Analytics 4 — not just reports, real-time data. Attribution modelling, cohort analysis, predictive audiences. YouTube Analytics for video performance. Search Console for rankings, indexing, CTR.' },
+    { cat: 'Social Media', items: ['TikTok', 'Instagram', 'Facebook', 'X', 'YouTube', 'LinkedIn'], desc: 'Flora posts platform-native content across all 6 channels via Zernio API. Mandatory format specs for each platform (dimensions, character limits, hashtag rules). 10+ posts/day with optimal timing. AI-generated images via Gemini for every post.' },
+    { cat: 'Finance & Accounting', items: ['Stripe', 'QuickBooks', 'Xero', 'Sage 50'], desc: 'Angela connects to your accounting stack for real-time financial data. Auto-connect on save. Handles UK Corporation Tax, VAT returns, R&D tax credit claims, Making Tax Digital (MTD) compliance. Cash flow projections and runway alerts.' },
+    { cat: 'Legal & Compliance', items: ['gov.uk', 'ICO', 'legislation.gov.uk', 'ASA', 'Companies House'], desc: 'Rupert accesses 5 legal databases via Google Search grounding for up-to-date UK GDPR, Consumer Rights Act, EU AI Act, PECR compliance. Monitors advertising standards (ASA) and company filings (Companies House). Weekly auto-research every Tuesday.' },
+    { cat: 'Automation & Webhooks', items: ['Webhooks', 'Zapier', 'Make', 'n8n', 'Google Sheets', 'Google Drive', 'Google Docs'], desc: 'Command Centre webhooks connect to 5,000+ external tools. HMAC-SHA256 signed payloads. 11 event types. Auto-disable after 10 consecutive failures. Google Workspace APIs (Sheets, Drive, Docs) for document creation and data export.' },
   ]
 
   return (
@@ -415,6 +458,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <PainPoints />
       <WhatYouGet />
       <TeamShowcase />
       <CrossReview />
