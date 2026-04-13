@@ -13,20 +13,25 @@ export default function Terms() {
     { t: '11. Law', c: 'Governed by laws of England and Wales.' },
     { t: '12. Contact', c: 'legal@aiemployees.com' },
   ]
+
   return (
     <div>
-      <section className="py-20 section-cream halftone">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-black text-5xl sm:text-6xl uppercase text-ink">Terms of Service</h1>
-          <p className="text-ink-ghost mt-3">Last updated: April 12, 2026</p>
+      {/* Hero */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-[1200px] mx-auto px-8 text-center">
+          <p className="text-sm font-semibold text-brand mb-4">Legal</p>
+          <h1 className="text-[36px] sm:text-[44px] font-black text-ink tracking-tight">Terms of Service</h1>
+          <p className="text-ink-light mt-3">Last updated: April 12, 2026</p>
         </div>
       </section>
-      <section className="py-16 section-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+      {/* Content */}
+      <section className="py-24 lg:py-32 bg-gray-50">
+        <div className="max-w-[800px] mx-auto px-8 space-y-10">
           {sections.map((s) => (
             <div key={s.t}>
-              <h2 className="font-bold text-lg text-ink mb-2">{s.t}</h2>
-              <p className="text-ink-faint text-sm leading-relaxed">{s.c}</p>
+              <h2 className="font-bold text-lg text-ink mb-3">{s.t}</h2>
+              <p className="text-ink-muted text-[15px] leading-relaxed">{s.c}</p>
             </div>
           ))}
         </div>

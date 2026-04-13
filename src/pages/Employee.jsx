@@ -183,12 +183,12 @@ const detailed = {
 function SkillBar({ name, level }) {
   return (
     <div>
-      <div className="flex justify-between mb-1.5">
-        <span className="text-sm font-semibold text-ink">{name}</span>
-        <span className="text-sm font-bold text-pop-red">{level}%</span>
+      <div className="flex justify-between mb-2">
+        <span className="text-[15px] font-semibold text-ink">{name}</span>
+        <span className="text-[15px] font-bold text-brand">{level}%</span>
       </div>
-      <div className="h-3 bg-light-200 rounded-full overflow-hidden">
-        <div className="h-full bg-gradient-to-r from-pop-red to-pop-orange rounded-full transition-all duration-700" style={{ width: `${level}%` }} />
+      <div className="progress-bar">
+        <div className="progress-fill" style={{ width: `${level}%` }} />
       </div>
     </div>
   )
@@ -210,49 +210,63 @@ export default function Employee() {
 
   return (
     <div>
-      {/* HERO — Full width, centered, clean */}
-      <section className="section-cream halftone">
-        <div className="max-w-5xl mx-auto px-6 py-16 lg:py-24 text-center">
-          {/* Portrait */}
-          <div className="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full overflow-hidden border-4 border-ink shadow-[6px_6px_0_var(--color-ink)] mb-10">
-            <img src={emp.image} alt={emp.name} className="w-full h-full object-cover" />
+      {/* Hero — side by side like monday.com */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-brand font-semibold text-sm mb-3">{emp.role}</p>
+              <h1 className="text-[42px] sm:text-[52px] font-black text-ink tracking-tight leading-[1.08] mb-2">{emp.name}</h1>
+              <p className="text-ink-light text-sm mb-5">{detail.fullName}</p>
+              <p className="text-ink-muted text-[17px] leading-relaxed mb-8">{detail.tagline}</p>
+
+              {/* Qualifications */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {detail.qualifications.map((q) => (
+                  <span key={q} className="px-3 py-1.5 text-[13px] font-semibold text-brand bg-brand/5 border border-brand/15 rounded-xl">{q}</span>
+                ))}
+              </div>
+
+              <p className="text-ink-light text-[13px] mb-8">Specialty: {detail.specialty}</p>
+
+              <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Hire {emp.name}
+              </a>
+            </div>
+
+            {/* Character image */}
+            <div className="hidden lg:block">
+              <div className="bg-[#F0ECFF] rounded-[32px] p-4">
+                <div className="rounded-2xl overflow-hidden">
+                  <img src={emp.image} alt={emp.name} className="w-full aspect-[3/4] object-cover" />
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <p className="text-pop-red font-semibold uppercase tracking-[0.25em] text-xs mb-3">{emp.role}</p>
-          <h1 className="font-black text-5xl sm:text-6xl lg:text-7xl text-ink leading-[0.9] mb-2">{emp.name}</h1>
-          <p className="text-ink-faint text-sm mb-6">{detail.fullName}</p>
-          <p className="text-ink-muted text-xl leading-relaxed max-w-2xl mx-auto mb-10">
-            {detail.tagline}
-          </p>
-
-          {/* Metrics strip */}
-          <div className="inline-flex flex-wrap justify-center gap-6 sm:gap-10">
+      {/* Key Metrics */}
+      <section className="py-16 bg-ink">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {detail.metrics.map((m) => (
               <div key={m.label} className="text-center">
-                <div className="font-black text-3xl sm:text-4xl text-ink">{m.value}</div>
-                <div className="text-[10px] font-semibold text-ink-faint uppercase tracking-widest mt-1">{m.label}</div>
+                <div className="font-black text-[36px] text-white">{m.value}</div>
+                <div className="text-white/50 text-[12px] font-semibold uppercase tracking-wider mt-1">{m.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* QUALIFICATIONS BAR */}
-      <section className="section-ink py-6">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {detail.qualifications.map((q) => (
-              <span key={q} className="px-4 py-2 text-sm font-semibold text-neon bg-white/5 border border-white/10 rounded-lg">{q}</span>
-            ))}
-            <span className="px-4 py-2 text-sm text-white/40 italic">Specialty: {detail.specialty}</span>
+      {/* Skills with progress bars */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-[700px] mx-auto px-8">
+          <div className="text-center mb-12">
+            <p className="text-brand font-semibold text-sm mb-3">Expertise</p>
+            <h2 className="text-[36px] font-black text-ink tracking-tight">Skills & Proficiency</h2>
           </div>
-        </div>
-      </section>
-
-      {/* SKILLS */}
-      <section className="section-white py-20 lg:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl font-black text-ink mb-10 text-center">Skills & Expertise</h2>
           <div className="space-y-6">
             {detail.skills.map((s) => (
               <SkillBar key={s.name} name={s.name} level={s.level} />
@@ -261,28 +275,25 @@ export default function Employee() {
         </div>
       </section>
 
-      {/* EXPERIENCE */}
-      <section className="section-cream py-20 lg:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl font-black text-ink mb-12 text-center">What {emp.name} Does</h2>
+      {/* Experience timeline */}
+      <section className="py-24 lg:py-32 bg-gray-50">
+        <div className="max-w-[800px] mx-auto px-8">
+          <div className="text-center mb-14">
+            <p className="text-brand font-semibold text-sm mb-3">Capabilities</p>
+            <h2 className="text-[36px] font-black text-ink tracking-tight">What {emp.name} Does</h2>
+          </div>
 
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-5 top-0 bottom-0 w-px bg-light-200" />
-
-            <div className="space-y-10">
+            <div className="absolute left-5 top-2 bottom-2 w-px bg-gray-200" />
+            <div className="space-y-8">
               {detail.experience.map((exp, i) => (
-                <div key={exp.area} className="flex gap-8 relative">
-                  {/* Dot */}
-                  <div className="relative shrink-0">
-                    <div className="w-10 h-10 rounded-full bg-white border-3 border-pop-red flex items-center justify-center z-10 relative">
-                      <span className="font-black text-pop-red text-xs">{String(i + 1).padStart(2, '0')}</span>
-                    </div>
+                <div key={exp.area} className="flex gap-6 relative">
+                  <div className="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center shrink-0 z-10 text-[13px] font-bold">
+                    {String(i + 1).padStart(2, '0')}
                   </div>
-                  {/* Content */}
-                  <div className="pb-2">
-                    <h3 className="font-bold text-ink text-lg mb-1">{exp.area}</h3>
-                    <p className="text-ink-muted leading-relaxed">{exp.detail}</p>
+                  <div className="card p-6 flex-1">
+                    <h3 className="font-bold text-ink mb-1">{exp.area}</h3>
+                    <p className="text-ink-muted text-[15px] leading-relaxed">{exp.detail}</p>
                   </div>
                 </div>
               ))}
@@ -291,41 +302,48 @@ export default function Employee() {
         </div>
       </section>
 
-      {/* IDEAL FOR */}
-      <section className="section-white py-20">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-2xl font-black text-ink mb-6">Ideal For</h2>
-          <div className="comic-panel-static rounded-2xl p-10">
-            <p className="text-ink-muted text-xl leading-relaxed">{detail.who}</p>
+      {/* Ideal For */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-[800px] mx-auto px-8 text-center">
+          <p className="text-brand font-semibold text-sm mb-3">Perfect For</p>
+          <h2 className="text-[36px] font-black text-ink tracking-tight mb-8">Who {emp.name} Is For</h2>
+          <div className="bg-[#F0ECFF] rounded-[32px] p-10">
+            <p className="text-ink-secondary text-[18px] leading-relaxed">{detail.who}</p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 section-neon">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-black text-4xl sm:text-5xl text-black mb-4">Ready to Hire {emp.name}?</h2>
-          <p className="text-black/60 mb-8 text-lg">{emp.name} activates in under 60 seconds. No setup required.</p>
-          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-dark text-lg px-12 py-5">Start Free Trial</a>
+      <section className="py-24 lg:py-32 bg-brand">
+        <div className="max-w-[800px] mx-auto px-8 text-center">
+          <h2 className="text-[36px] sm:text-[44px] font-black text-white mb-4">Ready to Hire {emp.name}?</h2>
+          <p className="text-white/70 text-[17px] mb-8">{emp.name} activates in under 60 seconds. No setup required.</p>
+          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-brand font-semibold text-[17px] rounded-2xl hover:bg-gray-50 transition-all">
+            Start Free Trial
+          </a>
         </div>
       </section>
 
-      {/* REST OF TEAM */}
-      <section className="py-20 section-cream">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-black text-2xl text-ink mb-10 text-center">Meet the Rest of the Team</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
-            {employees.filter((e) => e.name.toLowerCase() !== slug).map((e) => (
-              <Link key={e.name} to={`/employee/${e.name.toLowerCase()}`} className="comic-panel-subtle rounded-2xl overflow-hidden group text-center">
-                <div className="aspect-[3/4] overflow-hidden">
-                  <img src={e.image} alt={e.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-ink text-sm">{e.name}</h3>
-                  <p className="text-pop-red text-[10px] font-semibold uppercase tracking-wide">{e.role}</p>
-                </div>
-              </Link>
-            ))}
+      {/* Rest of team */}
+      <section className="py-24 lg:py-32 bg-gray-50">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-[36px] font-black text-ink tracking-tight">Meet the Rest of the Team</h2>
+          </div>
+          <div className="bg-[#F0ECFF] rounded-[32px] p-5 sm:p-7">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {employees.filter((e) => e.name.toLowerCase() !== slug).map((e) => (
+                <Link key={e.name} to={`/employee/${e.name.toLowerCase()}`} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group text-center">
+                  <div className="aspect-square overflow-hidden">
+                    <img src={e.image} alt={e.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div className="p-3">
+                    <h3 className="font-bold text-ink text-sm">{e.name}</h3>
+                    <p className="text-brand text-[10px] font-semibold">{e.role}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
