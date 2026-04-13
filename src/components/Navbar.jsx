@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const navLinks = [
+const links = [
   { to: '/', label: 'Home' },
   { to: '/pricing', label: 'Pricing' },
   { to: '/about', label: 'About' },
@@ -10,47 +10,51 @@ const navLinks = [
 ]
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
+  const [open, setOpen] = useState(false)
+  const loc = useLocation()
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[72px]">
-          <Link to="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 bg-brand rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-xs">AI</span>
-            </div>
-            <span className="font-bold text-lg text-ink">AI Employees</span>
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl" style={{ borderBottom: '1px solid #eee' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px' }}>
+        <div className="flex items-center justify-between" style={{ height: 72 }}>
+          <Link to="/" className="flex items-center gap-2.5 no-underline">
+            <div className="flex items-center justify-center rounded-xl text-white font-bold text-xs" style={{ width: 36, height: 36, background: '#6C3AFF' }}>AI</div>
+            <span className="font-bold text-lg" style={{ color: '#1a1a2e' }}>AI Employees</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link key={link.to} to={link.to} className={`px-4 py-2 text-[15px] font-medium rounded-lg transition-all ${location.pathname === link.to ? 'text-brand' : 'text-ink-muted hover:text-ink'}`}>
-                {link.label}
+            {links.map((l) => (
+              <Link key={l.to} to={l.to} className="no-underline px-4 py-2 rounded-lg text-[15px] font-medium transition-colors" style={{ color: loc.pathname === l.to ? '#6C3AFF' : '#6b6b8d' }}>
+                {l.label}
               </Link>
             ))}
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="text-[15px] font-medium text-ink-muted hover:text-ink px-4 py-2">Sign In</a>
-            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm px-6 py-2.5">Get Started Free</a>
+            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="no-underline text-[15px] font-medium px-4 py-2" style={{ color: '#6b6b8d' }}>Sign In</a>
+            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="no-underline text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5" style={{ background: '#6C3AFF', padding: '10px 24px', boxShadow: '0 4px 15px rgba(108,58,255,0.3)' }}>
+              Get Started Free
+            </a>
           </div>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-ink" aria-label="Menu">
+          <button onClick={() => setOpen(!open)} className="md:hidden p-2" style={{ color: '#1a1a2e' }}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              {isOpen ? <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />}
+              {open ? <path strokeLinecap="round" d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />}
             </svg>
           </button>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-1">
-          {navLinks.map((link) => (
-            <Link key={link.to} to={link.to} onClick={() => setIsOpen(false)} className={`block px-3 py-3 text-[15px] font-medium rounded-lg ${location.pathname === link.to ? 'text-brand bg-gray-50' : 'text-ink-muted'}`}>{link.label}</Link>
+      {open && (
+        <div className="md:hidden" style={{ background: '#fff', borderTop: '1px solid #eee', padding: '16px 32px' }}>
+          {links.map((l) => (
+            <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="block no-underline py-3 text-[15px] font-medium" style={{ color: loc.pathname === l.to ? '#6C3AFF' : '#6b6b8d' }}>
+              {l.label}
+            </Link>
           ))}
-          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="block mt-2 btn-primary w-full text-center text-sm py-3">Get Started Free</a>
+          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="block no-underline text-center text-white text-sm font-semibold rounded-xl mt-3" style={{ background: '#6C3AFF', padding: '12px 24px' }}>
+            Get Started Free
+          </a>
         </div>
       )}
     </nav>
