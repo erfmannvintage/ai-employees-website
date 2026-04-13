@@ -180,15 +180,17 @@ const detailed = {
   },
 }
 
+const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
+
 function SkillBar({ name, level }) {
   return (
-    <div>
-      <div className="flex justify-between mb-2">
-        <span className="text-[15px] font-semibold text-ink">{name}</span>
-        <span className="text-[15px] font-bold text-brand">{level}%</span>
+    <div style={{ marginBottom: 20 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+        <span style={{ fontSize: 15, fontWeight: 600, color: '#1a1a2e' }}>{name}</span>
+        <span style={{ fontSize: 15, fontWeight: 700, color: '#6C3AFF' }}>{level}%</span>
       </div>
-      <div className="progress-bar">
-        <div className="progress-fill" style={{ width: `${level}%` }} />
+      <div style={{ height: 8, background: '#eee', borderRadius: 4, overflow: 'hidden' }}>
+        <div style={{ height: '100%', width: `${level}%`, background: 'linear-gradient(90deg, #6C3AFF, #0066FF)', borderRadius: 4 }} />
       </div>
     </div>
   )
@@ -201,145 +203,132 @@ export default function Employee() {
 
   if (!emp || !detail) {
     return (
-      <div className="py-40 text-center">
-        <h1 className="font-black text-4xl text-ink">Employee Not Found</h1>
-        <Link to="/about" className="text-pop-red mt-4 inline-block hover:underline">View all employees &rarr;</Link>
+      <div style={{ padding: '160px 32px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e' }}>Employee Not Found</h1>
+        <Link to="/about" style={{ color: '#6C3AFF', marginTop: 16, display: 'inline-block' }}>View all employees →</Link>
       </div>
     )
   }
 
   return (
     <div>
-      {/* Hero — side by side like monday.com */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Hero — side by side */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
+        <div style={cx}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
             <div>
-              <p className="text-brand font-semibold text-sm mb-3">{emp.role}</p>
-              <h1 className="text-[42px] sm:text-[52px] font-black text-ink tracking-tight leading-[1.08] mb-2">{emp.name}</h1>
-              <p className="text-ink-light text-sm mb-5">{detail.fullName}</p>
-              <p className="text-ink-muted text-[17px] leading-relaxed mb-8">{detail.tagline}</p>
+              <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>{emp.role}</p>
+              <h1 style={{ fontSize: 56, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', lineHeight: 1.08, marginBottom: 8 }}>{emp.name}</h1>
+              <p style={{ color: '#9999aa', fontSize: 14, marginBottom: 20 }}>{detail.fullName}</p>
+              <p style={{ color: '#6b6b8d', fontSize: 18, lineHeight: 1.7, marginBottom: 32 }}>{detail.tagline}</p>
 
-              {/* Qualifications */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              {/* Qualifications as tags */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12 }}>
                 {detail.qualifications.map((q) => (
-                  <span key={q} className="px-3 py-1.5 text-[13px] font-semibold text-brand bg-brand/5 border border-brand/15 rounded-xl">{q}</span>
+                  <span key={q} style={{ padding: '6px 14px', fontSize: 13, fontWeight: 600, color: '#6C3AFF', background: 'rgba(108,58,255,0.06)', border: '1px solid rgba(108,58,255,0.12)', borderRadius: 10 }}>{q}</span>
                 ))}
               </div>
+              <p style={{ color: '#9999aa', fontSize: 13, marginBottom: 32 }}>Specialty: {detail.specialty}</p>
 
-              <p className="text-ink-light text-[13px] mb-8">Specialty: {detail.specialty}</p>
-
-              <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="btn-primary">
+              <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 16, borderRadius: 14, padding: '16px 32px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
                 Hire {emp.name}
               </a>
             </div>
 
-            {/* Character image */}
-            <div className="hidden lg:block">
-              <div className="bg-[#F0ECFF] rounded-[32px] p-4">
-                <div className="rounded-2xl overflow-hidden">
-                  <img src={emp.image} alt={emp.name} className="w-full aspect-[3/4] object-cover" />
-                </div>
+            <div>
+              <div style={{ background: 'rgba(108,58,255,0.06)', borderRadius: 32, padding: 16 }}>
+                <img src={emp.image} alt={emp.name} style={{ width: '100%', borderRadius: 20, display: 'block', aspectRatio: '3/4', objectFit: 'cover' }} />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-16 bg-ink">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+      {/* Key Metrics bar */}
+      <section style={{ background: '#1a1a2e', padding: '48px 0' }}>
+        <div style={cx}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>
             {detail.metrics.map((m) => (
-              <div key={m.label} className="text-center">
-                <div className="font-black text-[36px] text-white">{m.value}</div>
-                <div className="text-white/50 text-[12px] font-semibold uppercase tracking-wider mt-1">{m.label}</div>
+              <div key={m.label} style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 40, fontWeight: 900, color: '#fff' }}>{m.value}</div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 4 }}>{m.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Skills with progress bars */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-[700px] mx-auto px-8">
-          <div className="text-center mb-12">
-            <p className="text-brand font-semibold text-sm mb-3">Expertise</p>
-            <h2 className="text-[36px] font-black text-ink tracking-tight">Skills & Proficiency</h2>
-          </div>
-          <div className="space-y-6">
-            {detail.skills.map((s) => (
-              <SkillBar key={s.name} name={s.name} level={s.level} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Experience timeline */}
-      <section className="py-24 lg:py-32 bg-gray-50">
-        <div className="max-w-[800px] mx-auto px-8">
-          <div className="text-center mb-14">
-            <p className="text-brand font-semibold text-sm mb-3">Capabilities</p>
-            <h2 className="text-[36px] font-black text-ink tracking-tight">What {emp.name} Does</h2>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-5 top-2 bottom-2 w-px bg-gray-200" />
-            <div className="space-y-8">
-              {detail.experience.map((exp, i) => (
-                <div key={exp.area} className="flex gap-6 relative">
-                  <div className="w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center shrink-0 z-10 text-[13px] font-bold">
-                    {String(i + 1).padStart(2, '0')}
-                  </div>
-                  <div className="card p-6 flex-1">
-                    <h3 className="font-bold text-ink mb-1">{exp.area}</h3>
-                    <p className="text-ink-muted text-[15px] leading-relaxed">{exp.detail}</p>
-                  </div>
-                </div>
+      {/* Two-column: Skills left, Experience right */}
+      <section style={{ background: '#fafafa', padding: '100px 0' }}>
+        <div style={cx}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60 }}>
+            {/* Left: Skills */}
+            <div>
+              <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Expertise</p>
+              <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', marginBottom: 32 }}>Skills & Proficiency</h2>
+              {detail.skills.map((s) => (
+                <SkillBar key={s.name} name={s.name} level={s.level} />
               ))}
             </div>
+
+            {/* Right: Quick capabilities */}
+            <div>
+              <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Capabilities</p>
+              <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', marginBottom: 32 }}>What {emp.name} Does</h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                {detail.experience.map((exp, i) => (
+                  <div key={exp.area} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
+                    <div style={{ width: 36, height: 36, borderRadius: '50%', background: '#6C3AFF', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 13, fontWeight: 700, flexShrink: 0 }}>
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                    <div>
+                      <h3 style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 15, marginBottom: 4 }}>{exp.area}</h3>
+                      <p style={{ color: '#6b6b8d', fontSize: 14, lineHeight: 1.6 }}>{exp.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Ideal For */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-[800px] mx-auto px-8 text-center">
-          <p className="text-brand font-semibold text-sm mb-3">Perfect For</p>
-          <h2 className="text-[36px] font-black text-ink tracking-tight mb-8">Who {emp.name} Is For</h2>
-          <div className="bg-[#F0ECFF] rounded-[32px] p-10">
-            <p className="text-ink-secondary text-[18px] leading-relaxed">{detail.who}</p>
+      {/* Ideal For — full width coloured container */}
+      <section style={{ background: '#fff', padding: '80px 0' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 32px' }}>
+          <div style={{ background: 'rgba(108,58,255,0.05)', borderRadius: 32, padding: 56, textAlign: 'center' }}>
+            <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Perfect For</p>
+            <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', marginBottom: 20 }}>Who {emp.name} Is For</h2>
+            <p style={{ color: '#3d3d5c', fontSize: 18, lineHeight: 1.7 }}>{detail.who}</p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-brand">
-        <div className="max-w-[800px] mx-auto px-8 text-center">
-          <h2 className="text-[36px] sm:text-[44px] font-black text-white mb-4">Ready to Hire {emp.name}?</h2>
-          <p className="text-white/70 text-[17px] mb-8">{emp.name} activates in under 60 seconds. No setup required.</p>
-          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-white text-brand font-semibold text-[17px] rounded-2xl hover:bg-gray-50 transition-all">
+      <section style={{ background: '#6C3AFF', padding: '80px 0' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 32px', textAlign: 'center' }}>
+          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#fff', marginBottom: 16 }}>Ready to Hire {emp.name}?</h2>
+          <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 17, marginBottom: 32 }}>{emp.name} activates in under 60 seconds. No setup required.</p>
+          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#6C3AFF', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none' }}>
             Start Free Trial
           </a>
         </div>
       </section>
 
       {/* Rest of team */}
-      <section className="py-24 lg:py-32 bg-gray-50">
-        <div className="max-w-[1200px] mx-auto px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-[36px] font-black text-ink tracking-tight">Meet the Rest of the Team</h2>
-          </div>
-          <div className="bg-[#F0ECFF] rounded-[32px] p-5 sm:p-7">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+      <section style={{ background: '#fafafa', padding: '80px 0' }}>
+        <div style={cx}>
+          <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', textAlign: 'center', marginBottom: 40 }}>Meet the Rest of the Team</h2>
+          <div style={{ background: 'rgba(108,58,255,0.06)', borderRadius: 32, padding: 24 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 16 }}>
               {employees.filter((e) => e.name.toLowerCase() !== slug).map((e) => (
-                <Link key={e.name} to={`/employee/${e.name.toLowerCase()}`} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group text-center">
-                  <div className="aspect-square overflow-hidden">
-                    <img src={e.image} alt={e.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <Link key={e.name} to={`/employee/${e.name.toLowerCase()}`} style={{ textDecoration: 'none', background: '#fff', borderRadius: 16, overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', textAlign: 'center' }}>
+                  <div style={{ aspectRatio: '1/1', overflow: 'hidden' }}>
+                    <img src={e.image} alt={e.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   </div>
-                  <div className="p-3">
-                    <h3 className="font-bold text-ink text-sm">{e.name}</h3>
-                    <p className="text-brand text-[10px] font-semibold">{e.role}</p>
+                  <div style={{ padding: 12 }}>
+                    <h3 style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 13 }}>{e.name}</h3>
+                    <p style={{ color: '#6C3AFF', fontSize: 10, fontWeight: 600 }}>{e.role}</p>
                   </div>
                 </Link>
               ))}
