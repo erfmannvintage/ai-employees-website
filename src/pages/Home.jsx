@@ -61,14 +61,17 @@ function Hero() {
    ============================================ */
 function PainPoints() {
   const pains = [
-    { problem: 'Your inbox has 100+ unread emails', solution: 'Cecil triages every email, drafts replies, achieves Inbox Zero daily, runs MailerLite campaigns across Gmail, Outlook, Yahoo, Zoho, iCloud, or any SMTP server.' },
-    { problem: 'Social media hasn\'t been updated in weeks', solution: 'Flora creates 10+ posts/day across 6 platforms with AI-generated images, TikTok-native video, and trend-aligned scheduling via Zernio.' },
-    { problem: 'Leads are falling through the cracks', solution: 'Hugh discovers leads from 7 free sources across 33 industries — OpenStreetMap, Google Places, directories, social media — then runs SPIN/Challenger/MEDDIC outreach.' },
-    { problem: 'You\'re guessing at your numbers', solution: 'Ava has live Marketer-level GA4 access, YouTube Analytics, Search Console. Attribution modelling, cohort analysis, predictive audiences — not just dashboards.' },
-    { problem: 'Blog hasn\'t been touched in months', solution: 'Mabel writes hub-and-spoke SEO content, implements AEO for snippets and GEO for AI search. 15+ Semrush certs, Ahrefs Academy, Google SEO certified.' },
-    { problem: 'Finances live in a spreadsheet you never open', solution: 'Angela handles Corporation Tax, VAT, R&D credits, MTD compliance via Stripe, QuickBooks, Xero, Sage. ACA, ACCA, CIMA Strategic qualified.' },
-    { problem: 'Signed contracts without reading them', solution: 'Rupert reviews every clause, drafts terms/privacy/refund policies, monitors UK GDPR, Consumer Rights Act, EU AI Act, PECR via 5 legal databases.' },
-    { problem: 'Ad spend is a black hole', solution: 'Raymond holds all 9 Google Ads certs + Meta Ads. Manages Search, Display, Shopping, PMax campaigns with his 5-pillar architecture for maximum ROAS.' },
+    { problem: 'Your inbox has 100+ unread emails', solution: 'Cecil triages every email, drafts replies, achieves Inbox Zero daily, runs MailerLite campaigns across Gmail, Outlook, Yahoo, Zoho, iCloud, or any SMTP server.', image: '/pain-email.png', employee: 'Cecil' },
+    { problem: 'Social media hasn\'t been updated in weeks', solution: 'Flora creates 10+ posts/day across 6 platforms with AI-generated images, TikTok-native video, and trend-aligned scheduling via Zernio.', image: '/pain-social.png', employee: 'Flora' },
+    { problem: 'Leads are falling through the cracks', solution: 'Hugh discovers leads from 7 free sources across 33 industries — OpenStreetMap, Google Places, directories, social media — then runs SPIN/Challenger/MEDDIC outreach.', image: '/pain-leads.png', employee: 'Hugh' },
+    { problem: 'You\'re guessing at your numbers', solution: 'Ava has live Marketer-level GA4 access, YouTube Analytics, Search Console. Attribution modelling, cohort analysis, predictive audiences — not just dashboards.', image: '/pain-analytics.png', employee: 'Ava' },
+    { problem: 'Blog hasn\'t been touched in months', solution: 'Mabel writes hub-and-spoke SEO content, implements AEO for snippets and GEO for AI search. 15+ Semrush certs, Ahrefs Academy, Google SEO certified.', image: '/pain-blog.png', employee: 'Mabel' },
+    { problem: 'Finances live in a spreadsheet you never open', solution: 'Angela handles Corporation Tax, VAT, R&D credits, MTD compliance via Stripe, QuickBooks, Xero, Sage. ACA, ACCA, CIMA Strategic qualified.', image: '/pain-finance.png', employee: 'Angela' },
+    { problem: 'Signed contracts without reading them', solution: 'Rupert reviews every clause, drafts terms/privacy/refund policies, monitors UK GDPR, Consumer Rights Act, EU AI Act, PECR via 5 legal databases.', image: '/pain-legal.png', employee: 'Rupert' },
+    { problem: 'Ad spend is a black hole', solution: 'Raymond holds all 9 Google Ads certs + Meta Ads. Manages Search, Display, Shopping, PMax campaigns with his 5-pillar architecture for maximum ROAS.', image: '/pain-ads.png', employee: 'Raymond' },
+    { problem: 'Customer support is slow or nonexistent', solution: 'Basil responds in under 2 minutes, 24/7. Uses the HEARD method, detects churn signals early, books demos, builds your knowledge base. HubSpot Service Hub + CCXP certified.', image: '/pain-support.png', employee: 'Basil' },
+    { problem: 'Marketing has no strategy behind it', solution: 'Poppi builds AARRR funnels, creates Ideal Customer Profiles, orchestrates multi-channel campaigns, and manages Flora, Mabel, Raymond, and Hugh as a team.', image: '/pain-strategy.png', employee: 'Poppi' },
+    { problem: 'You don\'t know what competitors are doing', solution: 'Bowie runs Porter\'s Five Forces analysis, calculates TAM/SAM/SOM, does PESTLE mapping, and scans your competitive landscape automatically every Monday and Wednesday.', image: '/pain-research.png', employee: 'Bowie' },
   ]
 
   return (
@@ -83,16 +86,23 @@ function PainPoints() {
           <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginTop: 16 }}>You're wearing too many hats. Here's what changes when you hire your AI team:</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
           {pains.map((p) => (
-            <div key={p.problem} style={{ background: 'rgba(255,255,255,0.95)', borderRadius: 20, padding: 24, border: '3px solid #1a1a2e', boxShadow: '5px 5px 0 rgba(0,0,0,0.15)' }}>
-              <h3 style={{ fontWeight: 800, color: '#FF3366', fontSize: 15, marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ width: 24, height: 24, borderRadius: '50%', background: '#FF3366', color: '#fff', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, flexShrink: 0 }}>✕</span>
-                {p.problem}
-              </h3>
-              <p style={{ color: '#3d3d5c', fontSize: 14, lineHeight: 1.65, paddingLeft: 32 }}>
-                <span style={{ color: '#00CC66', fontWeight: 700 }}>→</span> {p.solution}
-              </p>
+            <div key={p.problem} style={{ background: 'rgba(255,255,255,0.95)', borderRadius: 24, overflow: 'hidden', border: '3px solid #1a1a2e', boxShadow: '5px 5px 0 rgba(0,0,0,0.15)', display: 'flex' }}>
+              {/* Employee image */}
+              <div style={{ width: 140, flexShrink: 0, overflow: 'hidden' }}>
+                <img src={p.image} alt={p.employee} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              </div>
+              {/* Content */}
+              <div style={{ padding: 20, flex: 1 }}>
+                <h3 style={{ fontWeight: 800, color: '#FF3366', fontSize: 15, marginBottom: 8 }}>
+                  {p.problem}
+                </h3>
+                <p style={{ color: '#3d3d5c', fontSize: 13, lineHeight: 1.6 }}>
+                  <span style={{ color: '#00CC66', fontWeight: 700 }}>→</span> {p.solution}
+                </p>
+                <p style={{ fontSize: 11, color: '#6C3AFF', fontWeight: 700, marginTop: 8 }}>Solved by {p.employee}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -287,7 +297,7 @@ function ContentChains() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>
             <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '5px 5px 0 #1a1a2e', border: '3px solid #1a1a2e' }}>
-              <img src="/characters/flora.png" alt="Flora" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} />
+              <img src="/hero-chains.png" alt="Mabel writes blog, Flora promotes on social" style={{ width: '100%', display: 'block' }} />
             </div>
           </div>
           <div>
