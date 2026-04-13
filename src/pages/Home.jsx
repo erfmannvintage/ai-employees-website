@@ -41,22 +41,69 @@ function Hero() {
               ))}
             </div>
           </div>
-          <div>
-            <div style={{ background: 'rgba(108,58,255,0.06)', borderRadius: 32, padding: 20, position: 'relative' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
-                {employees.slice(0, 6).map((emp) => (
-                  <Link key={emp.name} to={`/employee/${emp.name.toLowerCase()}`} style={{ textDecoration: 'none' }}>
-                    <div style={{ borderRadius: 16, overflow: 'hidden', border: '2px solid #fff', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}>
-                      <img src={emp.image} alt={emp.name} style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block' }} />
-                    </div>
-                    <p style={{ textAlign: 'center', fontSize: 11, fontWeight: 600, color: '#6b6b8d', marginTop: 6 }}>{emp.name}</p>
-                  </Link>
-                ))}
+          {/* Pop-art office scene — overlapping characters */}
+          <div style={{ position: 'relative', height: 520, overflow: 'visible' }}>
+            {/* Background "office" */}
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(108,58,255,0.08) 0%, rgba(0,102,255,0.06) 50%, rgba(0,204,102,0.04) 100%)', borderRadius: 40 }} />
+
+            {/* Main character — Poppi center back */}
+            <div style={{ position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', width: 220, zIndex: 2 }}>
+              <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '0 20px 60px rgba(108,58,255,0.2)', border: '3px solid #fff' }}>
+                <img src="/characters/poppi.png" alt="Poppi" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} />
               </div>
-              <div style={{ position: 'absolute', bottom: -20, left: -20, background: '#fff', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.1)', border: '1px solid #eee', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
-                <div style={{ width: 40, height: 40, background: '#00CC66', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700 }}>11</div>
-                <div><div style={{ fontWeight: 700, fontSize: 14, color: '#1a1a2e' }}>AI Employees</div><div style={{ fontSize: 11, color: '#9999aa' }}>Active & learning</div></div>
+            </div>
+
+            {/* Cecil — left front */}
+            <div style={{ position: 'absolute', bottom: 40, left: 0, width: 180, zIndex: 3 }}>
+              <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 16px 50px rgba(0,0,0,0.15)', border: '3px solid #fff' }}>
+                <img src="/characters/cecil.png" alt="Cecil" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} />
               </div>
+            </div>
+
+            {/* Flora — right front */}
+            <div style={{ position: 'absolute', bottom: 20, right: 0, width: 180, zIndex: 3 }}>
+              <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 16px 50px rgba(0,0,0,0.15)', border: '3px solid #fff' }}>
+                <img src="/characters/flora.png" alt="Flora" style={{ width: '100%', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }} />
+              </div>
+            </div>
+
+            {/* Hugh — left back */}
+            <div style={{ position: 'absolute', top: 60, left: 30, width: 140, zIndex: 1 }}>
+              <div style={{ borderRadius: 16, overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.1)', border: '2px solid #fff' }}>
+                <img src="/characters/hugh.png" alt="Hugh" style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block' }} />
+              </div>
+            </div>
+
+            {/* Ava — right back */}
+            <div style={{ position: 'absolute', top: 40, right: 20, width: 140, zIndex: 1 }}>
+              <div style={{ borderRadius: 16, overflow: 'hidden', boxShadow: '0 12px 40px rgba(0,0,0,0.1)', border: '2px solid #fff' }}>
+                <img src="/characters/ava.png" alt="Ava" style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block' }} />
+              </div>
+            </div>
+
+            {/* Angela — bottom center */}
+            <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', width: 160, zIndex: 4 }}>
+              <div style={{ borderRadius: 18, overflow: 'hidden', boxShadow: '0 16px 50px rgba(0,0,0,0.15)', border: '3px solid #fff' }}>
+                <img src="/characters/angela.png" alt="Angela" style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block' }} />
+              </div>
+            </div>
+
+            {/* Floating badge */}
+            <div style={{ position: 'absolute', bottom: -16, left: -16, background: '#fff', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.12)', border: '1px solid #eee', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, zIndex: 10 }}>
+              <div style={{ width: 40, height: 40, background: '#00CC66', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700 }}>11</div>
+              <div><div style={{ fontWeight: 700, fontSize: 14, color: '#1a1a2e' }}>AI Employees</div><div style={{ fontSize: 11, color: '#9999aa' }}>Active & learning</div></div>
+            </div>
+
+            {/* Floating notification */}
+            <div style={{ position: 'absolute', top: 10, right: -10, background: '#fff', borderRadius: 14, boxShadow: '0 8px 30px rgba(0,0,0,0.1)', border: '1px solid #eee', padding: '10px 16px', zIndex: 10 }}>
+              <div style={{ fontSize: 11, color: '#00CC66', fontWeight: 700 }}>✓ Flora published 3 posts</div>
+              <div style={{ fontSize: 10, color: '#9999aa', marginTop: 2 }}>Just now</div>
+            </div>
+
+            {/* Another notification */}
+            <div style={{ position: 'absolute', top: 200, right: -20, background: '#fff', borderRadius: 14, boxShadow: '0 8px 30px rgba(0,0,0,0.1)', border: '1px solid #eee', padding: '10px 16px', zIndex: 10 }}>
+              <div style={{ fontSize: 11, color: '#6C3AFF', fontWeight: 700 }}>Hugh found 12 new leads</div>
+              <div style={{ fontSize: 10, color: '#9999aa', marginTop: 2 }}>5 min ago</div>
             </div>
           </div>
         </div>
