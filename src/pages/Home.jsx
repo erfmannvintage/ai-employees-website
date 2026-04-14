@@ -502,6 +502,45 @@ function PricingSection() {
 /* ============================================
    SECTION 12: CTA — Purple bg with halftone
    ============================================ */
+function FAQ() {
+  const faqs = [
+    { q: 'What exactly is AI Employees?', a: 'A platform that gives you 11 specialized AI employees — each one a certified expert in their domain. They handle your marketing, sales, support, content, analytics, legal, advertising, research, and finance. They collaborate with each other, cross-review work, and learn your business over time. It\'s like hiring a full department for a fraction of the cost.' },
+    { q: 'How is this different from ChatGPT or other AI tools?', a: 'ChatGPT is a general-purpose chatbot. AI Employees are specialized workers with real qualifications (HubSpot, Google Ads certs, ACA, ACCA, etc.), permanent memory of your business, cross-team collaboration, autonomous execution, and integration with your actual tools (email, analytics, accounting, social media). They don\'t just chat — they DO the work.' },
+    { q: 'Do I need any technical skills?', a: 'None. Everything works through simple chat or voice. No coding, no prompt engineering, no API setup. Tell your employees what you need in plain English and they deliver. The 6-step onboarding wizard takes 2 minutes.' },
+    { q: 'How do the employees learn my business?', a: 'Through your Business Profile (100+ fields about your business), Data Hub (upload your documents, emails, competitor info), and Custom Skills (teach them your specific workflows). Plus a 5-layer self-learning pipeline that extracts insights from every task, peer feedback, weekly auto-research, knowledge refreshes, and monthly self-assessments.' },
+    { q: 'What\'s included in the free trial?', a: '14 days of full access at Growth-level (all features, all employees, 5,000 tasks). No credit card required. At the end, choose a plan or your account pauses — no surprise charges. Your data is kept for 30 days in case you come back.' },
+    { q: 'Can I cancel anytime?', a: 'Yes. Cancel from your account settings at any time. No lock-in contracts, no cancellation fees. You keep access until the end of your billing period. We also offer a 30-day money-back guarantee on all paid plans.' },
+    { q: 'What integrations are supported?', a: 'Email (Gmail, Outlook, Yahoo, Zoho, iCloud, SMTP), Google Calendar, MailerLite, GA4, YouTube Analytics, Search Console, Stripe, QuickBooks, Xero, Sage, plus webhooks for Zapier, Make, n8n, and Google Workspace (Sheets, Drive, Docs).' },
+    { q: 'How do you handle security and privacy?', a: 'Bank-grade encryption, database-level security with complete data isolation between users, GDPR compliant. Your data is never sold or shared. AI models don\'t train on your data. You own everything you create.' },
+  ]
+
+  return (
+    <section style={{ background: '#fff', padding: '80px 0' }}>
+      <div style={cx}>
+        <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>FAQ</p>
+          <h2 style={{ fontSize: 40, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em' }}>Frequently Asked Questions</h2>
+        </div>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {faqs.map((f) => (
+              <details key={f.q} style={{ background: '#fafafa', borderRadius: 16, border: '1px solid #eee', overflow: 'hidden' }}>
+                <summary style={{ padding: '20px 24px', cursor: 'pointer', fontWeight: 600, fontSize: 16, color: '#1a1a2e', listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  {f.q}
+                  <span style={{ color: '#6C3AFF', fontSize: 20, fontWeight: 700, marginLeft: 16, flexShrink: 0 }}>+</span>
+                </summary>
+                <div style={{ padding: '0 24px 20px', fontSize: 15, color: '#6b6b8d', lineHeight: 1.7 }}>
+                  {f.a}
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function CTA() {
   return (
     <section style={{ background: '#6C3AFF', position: 'relative', overflow: 'hidden', padding: '100px 0' }}>
@@ -537,6 +576,7 @@ export default function Home() {
       <Stats />
       <Testimonials />
       <PricingSection />
+      <FAQ />
       <CTA />
     </>
   )
