@@ -345,50 +345,38 @@ function MobileApp() {
 
 function ContentChains() {
   const chains = [
-    { from: 'Mabel', fromRole: 'SEO Writer', to: 'Flora', toRole: 'Social Media', trigger: 'Blog post published', detail: 'Mabel writes an SEO-optimized blog post using her hub-and-spoke framework, publishes it to the Blog CMS. Flora automatically receives it, extracts the key points, creates 6+ social posts (TikTok video, Instagram carousel, Facebook post, X thread, LinkedIn article, YouTube Short), generates branded images for each, and schedules them across all platforms. One blog becomes a week of social content.' },
-    { from: 'Flora', fromRole: 'Social Media', to: 'Hugh', toRole: 'Sales', trigger: 'Campaign content created', detail: 'Flora creates a social media campaign with branded visuals, hooks, and captions. Hugh automatically receives the creative assets and integrates them into his outreach sequences — cold emails reference the campaign, follow-ups include the social proof, and pitch decks use Flora\'s graphics. Your sales and marketing are always aligned.' },
-    { from: 'Bowie', fromRole: 'Research', to: 'Poppi', toRole: 'Strategy', trigger: 'Research report published', detail: 'Bowie completes a competitor analysis or market research report (using data from uploaded Excel files, PDFs, and live Google search). Poppi automatically receives the findings, updates your marketing strategy, adjusts Flora\'s content calendar, refines Hugh\'s outreach targeting, and posts strategic recommendations to the team Boardroom.' },
-    { from: 'Hugh', fromRole: 'Sales', to: 'Cecil', toRole: 'Assistant', trigger: 'New leads discovered', detail: 'Hugh discovers a batch of new leads from business directories, social media, and website enrichment. Cecil automatically receives the contact details, drafts personalised welcome emails for each lead, and queues them in MailerLite. The leads get a warm introduction before Hugh follows up with his SPIN/Challenger outreach sequence.' },
-    { from: 'Ava', fromRole: 'Analytics', to: 'Flora', toRole: 'Social Media', trigger: 'Analytics report generated', detail: 'Ava analyses your GA4 data, identifies which content drives the most traffic and conversions, spots underperforming channels, and generates an insights report. Flora automatically receives the data, adjusts her posting schedule, doubles down on what\'s working, and shifts away from what isn\'t. Your content strategy is always data-driven, never guesswork.' },
+    { from: 'Mabel', to: 'Flora', desc: 'Blog published → Flora creates 6+ social posts (TikTok, Instagram, Facebook, X, LinkedIn, YouTube), generates branded images, schedules across all platforms. One blog = a week of content.' },
+    { from: 'Flora', to: 'Hugh', desc: 'Campaign created → Hugh integrates visuals into outreach sequences. Cold emails reference the campaign, pitch decks use Flora\'s graphics. Sales and marketing always aligned.' },
+    { from: 'Bowie', to: 'Poppi', desc: 'Research published → Poppi updates strategy, adjusts Flora\'s content calendar, refines Hugh\'s targeting, posts recommendations to team Boardroom.' },
+    { from: 'Hugh', to: 'Cecil', desc: 'Leads discovered → Cecil drafts personalised welcome emails, queues in MailerLite. Warm introduction before Hugh\'s SPIN/Challenger outreach.' },
+    { from: 'Ava', to: 'Flora', desc: 'Analytics reported → Flora adjusts posting schedule, doubles down on what\'s working, shifts away from what isn\'t. Content strategy always data-driven.' },
   ]
 
   return (
-    <section style={{ background: '#FFF8E6', padding: '100px 0' }}>
+    <section style={{ background: '#FFF8E6', padding: '80px 0' }}>
       <div style={cx}>
-        <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 48px' }}>
-          <p style={{ color: '#FF6600', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Automated Content Chains</p>
-          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: 16 }}>5 workflows where one employee's output triggers another's task.</h2>
-          <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7 }}>Not manual handoffs. When work completes, the system automatically fires the next step and posts to Team Chat so everyone sees. Your marketing, sales, and content pipeline runs itself.</p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'start', marginBottom: 40 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 60, alignItems: 'center' }}>
           <div>
-            <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '5px 5px 0 #1a1a2e', border: '3px solid #1a1a2e', position: 'sticky', top: 100 }}>
-              <img src="/hero-chains.png" alt="Mabel writes blog, Flora promotes on social" style={{ width: '100%', display: 'block' }} />
+            <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '5px 5px 0 #1a1a2e', border: '3px solid #1a1a2e' }}>
+              <img src="/hero-chains.png" alt="Content chain workflow" style={{ width: '100%', display: 'block' }} />
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {chains.map((c, i) => (
-              <div key={i} style={{ background: '#fff', borderRadius: 16, overflow: 'hidden', border: '2px solid #1a1a2e', boxShadow: '3px 3px 0 #1a1a2e' }}>
-                {/* Header */}
-                <div style={{ padding: '14px 20px', background: '#f9f5e8', borderBottom: '2px solid #1a1a2e', display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <span style={{ fontWeight: 800, color: '#1a1a2e', fontSize: 14 }}>{c.from}</span>
-                    <span style={{ fontSize: 11, color: '#6b6b8d' }}>{c.fromRole}</span>
+          <div>
+            <p style={{ color: '#FF6600', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Automated Content Chains</p>
+            <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: 16 }}>5 workflows that run your pipeline automatically.</h2>
+            <p style={{ fontSize: 15, color: '#6b6b8d', lineHeight: 1.7, marginBottom: 24 }}>When one employee finishes, the next one starts. No manual handoffs. Posts to Team Chat so everyone sees.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {chains.map((c, i) => (
+                <div key={i} style={{ background: '#fff', borderRadius: 12, padding: '14px 18px', border: '1px solid #e8dfc8' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+                    <span style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 14 }}>{c.from}</span>
+                    <span style={{ color: '#FF6600', fontWeight: 700 }}>→</span>
+                    <span style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 14 }}>{c.to}</span>
                   </div>
-                  <span style={{ color: '#FF6600', fontWeight: 700, fontSize: 16 }}>→</span>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <span style={{ fontWeight: 800, color: '#1a1a2e', fontSize: 14 }}>{c.to}</span>
-                    <span style={{ fontSize: 11, color: '#6b6b8d' }}>{c.toRole}</span>
-                  </div>
+                  <p style={{ fontSize: 13, color: '#6b6b8d', lineHeight: 1.55 }}>{c.desc}</p>
                 </div>
-                {/* Body */}
-                <div style={{ padding: '16px 20px' }}>
-                  <p style={{ fontSize: 11, color: '#FF6600', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 8 }}>Trigger: {c.trigger}</p>
-                  <p style={{ fontSize: 14, color: '#3d3d5c', lineHeight: 1.65 }}>{c.detail}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
