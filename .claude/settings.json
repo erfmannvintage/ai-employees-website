@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/chadb/**)"
+      "Read(//c/Users/chadb/**)",
+      "WebFetch(domain:www.trustpilot.com)"
     ]
   }
 }
