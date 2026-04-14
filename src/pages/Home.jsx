@@ -23,7 +23,7 @@ function Hero() {
               You're the CEO, marketer, sales rep, support agent, content creator, bookkeeper, and legal reviewer — all at once. It's not sustainable.
             </p>
             <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7, marginBottom: 36, maxWidth: 500 }}>
-              AI Employees gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> who handle marketing, sales, support, content, analytics, legal, advertising, research, and finance. From <strong style={{ color: '#1a1a2e' }}>$97/mo</strong>.
+              AI Employees gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> who handle marketing, sales, support, content, analytics, legal, advertising, research, and finance. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong>.
             </p>
             <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
               <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
@@ -439,7 +439,7 @@ function PricingPreview() {
             <div style={{ position: 'absolute', top: -14, left: '50%', transform: 'translateX(-50%)', background: '#6C3AFF', color: '#fff', fontSize: 13, fontWeight: 600, borderRadius: 100, padding: '6px 20px' }}>{plan.badge}</div>
             <div style={{ textAlign: 'center', marginBottom: 28, marginTop: 8 }}>
               <h3 style={{ fontWeight: 700, fontSize: 20, color: '#1a1a2e' }}>{plan.name}</h3>
-              <div style={{ margin: '12px 0' }}><span style={{ fontSize: 64, fontWeight: 900, color: '#1a1a2e' }}>${plan.price}</span><span style={{ fontSize: 18, color: '#9999aa' }}>/{plan.period}</span></div>
+              <div style={{ margin: '12px 0' }}><span style={{ fontSize: 64, fontWeight: 900, color: '#1a1a2e' }}>{plan.currency}{plan.price}</span><span style={{ fontSize: 18, color: '#9999aa' }}>/{plan.period}</span></div>
               <p style={{ color: '#6b6b8d', fontSize: 15 }}>{plan.description}</p>
             </div>
             <ul style={{ listStyle: 'none', marginBottom: 28 }}>
