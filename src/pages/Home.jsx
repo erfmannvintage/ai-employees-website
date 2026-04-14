@@ -8,49 +8,49 @@ const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
    ============================================ */
 function Hero() {
   return (
-    <section style={{ background: '#fff' }}>
-      <div style={{ ...cx, paddingTop: 80, paddingBottom: 80 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
-          <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontSize: 13, fontWeight: 600, borderRadius: 100, padding: '8px 18px', marginBottom: 32 }}>
-              <span style={{ width: 8, height: 8, background: '#00CC66', borderRadius: '50%' }} /> 11 AI Employees — Ready to Work
-            </div>
-            <h1 style={{ fontSize: 58, fontWeight: 900, lineHeight: 1.08, letterSpacing: '-0.02em', color: '#1a1a2e', marginBottom: 24 }}>
-              Stop doing everything yourself.
-              <br /><span style={{ color: '#6C3AFF' }}>Hire your AI team.</span>
-            </h1>
-            <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7, marginBottom: 16, maxWidth: 500 }}>
-              You're the CEO, marketer, sales rep, support agent, content creator, bookkeeper, and legal reviewer — all at once. <strong style={{ color: '#1a1a2e' }}>Your competitors aren't doing this anymore.</strong> They've automated.
-            </p>
-            <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7, marginBottom: 36, maxWidth: 500 }}>
-              AI Employees gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. While you sleep. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong> — less than one hour of a freelancer.
-            </p>
-            <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
-              <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
-                Get Started Free <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-              </a>
-              <Link to="/pricing" style={{ display: 'inline-flex', alignItems: 'center', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', color: '#1a1a2e', border: '2px solid #e0e0e0' }}>View Pricing</Link>
-            </div>
-            <div style={{ display: 'flex', gap: 24, fontSize: 13, color: '#9999aa' }}>
-              {['No credit card', '7-day free trial', 'Cancel anytime'].map((t) => (
-                <span key={t} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <svg width="16" height="16" fill="#00CC66" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>{t}
-                </span>
-              ))}
-            </div>
+    <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+      {/* Full-width pop-art background */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+        <img src="/hero-office.png" alt="AI Employees pop-art office" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+        {/* Gradient overlay — dark left for text readability, fades right to show image */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 35%, rgba(255,255,255,0.6) 60%, rgba(255,255,255,0.1) 100%)' }} />
+      </div>
+
+      <div style={{ ...cx, position: 'relative', zIndex: 1, paddingTop: 80, paddingBottom: 80 }}>
+        <div style={{ maxWidth: 600 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontSize: 13, fontWeight: 600, borderRadius: 100, padding: '8px 18px', marginBottom: 32 }}>
+            <span style={{ width: 8, height: 8, background: '#00CC66', borderRadius: '50%' }} /> 11 AI Employees — Ready to Work
           </div>
-          {/* Pop-art office scene — AI generated */}
-          <div style={{ position: 'relative' }}>
-            <div style={{ borderRadius: 24, overflow: 'hidden', border: '4px solid #1a1a2e', boxShadow: '8px 8px 0 #1a1a2e' }}>
-              <img src="/hero-office.png" alt="AI Employees working in pop-art office" style={{ width: '100%', display: 'block' }} />
-            </div>
-            {/* Floating badge */}
-            <div style={{ position: 'absolute', bottom: -16, left: -16, background: '#fff', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.12)', border: '3px solid #1a1a2e', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, zIndex: 10 }}>
-              <div style={{ width: 40, height: 40, background: '#00CC66', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700 }}>11</div>
-              <div><div style={{ fontWeight: 700, fontSize: 14, color: '#1a1a2e' }}>AI Employees</div><div style={{ fontSize: 11, color: '#9999aa' }}>Active & learning</div></div>
-            </div>
+          <h1 style={{ fontSize: 58, fontWeight: 900, lineHeight: 1.08, letterSpacing: '-0.02em', color: '#1a1a2e', marginBottom: 24 }}>
+            Stop doing everything yourself.
+            <br /><span style={{ color: '#6C3AFF' }}>Hire your AI team.</span>
+          </h1>
+          <p style={{ fontSize: 17, color: '#4a4a6a', lineHeight: 1.7, marginBottom: 16, maxWidth: 520 }}>
+            You're the CEO, marketer, sales rep, support agent, content creator, bookkeeper, and legal reviewer — all at once. <strong style={{ color: '#1a1a2e' }}>Your competitors aren't doing this anymore.</strong> They've automated.
+          </p>
+          <p style={{ fontSize: 17, color: '#4a4a6a', lineHeight: 1.7, marginBottom: 36, maxWidth: 520 }}>
+            AI Employees gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. While you sleep. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong> — less than one hour of a freelancer.
+          </p>
+          <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
+            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
+              Get Started Free <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </a>
+            <Link to="/pricing" style={{ display: 'inline-flex', alignItems: 'center', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', color: '#1a1a2e', border: '2px solid rgba(0,0,0,0.15)', background: 'rgba(255,255,255,0.8)', backdropFilter: 'blur(4px)' }}>View Pricing</Link>
+          </div>
+          <div style={{ display: 'flex', gap: 24, fontSize: 13, color: '#6b6b8d' }}>
+            {['No credit card', '7-day free trial', 'Cancel anytime'].map((t) => (
+              <span key={t} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <svg width="16" height="16" fill="#00CC66" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>{t}
+              </span>
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Floating badge bottom right */}
+      <div style={{ position: 'absolute', bottom: 32, right: 48, background: 'rgba(255,255,255,0.95)', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.15)', border: '3px solid #1a1a2e', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: 12, zIndex: 10 }}>
+        <div style={{ width: 44, height: 44, background: '#00CC66', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 800, fontSize: 16 }}>11</div>
+        <div><div style={{ fontWeight: 700, fontSize: 15, color: '#1a1a2e' }}>AI Employees</div><div style={{ fontSize: 12, color: '#6b6b8d' }}>Active & learning</div></div>
       </div>
     </section>
   )
