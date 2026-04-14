@@ -431,8 +431,8 @@ function PricingSection() {
       <div style={cx}>
         <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 48px' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Pricing</p>
-          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', marginBottom: 12 }}>All 11 employees. Every plan. From £49/mo.</h2>
-          <p style={{ fontSize: 17, color: '#6b6b8d' }}>Less than one hour of a freelancer. All prices in GBP. 14-day free trial, no credit card.</p>
+          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', marginBottom: 12 }}>All 11 employees. Every plan. No credits.</h2>
+          <p style={{ fontSize: 17, color: '#6b6b8d' }}>Simple monthly task limits, not confusing credits. All prices in GBP. 14-day free trial, no credit card.</p>
         </div>
 
         <div style={{ background: 'rgba(108,58,255,0.06)', borderRadius: 32, padding: 28 }}>
@@ -452,16 +452,32 @@ function PricingSection() {
                   <p style={{ fontSize: 12, color: '#00CC66', fontWeight: 600, marginBottom: 12 }}>or {p.currency}{p.annualPrice}/{p.period} annually</p>
                   <p style={{ fontSize: 13, color: '#6b6b8d', marginBottom: 16, lineHeight: 1.5 }}>{p.description}</p>
 
-                  <div style={{ background: '#fafafa', borderRadius: 10, padding: '8px 12px', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <span style={{ fontSize: 14 }}>👥</span>
-                    <span style={{ fontWeight: 700, fontSize: 13, color: '#1a1a2e' }}>All 11 AI Employees</span>
+                  <div style={{ display: 'flex', gap: 6, marginBottom: 16 }}>
+                    <div style={{ background: '#fafafa', borderRadius: 8, padding: '6px 10px', flex: 1, textAlign: 'center' }}>
+                      <div style={{ fontWeight: 800, fontSize: 13, color: '#1a1a2e' }}>👥 11</div>
+                      <div style={{ fontSize: 9, color: '#9999aa' }}>Employees</div>
+                    </div>
+                    <div style={{ background: '#fafafa', borderRadius: 8, padding: '6px 10px', flex: 1, textAlign: 'center' }}>
+                      <div style={{ fontWeight: 800, fontSize: 13, color: '#1a1a2e' }}>{p.taskLimit}</div>
+                      <div style={{ fontSize: 9, color: '#9999aa' }}>Tasks/mo</div>
+                    </div>
+                    <div style={{ background: '#fafafa', borderRadius: 8, padding: '6px 10px', flex: 1, textAlign: 'center' }}>
+                      <div style={{ fontWeight: 800, fontSize: 13, color: '#1a1a2e' }}>{p.seats}</div>
+                      <div style={{ fontSize: 9, color: '#9999aa' }}>Seats</div>
+                    </div>
                   </div>
 
                   <ul style={{ listStyle: 'none', marginBottom: 16, flex: 1 }}>
-                    {p.features.slice(0, 6).map((f) => (
-                      <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, padding: '4px 0' }}>
+                    {p.features.slice(0, 7).map((f) => (
+                      <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, padding: '3px 0' }}>
                         <svg width="14" height="14" fill="#00CC66" viewBox="0 0 20 20" style={{ marginTop: 3, flexShrink: 0 }}><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                         <span style={{ fontSize: 12, color: '#3d3d5c' }}>{f}</span>
+                      </li>
+                    ))}
+                    {(p.lockedFeatures || []).slice(0, 3).map((f) => (
+                      <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, padding: '3px 0' }}>
+                        <svg width="14" height="14" fill="#ddd" viewBox="0 0 20 20" style={{ marginTop: 3, flexShrink: 0 }}><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" /></svg>
+                        <span style={{ fontSize: 12, color: '#bbb' }}>{f}</span>
                       </li>
                     ))}
                   </ul>
