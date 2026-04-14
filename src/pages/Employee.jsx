@@ -16,7 +16,7 @@ const detailed = {
       { area: 'Team Coordination', detail: 'Routes tasks across 11 employees — delegates, tracks completion.' },
     ],
     metrics: [{ value: 'Daily', label: 'Inbox Zero' }, { value: '<30s', label: 'Draft Time' }, { value: '11', label: 'Employees Routed' }, { value: 'AM', label: 'Briefing Schedule' }],
-    who: 'Business owners drowning in 2+ hours of email and admin daily. If your calendar runs your life, Cecil fixes that.',
+    who: 'Business owners and founders spending 2+ hours a day on email, calendar management, and admin tasks. If your inbox has 100+ unread emails, your calendar is a warzone of double-bookings, and you\'re still doing your own MailerLite campaigns at 10pm — Cecil takes over all of it. He connects to Gmail, Outlook, Yahoo, Zoho, iCloud, or any SMTP server. He achieves Inbox Zero every single day, drafts professional replies in under 30 seconds, blocks focus time on your calendar, and runs your newsletter campaigns. You wake up to a morning briefing with your top priorities, deadlines, and decisions that need your attention. Nothing gets missed.',
   },
   flora: {
     fullName: 'Flora Beaumont', tagline: 'Your social media powerhouse. Scroll-stopping content across every platform, every day.',
@@ -32,7 +32,7 @@ const detailed = {
       { area: 'Cross-Team Sync', detail: 'Reviews with Poppi on strategy, Mabel on SEO, Raymond on ad creative.' },
     ],
     metrics: [{ value: '10+', label: 'Daily Posts' }, { value: '6', label: 'Platforms' }, { value: '5', label: 'Content Types' }, { value: 'Same Day', label: 'Trend Response' }],
-    who: 'Businesses whose social media hasn\'t been updated in weeks. Flora runs it 24/7.',
+    who: 'If you hired a social media manager, you\'d pay £2,000-£3,500/month and they\'d produce maybe 2-3 posts a day across 2 platforms. Flora produces 10+ posts every single day across TikTok, Instagram, Facebook, X, YouTube, and LinkedIn — each one formatted perfectly for that platform\'s algorithm, dimensions, and audience behaviour. She generates branded AI images for every post via Gemini, creates TikTok-native videos via Remotion, runs weekly competitor analysis to see what\'s working in your niche, and adjusts your content strategy based on real data from Ava. She auto-runs every morning — you wake up to a full day\'s content ready for your approval. She never takes holidays, never calls in sick, and never runs out of ideas.',
   },
   basil: {
     fullName: 'Basil Thornbury', tagline: 'Your customer support lead. Every query handled with patience and precision — 24/7.',
@@ -48,7 +48,7 @@ const detailed = {
       { area: 'Escalation', detail: 'Routes complex issues with full context — you get the summary, not the mess.' },
     ],
     metrics: [{ value: '<2m', label: 'Response Time' }, { value: '24/7', label: 'Availability' }, { value: '95%+', label: 'Resolution' }, { value: '4.8/5', label: 'CSAT Target' }],
-    who: 'Businesses losing customers to slow or inconsistent support.',
+    who: 'A human customer support agent costs £1,800-£2,500/month, works 8 hours a day, and needs training. Basil works 24/7/365 and responds in under 2 minutes — every time. He\'s CCXP certified, uses the HEARD method to turn angry customers into brand advocates, and detects churn signals before you lose the customer. He books demos for interested prospects (qualifying them with BANT before routing to Hugh), builds your knowledge base so common questions get instant answers, and escalates complex issues with full context so you never have to dig through old tickets. Your CSAT scores go up. Your churn goes down. And you never have to answer "where\'s my order?" at 11pm again.',
   },
   hugh: {
     fullName: 'Hugh Ashworth-Pemberton', tagline: 'Your sales machine. Discovers leads, runs outreach, manages pipelines, closes deals.',
@@ -64,7 +64,7 @@ const detailed = {
       { area: 'Proposals', detail: 'Pitch decks, proposals, follow-ups. Contract review with Rupert.' },
     ],
     metrics: [{ value: '7', label: 'Lead Sources' }, { value: '33', label: 'Industry Maps' }, { value: '3', label: 'Frameworks' }, { value: 'Global', label: 'Reach' }],
-    who: 'Businesses with leads falling through the cracks.',
+    who: 'A sales development rep costs £2,500-£4,000/month and still needs a CRM, lead database subscriptions (£200-500/month), and months of training. Hugh comes with his own Lead Discovery Engine that pulls from 7 free data sources across 33 industry mappings — he finds businesses you didn\'t know existed. He\'s trained in SPIN Selling, Challenger Sale, and MEDDIC, so he qualifies leads properly instead of spamming everyone. He builds and runs multi-touch outreach sequences, manages your entire pipeline, creates proposals and pitch decks, and gets contracts reviewed by Rupert before you sign anything. He prospects globally across time zones with localized messaging. The first week he works for you, he\'ll find more leads than your previous tool found in a month.',
   },
   mabel: {
     fullName: 'Mabel Cavendish', tagline: 'Your SEO content engine. Articles that rank on Google and convert visitors into customers.',
@@ -80,7 +80,7 @@ const detailed = {
       { area: 'Content Strategy', detail: 'Editorial calendars aligned with goals and seasonal opportunities.' },
     ],
     metrics: [{ value: '15+', label: 'Semrush Certs' }, { value: '3', label: 'SEO Types' }, { value: 'H&S', label: 'Architecture' }, { value: 'Live', label: 'Search Console' }],
-    who: 'Businesses invisible on Google. Mabel makes you rank.',
+    who: 'A freelance SEO writer charges £150-£500 per blog post, takes 3-5 days to deliver, and you still have to do your own keyword research and manage Search Console. Mabel writes 2 SEO-optimized articles per week using hub-and-spoke architecture that builds topical authority — not random one-off posts. She holds 15+ Semrush certifications, Ahrefs Academy credentials, Google SEO Fundamentals, and HubSpot Content Marketing. She implements Answer Engine Optimization (AEO) so your content appears in featured snippets, and Generative Engine Optimization (GEO) so you show up in AI search results. She has live Search Console access to monitor your rankings, fix indexing issues, and identify content decay. When she publishes a blog, Flora automatically promotes it across all social channels. That\'s a content pipeline that runs itself.',
   },
   rupert: {
     fullName: 'Rupert Blackwell-Forsyth', tagline: 'Your legal safety net. Contracts, compliance, and protection — without the hourly rate.',
@@ -96,7 +96,7 @@ const detailed = {
       { area: 'Legal Databases', detail: 'gov.uk, ICO, legislation.gov.uk, ASA, Companies House.' },
     ],
     metrics: [{ value: 'UK & EU', label: 'Jurisdictions' }, { value: '5', label: 'Legal Sources' }, { value: '4', label: 'Compliance Acts' }, { value: 'Weekly', label: 'Auto-Research' }],
-    who: 'Businesses operating without proper legal review.',
+    who: 'A solicitor charges £200-£500 per hour. Most small businesses can\'t afford one, so they sign contracts unread, copy privacy policies from competitors, and hope they\'re GDPR compliant. Rupert changes that. He reviews every clause in every contract, flags risky terms, and suggests amendments. He drafts proper terms of service, privacy policies, cookie policies, and refund policies. He monitors UK GDPR, the Consumer Rights Act, EU AI Act, and PECR regulations — accessing gov.uk, ICO, legislation.gov.uk, ASA, and Companies House every week for the latest updates. He reviews Hugh\'s sales outreach for legal compliance, checks Raymond\'s ads against ASA rules, and ensures Angela\'s financial reporting meets regulatory standards. That\'s legal protection that runs 24/7 for less than one hour of a solicitor\'s time.',
   },
   poppi: {
     fullName: 'Poppi Hartwell', tagline: 'Your marketing brain. Strategy, campaigns, and team coordination on autopilot.',
@@ -112,7 +112,7 @@ const detailed = {
       { area: 'Performance', detail: 'Analyzes results, runs experiments, improves conversion.' },
     ],
     metrics: [{ value: 'AARRR', label: 'Framework' }, { value: '4', label: 'Team Managed' }, { value: '15+', label: 'Auto-Workflows' }, { value: 'Full', label: 'Channel Coverage' }],
-    who: 'Businesses doing random marketing without a strategy.',
+    who: 'A marketing consultant charges £3,000-£8,000 per month and gives you a strategy document that sits in a drawer. Poppi doesn\'t just write strategies — she orchestrates them. She builds AARRR funnels (Acquisition, Activation, Retention, Referral, Revenue), creates your Ideal Customer Profile, then breaks every campaign into specific tasks and assigns them to the right employees: Flora handles social, Mabel handles content, Raymond handles ads, Hugh handles outreach. She coordinates the entire team, monitors campaign performance, and adjusts in real-time. She runs competitive intelligence to make sure your positioning stays ahead. And she manages 6 pre-built campaign templates (Waitlist, New Subscriber, Free Trial, Retention, Win-Back, Custom) that you can launch with a single click. That\'s not a strategy consultant — that\'s a marketing department.',
   },
   ava: {
     fullName: 'Ava Sinclair', tagline: 'Your data translator. Numbers become decisions with dashboards, reports, and predictions.',
@@ -128,7 +128,7 @@ const detailed = {
       { area: 'Dashboards', detail: 'Visual KPI dashboards for your business.' },
     ],
     metrics: [{ value: 'Live', label: 'GA4 Access' }, { value: '3', label: 'Analysis Types' }, { value: 'Real-time', label: 'Monitoring' }, { value: 'Weekly', label: 'Benchmarks' }],
-    who: 'Businesses making gut-feel decisions instead of data-driven ones.',
+    who: 'An analytics consultant charges £100-£250 per hour to produce monthly reports you barely read. Ava is connected live to your Google Analytics 4 at Marketer-level access — she sees everything in real-time, not 30-day-old exports. She builds attribution models that show you exactly which channels drive revenue (not just traffic), runs cohort analysis to understand customer behaviour over time, and creates predictive audiences that target your highest-value prospects. She detects traffic anomalies daily and alerts you before problems become crises. She builds executive dashboards tracking the KPIs that actually matter for YOUR business. And she shares her insights automatically with Poppi (strategy), Flora (content), and Angela (finances) through the team knowledge system. That\'s a data team for the price of one report.',
   },
   raymond: {
     fullName: 'Raymond Blake', tagline: 'Your ad spend guardian. Google, Meta, TikTok — maximum ROAS, minimum waste.',
@@ -144,7 +144,7 @@ const detailed = {
       { area: 'Compliance', detail: 'Cross-reviews with Rupert on ASA and platform policies.' },
     ],
     metrics: [{ value: '9/9', label: 'Google Certs' }, { value: '3', label: 'Ad Platforms' }, { value: '5', label: 'Campaign Types' }, { value: '5-Pillar', label: 'Architecture' }],
-    who: 'Businesses wasting ad spend with terrible (or unknown) ROAS.',
+    who: 'A PPC agency charges £1,500-£5,000 per month plus a percentage of your ad spend — and they\'re managing 20 other clients at the same time. Raymond manages YOUR campaigns like they\'re his own money. He holds all 9 Google Ads certifications (Search, Display, Video, Shopping, Apps, Measurement, AI-Powered Performance, AI-Powered Shopping, Creative) plus Meta Ads. He builds campaigns using his 5-pillar architecture: targeting, creative, bidding, landing pages, and measurement — each one optimized for maximum ROAS. He runs continuous A/B tests on copy, creative, audiences, and landing pages. He cross-reviews with Ava on performance metrics and Rupert on advertising compliance. If your ROAS is bad, he fixes it. If you don\'t know what your ROAS is, he tells you.',
   },
   bowie: {
     fullName: 'Bowie Fairfax', tagline: 'Your intelligence analyst. Markets, competitors, trends — your unfair advantage.',
@@ -160,7 +160,7 @@ const detailed = {
       { area: 'Opportunity Spotting', detail: 'Market gaps, emerging trends, positioning opportunities.' },
     ],
     metrics: [{ value: 'Oxbridge', label: 'Education' }, { value: '2x/wk', label: 'Auto-Research' }, { value: '4', label: 'Frameworks' }, { value: 'Global', label: 'Coverage' }],
-    who: 'Businesses competing blind without competitor or market intelligence.',
+    who: 'A market research firm charges £5,000-£20,000 per project and takes weeks to deliver. Bowie has an Oxford MPhil and Cambridge MBA, and he works for you every week — not once a quarter. He runs Porter\'s Five Forces analysis on your competitors (pricing, features, positioning, vulnerabilities), calculates your Total Addressable Market, Serviceable Addressable Market, and Serviceable Obtainable Market, and performs PESTLE mapping across Political, Economic, Social, Technological, Legal, and Environmental factors. He scans your competitive landscape automatically every Monday and Wednesday, pulling from gov.uk, ONS, SimilarWeb, Google Trends, Crunchbase, and Product Hunt. His findings feed directly into Poppi\'s marketing strategy and Flora\'s content planning. That\'s an intelligence department that never sleeps.',
   },
   angela: {
     fullName: 'Angela Whitworth-Sterling', tagline: 'Your CFO. Books, budgets, tax, and strategy with visibility into every pound.',
@@ -176,7 +176,7 @@ const detailed = {
       { area: 'Strategic Finance', detail: 'Pricing, cost optimization, investment timing, growth financing.' },
     ],
     metrics: [{ value: '6', label: 'Qualifications' }, { value: '4', label: 'Accounting Tools' }, { value: '3', label: 'Tax Types' }, { value: 'Weekly', label: 'Tax Updates' }],
-    who: 'Businesses that don\'t know if they\'re profitable.',
+    who: 'A part-time bookkeeper costs £800-£1,500/month and still can\'t advise you on tax strategy. A qualified accountant costs £2,000-£5,000/month. Angela is ACA, ACCA, and CIMA Strategic qualified — the same credentials as a Big Four accountant — plus Xero Advisor, QuickBooks ProAdvisor Platinum, and Sage 50 Mastery. She connects to Stripe, QuickBooks, Xero, and Sage for real-time financial data across all your accounts. She handles Corporation Tax planning, VAT returns, R&D tax credit claims, and Making Tax Digital compliance. She monitors your cash flow runway and alerts you before problems hit. She generates P&L reports, balance sheets, expense breakdowns, and board-ready summaries. And she gets her tax knowledge refreshed every Monday morning via auto-research from HMRC and gov.uk. That\'s a CFO who never takes their eye off the numbers.',
   },
 }
 
