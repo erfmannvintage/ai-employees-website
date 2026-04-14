@@ -62,8 +62,8 @@ function Hero() {
 function PainPoints() {
   const pains = [
     { problem: 'Your inbox has 100+ unread emails', solution: 'Cecil triages every email, drafts replies, achieves Inbox Zero daily, runs MailerLite campaigns across Gmail, Outlook, Yahoo, Zoho, iCloud, or any SMTP server.', image: '/characters/cecil.png', employee: 'Cecil' },
-    { problem: 'Social media hasn\'t been updated in weeks', solution: 'Flora creates 10+ posts/day across 6 platforms with AI-generated images, TikTok-native video, and trend-aligned scheduling via Zernio.', image: '/characters/flora.png', employee: 'Flora' },
-    { problem: 'Leads are falling through the cracks', solution: 'Hugh discovers leads from 7 free sources across 33 industries — OpenStreetMap, Google Places, directories, social media — then runs SPIN/Challenger/MEDDIC outreach.', image: '/characters/hugh.png', employee: 'Hugh' },
+    { problem: 'Social media hasn\'t been updated in weeks', solution: 'Flora creates 10+ posts/day across 6 platforms with AI-generated images, TikTok-native video, and trend-aligned scheduling with platform-optimized scheduling.', image: '/characters/flora.png', employee: 'Flora' },
+    { problem: 'Leads are falling through the cracks', solution: 'Hugh discovers leads from multiple data sources across any industry — directories, maps, social media, business databases — then runs SPIN/Challenger/MEDDIC outreach.', image: '/characters/hugh.png', employee: 'Hugh' },
     { problem: 'You\'re guessing at your numbers', solution: 'Ava has live Marketer-level GA4 access, YouTube Analytics, Search Console. Attribution modelling, cohort analysis, predictive audiences — not just dashboards.', image: '/characters/ava.png', employee: 'Ava' },
     { problem: 'Blog hasn\'t been touched in months', solution: 'Mabel writes hub-and-spoke SEO content, implements AEO for snippets and GEO for AI search. 15+ Semrush certs, Ahrefs Academy, Google SEO certified.', image: '/characters/mabel.png', employee: 'Mabel' },
     { problem: 'Finances live in a spreadsheet you never open', solution: 'Angela handles Corporation Tax, VAT, R&D credits, MTD compliance via Stripe, QuickBooks, Xero, Sage. ACA, ACCA, CIMA Strategic qualified.', image: '/characters/angela.png', employee: 'Angela' },
@@ -121,12 +121,12 @@ function WhatYouGet() {
     { title: 'Data Hub & Custom Skills', desc: 'Upload business knowledge — emails, sales calls, competitor docs. Then teach employees YOUR workflows with Custom Skills: "When a lead comes in, do X then Y then Z." Stored permanently.' },
     { title: 'Content Calendar & Blog CMS', desc: 'Visual calendar across all platforms. Flora, Mabel, Poppi coordinate here. Built-in Blog CMS with hub-and-spoke architecture, keyword research, Search Console integration.' },
     { title: 'Campaign Templates & Orchestration', desc: '6 pre-built campaigns: Waitlist, Subscriber, Trial, Retention, Win-Back, Custom. Poppi breaks each into employee tasks with plain English explanations — executes across the team automatically.' },
-    { title: 'Lead Discovery Engine', desc: 'Hugh finds leads from 7 free sources: OpenStreetMap, Google Places, social media via Gemini, directory scraping, Wikidata, website enrichment. 33 industry mappings. Optional Companies House API.' },
+    { title: 'Lead Discovery Engine', desc: 'Hugh finds leads from multiple data sources — business directories, mapping services, social media, trade associations, and website enrichment. Works across any industry. Built-in deduplication and contact extraction.' },
     { title: 'Multi-Account Email Manager', desc: 'Unlimited accounts — Gmail, Outlook, Yahoo, Zoho, iCloud, or any SMTP server. Cecil manages all inboxes from one place. Send, receive, triage, draft, run MailerLite campaigns.' },
-    { title: 'AI Image & Video Generation', desc: 'Gemini-powered images for social posts, blog graphics, marketing. Remotion video pipeline for TikTok-native explainer and slideshow videos. Flora auto-generates visuals for every post.' },
+    { title: 'AI Image & Video Generation', desc: 'AI-powered images for social posts, blog graphics, marketing. Video production pipeline for TikTok-native explainer and slideshow videos. Flora auto-generates visuals for every post.' },
     { title: 'Daily Action Plans & Team Overview', desc: 'Morning: 4 numbered steps (approve work, check Team Chat, review plan, check leads). Evening: team accomplishment summary. Dashboard shows every employee\'s current task.' },
     { title: 'Approval Queue', desc: 'Nothing publishes without your say-so. Review every piece of work. Approve, edit, or reject. Filter by Pending/Flagged/Passed. Delete anything. Full control.' },
-    { title: 'Command Centre & Webhooks', desc: 'Custom automations: "When X happens, trigger Y." Webhook endpoints for Zapier, Make, n8n — HMAC-SHA256 signed, auto-disable after 10 failures. 11 event types.' },
+    { title: 'Command Centre & Webhooks', desc: 'Custom automations: "When X happens, trigger Y." Webhook endpoints for Zapier, Make, n8n — Secure signed payloads with automatic failure handling.' },
     { title: 'Proactive Monitoring', desc: 'Angela monitors cash flow weekly. Ava detects traffic anomalies daily. Basil watches churn signals. Rupert tracks compliance deadlines. Bowie scans competitors. Hugh checks pipeline. All automatic.' },
   ]
 
@@ -329,10 +329,10 @@ function Integrations() {
   const integrations = [
     { cat: 'Email & Calendar', items: ['Gmail', 'Outlook', 'Yahoo', 'Zoho', 'iCloud', 'SMTP', 'Calendar', 'MailerLite'], desc: 'Connect unlimited email accounts — any provider. Cecil manages all inboxes, drafts replies, runs MailerLite campaigns. Google Calendar for scheduling and focus time.', color: '#0066FF' },
     { cat: 'Analytics', items: ['GA4 (Live)', 'YouTube Analytics', 'Search Console'], desc: 'Ava has live Marketer-level GA4 access — real-time, not reports. Attribution modelling, cohort analysis, predictive audiences. YouTube metrics. Search Console rankings.', color: '#00CC66' },
-    { cat: 'Social Media', items: ['TikTok', 'Instagram', 'Facebook', 'X', 'YouTube', 'LinkedIn'], desc: 'Flora posts platform-native content across 6 channels via Zernio API. Mandatory format specs for each platform. 10+ posts/day. AI images via Gemini.', color: '#FF1493' },
+    { cat: 'Social Media', items: ['TikTok', 'Instagram', 'Facebook', 'X', 'YouTube', 'LinkedIn'], desc: 'Flora posts platform-native content across 6 channels with platform-optimized scheduling API. Mandatory format specs for each platform. 10+ posts/day. AI-generated branded images.', color: '#FF1493' },
     { cat: 'Finance & Accounting', items: ['Stripe', 'QuickBooks', 'Xero', 'Sage 50'], desc: 'Angela connects to your accounting stack. Auto-connect on save. Corporation Tax, VAT returns, R&D credits, MTD compliance. Cash flow projections and runway alerts.', color: '#FF6600' },
     { cat: 'Legal & Compliance', items: ['gov.uk', 'ICO', 'legislation.gov.uk', 'ASA', 'Companies House'], desc: 'Rupert accesses 5 legal databases for UK GDPR, Consumer Rights Act, EU AI Act, PECR compliance. Advertising standards. Weekly auto-research every Tuesday.', color: '#6C3AFF' },
-    { cat: 'Automation & Workspace', items: ['Webhooks', 'Zapier', 'Make', 'n8n', 'Sheets', 'Drive', 'Docs'], desc: 'Connect to 5,000+ external tools via webhooks. HMAC-SHA256 signed. 11 event types. Google Workspace APIs for document creation and data export.', color: '#00CED1' },
+    { cat: 'Automation & Workspace', items: ['Webhooks', 'Zapier', 'Make', 'n8n', 'Sheets', 'Drive', 'Docs'], desc: 'Connect to 5,000+ external tools via webhooks. Secure signed payloads. Multiple event types. Google Workspace APIs for document creation and data export.', color: '#00CED1' },
   ]
 
   return (

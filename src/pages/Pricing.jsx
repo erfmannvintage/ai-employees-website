@@ -21,7 +21,7 @@ const compRows = [
   { key: 'vibeMode', label: 'Vibe Mode (fully autonomous)', t: 'bool' },
   { key: 'video', label: 'AI Video (TikTok-native)', t: 'bool' },
   { key: 'blogCms', label: 'Built-in Blog CMS + SEO', t: 'bool' },
-  { key: 'leadDiscovery', label: 'Lead Discovery (7 sources, 33 industries)', t: 'bool' },
+  { key: 'leadDiscovery', label: 'Lead Discovery Engine (multi-source)', t: 'bool' },
   { key: 'emailAll', label: 'Multi-Provider Email', t: 'bool' },
   { key: 'liveAnalytics', label: 'Live GA4 + YouTube + Search Console', t: 'bool' },
   { key: 'legal', label: 'Legal & Compliance', t: 'bool' },
@@ -215,82 +215,31 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* Why switch — competitor complaints */}
-      <section style={{ background: '#1a1a2e', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.03) 1.5px, transparent 1.5px)', backgroundSize: '10px 10px', pointerEvents: 'none' }} />
-        <div style={{ ...cx, position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: 48 }}>
-            <p style={{ color: '#FF3366', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Why Switch?</p>
-            <h2 style={{ fontSize: 40, fontWeight: 900, color: '#fff', marginBottom: 12 }}>What customers say about our competitors.</h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.6)', maxWidth: 600, margin: '0 auto' }}>Real reviews from Trustpilot. Real problems we've solved.</p>
+      {/* Common problems with other platforms */}
+      <section style={{ background: '#1a1a2e', padding: '60px 0' }}>
+        <div style={cx}>
+          <div style={{ textAlign: 'center', marginBottom: 32 }}>
+            <h2 style={{ fontSize: 32, fontWeight: 900, color: '#fff', marginBottom: 8 }}>Problems with other AI employee platforms</h2>
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.5)' }}>Common issues reported by users of competing products — and how we do things differently.</p>
           </div>
 
-          {/* Sintra complaints */}
-          <div style={{ marginBottom: 48 }}>
-            <h3 style={{ color: '#FF3366', fontWeight: 700, fontSize: 18, marginBottom: 20 }}>Sintra.ai — What Their Customers Say</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
-              {[
-                { quote: 'Credits are expensive and very fast gone.', issue: 'Credit-based pricing', fix: 'We use simple monthly task limits (500/5,000/unlimited). No credits. No surprises. No "money grab" feeling.' },
-                { quote: 'Different AI from Sintra don\'t work together normally.', issue: 'No collaboration', fix: 'Our employees have 15+ cross-review workflows, 5 content chains, team knowledge sharing, and daily check-ins. Real teamwork.' },
-                { quote: 'Didn\'t deliver any real value despite promising features.', issue: 'Overpromises', fix: 'We back everything with specifics: 30+ certifications, 7 lead sources, live GA4 access, 5-layer learning. Not vague promises.' },
-                { quote: 'Used 550 credits in a couple hour session against a 350 monthly allowance. Bait and switch.', issue: 'Hidden limits', fix: 'Our task limits are generous and transparent. Growth plan gives you 5,000 tasks/month — most businesses use 800-1,500.' },
-              ].map((c) => (
-                <div key={c.quote} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 16, padding: 24, border: '1px solid rgba(255,255,255,0.08)' }}>
-                  <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, fontStyle: 'italic', marginBottom: 12 }}>"{c.quote}"</p>
-                  <p style={{ color: '#FF3366', fontWeight: 700, fontSize: 12, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{c.issue}</p>
-                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 14, lineHeight: 1.6 }}>
-                    <span style={{ color: '#00CC66', fontWeight: 700 }}>Our fix:</span> {c.fix}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Marblism complaints */}
-          <div style={{ marginBottom: 48 }}>
-            <h3 style={{ color: '#FF3366', fontWeight: 700, fontSize: 18, marginBottom: 20 }}>Marblism — What Their Customers Say</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
-              {[
-                { quote: 'Doesn\'t generate and follow proper instructions and is all full of glitch.', issue: 'Unreliable agents', fix: 'Our Brain system stores 200+ permanent insights per employee. Cross-review catches errors. 5-layer self-learning means they get better, not worse.' },
-                { quote: 'Has such little memory it is pointless.', issue: 'No memory', fix: 'Every employee has a Brain with permanent knowledge, business context from 100+ profile fields, Data Hub uploads, and Custom Skills. They remember everything.' },
-                { quote: 'Has put our brand at risk with absurd emails.', issue: 'Brand safety', fix: 'Nothing publishes without your approval. Every task is cross-reviewed by 1-3 peer employees before it reaches your Approval Queue.' },
-                { quote: 'Spent most of the day monitoring and making corrections.', issue: 'Needs constant oversight', fix: 'Vibe Mode lets employees work autonomously. Approval Queue gives you oversight without micromanagement. Daily action plans keep you informed, not overwhelmed.' },
-              ].map((c) => (
-                <div key={c.quote} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 16, padding: 24, border: '1px solid rgba(255,255,255,0.08)' }}>
-                  <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, fontStyle: 'italic', marginBottom: 12 }}>"{c.quote}"</p>
-                  <p style={{ color: '#FF3366', fontWeight: 700, fontSize: 12, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{c.issue}</p>
-                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 14, lineHeight: 1.6 }}>
-                    <span style={{ color: '#00CC66', fontWeight: 700 }}>Our fix:</span> {c.fix}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Monday complaints */}
-          <div>
-            <h3 style={{ color: '#FF3366', fontWeight: 700, fontSize: 18, marginBottom: 20 }}>Monday.com — What Their Customers Say</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
-              {[
-                { quote: 'The pricing structure is VERY misleading. You can only purchase 3 seats as a minimum.', issue: 'Hidden seat minimums', fix: 'Transparent pricing: £49, £99, or £199. No hidden seat minimums. Starter includes 1 seat, Growth includes 3, Enterprise unlimited.' },
-                { quote: 'No real support! Don\'t spend your money on this app. Totally horrible!!', issue: 'No human support', fix: 'Priority support on Growth+. Real humans, not chatbots. 24-hour response time on business days.' },
-              ].map((c) => (
-                <div key={c.quote} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 16, padding: 24, border: '1px solid rgba(255,255,255,0.08)' }}>
-                  <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14, fontStyle: 'italic', marginBottom: 12 }}>"{c.quote}"</p>
-                  <p style={{ color: '#FF3366', fontWeight: 700, fontSize: 12, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.05em' }}>{c.issue}</p>
-                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 14, lineHeight: 1.6 }}>
-                    <span style={{ color: '#00CC66', fontWeight: 700 }}>Our fix:</span> {c.fix}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ textAlign: 'center', marginTop: 48 }}>
-            <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 13, marginBottom: 20 }}>All quotes from verified Trustpilot reviews.</p>
-            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 16, borderRadius: 14, padding: '16px 36px', textDecoration: 'none' }}>
-              Try AI Employees Free — No Credits, No Risk
-            </a>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+            {[
+              { problem: 'Credit-based pricing', desc: 'Some platforms use confusing credit systems where allowances vanish within hours. Users describe it as feeling punished for actually using the product.', fix: 'We use simple monthly task limits: 500, 5,000, or unlimited. No credits. No surprises.' },
+              { problem: 'AI agents don\'t collaborate', desc: 'On most platforms, each AI agent works in isolation. There\'s no cross-checking, no knowledge sharing, no team coordination.', fix: 'Our employees cross-review each other\'s work, share insights, run 5 automated content chains, and coordinate via a team communication system.' },
+              { problem: 'Agents forget everything', desc: 'Users report AI agents with minimal memory that forget instructions, require constant re-prompting, and can\'t learn from past work.', fix: 'Every employee has a permanent Brain with business knowledge, learns from every task, gets peer feedback stored permanently, and self-assesses monthly.' },
+              { problem: 'Brand safety risks', desc: 'Some platforms publish content automatically without review, leading to embarrassing or brand-damaging outputs reaching customers.', fix: 'Nothing publishes without your approval. Every task goes through peer review by 1-3 colleagues before reaching your Approval Queue.' },
+              { problem: 'Constant monitoring needed', desc: 'Users report spending most of their day correcting AI output rather than saving time. The tool adds complexity instead of removing it.', fix: 'Vibe Mode lets employees work autonomously. Daily action plans and the Approval Queue give you oversight without micromanagement.' },
+              { problem: 'Missing business functions', desc: 'Many platforms cover marketing and content but lack finance, legal, research, and analytics specialists — leaving gaps you still need to fill.', fix: 'All 11 employees cover 9 business domains: marketing, sales, support, content, analytics, legal, ads, research, and finance. No gaps.' },
+            ].map((c) => (
+              <div key={c.problem} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 16, padding: 24, border: '1px solid rgba(255,255,255,0.06)' }}>
+                <h3 style={{ color: '#FF3366', fontWeight: 700, fontSize: 14, marginBottom: 8 }}>{c.problem}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 13, lineHeight: 1.6, marginBottom: 12 }}>{c.desc}</p>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13, lineHeight: 1.6 }}>
+                  <span style={{ color: '#00CC66', fontWeight: 700 }}>How we're different:</span> {c.fix}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
