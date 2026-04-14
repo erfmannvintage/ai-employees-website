@@ -20,10 +20,10 @@ function Hero() {
               <br /><span style={{ color: '#6C3AFF' }}>Hire your AI team.</span>
             </h1>
             <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7, marginBottom: 16, maxWidth: 500 }}>
-              You're the CEO, marketer, sales rep, support agent, content creator, bookkeeper, and legal reviewer — all at once. It's not sustainable.
+              You're the CEO, marketer, sales rep, support agent, content creator, bookkeeper, and legal reviewer — all at once. <strong style={{ color: '#1a1a2e' }}>Your competitors aren't doing this anymore.</strong> They've automated.
             </p>
             <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7, marginBottom: 36, maxWidth: 500 }}>
-              AI Employees gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> who handle marketing, sales, support, content, analytics, legal, advertising, research, and finance. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong>.
+              AI Employees gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. While you sleep. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong> — less than one hour of a freelancer.
             </p>
             <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
               <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
@@ -282,6 +282,67 @@ function LearningSystem() {
 /* ============================================
    SECTION 7: CONTENT CHAINS — Warm yellow bg, side-by-side with character
    ============================================ */
+function MobileApp() {
+  return (
+    <section style={{ background: '#6C3AFF', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.06) 1.5px, transparent 1.5px)', backgroundSize: '10px 10px', pointerEvents: 'none' }} />
+      <div style={{ ...cx, position: 'relative', zIndex: 1 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}>
+          <div>
+            <div style={{ display: 'inline-block', background: 'rgba(255,255,255,0.15)', borderRadius: 100, padding: '6px 16px', marginBottom: 20 }}>
+              <span style={{ color: '#fff', fontWeight: 600, fontSize: 13 }}>📱 Coming Soon</span>
+            </div>
+            <h2 style={{ fontSize: 44, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: 20 }}>
+              Your AI team works while you're on the go.
+            </h2>
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 12 }}>
+              <strong style={{ color: '#fff' }}>You're at a meeting.</strong> Cecil just triaged your inbox, Flora posted 10 pieces of content, and Hugh found 15 new leads. You check your phone — everything's in the Approval Queue, waiting for one tap.
+            </p>
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 12 }}>
+              <strong style={{ color: '#fff' }}>You're on the school run.</strong> Angela flagged a cash flow issue. You voice-message her: "Move the payment to next week." Done. 30 seconds.
+            </p>
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 24 }}>
+              <strong style={{ color: '#fff' }}>You're on holiday.</strong> Your business doesn't stop because you did. 11 employees keep working, keep learning, keep delivering. You check in when you want, not because you have to.
+            </p>
+
+            <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.6)', marginBottom: 24 }}>
+              Approve work, chat with employees, check analytics, review leads — all from your pocket. Because the best business tool is the one you always have with you.
+            </p>
+
+            {/* Store badges */}
+            <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+              {/* Apple App Store badge */}
+              <div style={{ background: '#000', borderRadius: 10, padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 10, opacity: 0.7 }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <div>
+                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.7)' }}>Coming soon on</div>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: '#fff' }}>App Store</div>
+                </div>
+              </div>
+
+              {/* Google Play badge */}
+              <div style={{ background: '#000', borderRadius: 10, padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 10, opacity: 0.7 }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm.91-.91L19.65 12 17.72 10.79l-2.54 2.54 2.54 2.54zM6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
+                <div>
+                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.7)' }}>Coming soon on</div>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: '#fff' }}>Google Play</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Image */}
+          <div>
+            <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '3px solid rgba(255,255,255,0.2)' }}>
+              <img src="/mobile-app.png" alt="AI Employees on the go" style={{ width: '100%', display: 'block' }} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function ContentChains() {
   const chains = [
     { from: 'Mabel writes a blog post', to: 'Flora automatically promotes it across social media' },
@@ -547,11 +608,14 @@ function CTA() {
       <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.08) 1.5px, transparent 1.5px)', backgroundSize: '12px 12px', pointerEvents: 'none' }} />
       <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 32px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
         <h2 style={{ fontSize: 52, fontWeight: 900, color: '#fff', lineHeight: 1.15, marginBottom: 20 }}>
-          Stop wearing every hat.
-          <br />Hire your AI workforce.
+          Every day you wait is a day
+          <br />your competitors gain ground.
         </h2>
-        <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.7)', maxWidth: 560, margin: '0 auto 40px' }}>
+        <p style={{ fontSize: 18, color: 'rgba(255,255,255,0.7)', maxWidth: 560, margin: '0 auto 16px' }}>
           77% of businesses say AI is transformational but only 5% use it. The gap isn't desire — it's complexity. We eliminated the complexity.
+        </p>
+        <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.5)', maxWidth: 480, margin: '0 auto 40px' }}>
+          Right now, while you're reading this, someone in your industry is deploying AI to find your customers, create your content, and close your deals. The question isn't whether to start — it's whether you can afford to wait.
         </p>
         <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#6C3AFF', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none' }}>
           Get Started Free <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
@@ -572,6 +636,7 @@ export default function Home() {
       <CrossReview />
       <LearningSystem />
       <ContentChains />
+      <MobileApp />
       <Integrations />
       <Stats />
       <Testimonials />
