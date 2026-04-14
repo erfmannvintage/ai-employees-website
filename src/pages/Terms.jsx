@@ -3,7 +3,7 @@ export default function Terms() {
     { t: '1. Agreement', c: 'By using AI Employees you agree to these Terms. If not, don\'t use the Service.' },
     { t: '2. Service', c: 'AI-powered workforce platform with 11 specialized employees for marketing, sales, support, content, analytics, legal, advertising, research, and finance.' },
     { t: '3. Accounts', c: 'Must be 18+, provide accurate info, maintain security, notify of unauthorised use. Responsible for all account activity.' },
-    { t: '4. Billing', c: 'Tiered plans, monthly or annual. 14-day free trial. Payment via Stripe. Auto-renewal unless cancelled.' },
+    { t: '4. Billing', c: 'Tiered plans, monthly or annual. 7-day free trial. Payment via Stripe. Auto-renewal unless cancelled.' },
     { t: '5. Acceptable Use', c: 'No unlawful use, harmful content, reverse engineering, server interference, spam, credential sharing, or unauthorised resale.' },
     { t: '6. AI Content', c: 'Provided as-is. Review before publishing. You retain ownership and responsibility for accuracy and compliance.' },
     { t: '7. IP', c: 'Service owned by AI Employees. Subscription grants limited, non-exclusive, non-transferable licence.' },

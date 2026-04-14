@@ -4,8 +4,8 @@ import { plans } from '../data/employees'
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
 const competitors = [
-  { name: 'AI Employees', sub: 'Starter £49', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (500)', crossCollab: true, contentChains: false, vibeMode: false, video: false, blogCms: false, leadDiscovery: false, liveAnalytics: false, legal: true, finance: true, ads: true, research: true, autoResearch: false, selfLearning: true, webhooks: false, emailAll: true, trial: '14 days' },
-  { name: 'AI Employees', sub: 'Growth £99', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (5,000)', crossCollab: true, contentChains: true, vibeMode: true, video: true, blogCms: true, leadDiscovery: true, liveAnalytics: true, legal: true, finance: true, ads: true, research: true, autoResearch: true, selfLearning: true, webhooks: true, emailAll: true, trial: '14 days' },
+  { name: 'AI Employees', sub: 'Starter £49', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (500)', crossCollab: true, contentChains: false, vibeMode: false, video: false, blogCms: false, leadDiscovery: false, liveAnalytics: false, legal: true, finance: true, ads: true, research: true, autoResearch: false, selfLearning: true, webhooks: false, emailAll: true, trial: '7 days' },
+  { name: 'AI Employees', sub: 'Growth £99', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (5,000)', crossCollab: true, contentChains: true, vibeMode: true, video: true, blogCms: true, leadDiscovery: true, liveAnalytics: true, legal: true, finance: true, ads: true, research: true, autoResearch: true, selfLearning: true, webhooks: true, emailAll: true, trial: '7 days' },
   { name: 'Sintra.ai', sub: '~£77/mo', us: false, employees: '12+ helpers', taskModel: 'Credits (350/mo — runs out fast)', crossCollab: false, contentChains: false, vibeMode: false, video: false, blogCms: false, leadDiscovery: false, liveAnalytics: false, legal: false, finance: false, ads: true, research: false, autoResearch: false, selfLearning: false, webhooks: false, emailAll: false, trial: 'None' },
   { name: 'Marblism', sub: '~£19-35/mo', us: false, employees: '6 employees', taskModel: 'Simple monthly', crossCollab: false, contentChains: false, vibeMode: false, video: false, blogCms: true, leadDiscovery: false, liveAnalytics: false, legal: true, finance: false, ads: false, research: false, autoResearch: false, selfLearning: false, webhooks: false, emailAll: false, trial: '7 days' },
 ]
@@ -44,7 +44,7 @@ export default function Pricing() {
           <p style={{ fontSize: 18, color: '#6b6b8d', maxWidth: 650, margin: '0 auto 8px' }}>
             Unlike competitors who use confusing credit systems, we use simple monthly task limits. All plans include all 11 AI employees — because your team needs the full squad to collaborate properly.
           </p>
-          <p style={{ fontSize: 15, color: '#9999aa' }}>All prices in GBP. 14-day free trial. No credit card required.</p>
+          <p style={{ fontSize: 15, color: '#9999aa' }}>All prices in GBP. 7-day free trial. No credit card required.</p>
         </div>
       </section>
 
@@ -210,7 +210,7 @@ export default function Pricing() {
             <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
               Start Your Free Trial
             </a>
-            <p style={{ color: '#9999aa', fontSize: 13, marginTop: 12 }}>14-day free trial · No credit card · No credits to run out</p>
+            <p style={{ color: '#9999aa', fontSize: 13, marginTop: 12 }}>7-day free trial · No credit card · No credits to run out</p>
           </div>
         </div>
       </section>

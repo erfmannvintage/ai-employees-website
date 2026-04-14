@@ -43,7 +43,7 @@ const categories = [
     name: 'Billing & Plans',
     icon: '💳',
     qs: [
-      { q: 'How does the free trial work?', a: '14-day full access to your chosen plan. No credit card required. At the end of the trial, choose a plan to continue or your account pauses — no surprise charges, no data loss. Your data is retained for 30 days in case you resubscribe.' },
+      { q: 'How does the free trial work?', a: '7-day full access to your chosen plan. No credit card required. At the end of the trial, choose a plan to continue or your account pauses — no surprise charges, no data loss. Your data is retained for 30 days in case you resubscribe.' },
       { q: 'Can I change plans?', a: 'Upgrade or downgrade at any time. Changes take effect on your next billing cycle. If you upgrade, you get immediate access to additional employees and features.' },
       { q: 'Is there annual billing?', a: 'Yes — save 20% with annual billing compared to monthly. Contact us for enterprise custom pricing.' },
       { q: 'What\'s the refund policy?', a: '30-day money-back guarantee on all paid plans. Not satisfied within 30 days of your first payment? Contact billing@aiemployees.com for a full refund. No questions asked, no hoops to jump through.' },

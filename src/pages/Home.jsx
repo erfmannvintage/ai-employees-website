@@ -32,7 +32,7 @@ function Hero() {
               <Link to="/pricing" style={{ display: 'inline-flex', alignItems: 'center', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', color: '#1a1a2e', border: '2px solid #e0e0e0' }}>View Pricing</Link>
             </div>
             <div style={{ display: 'flex', gap: 24, fontSize: 13, color: '#9999aa' }}>
-              {['No credit card', '14-day free trial', 'Cancel anytime'].map((t) => (
+              {['No credit card', '7-day free trial', 'Cancel anytime'].map((t) => (
                 <span key={t} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                   <svg width="16" height="16" fill="#00CC66" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>{t}
                 </span>
@@ -432,7 +432,7 @@ function PricingSection() {
         <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 48px' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Pricing</p>
           <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', marginBottom: 12 }}>All 11 employees. Every plan. No credits.</h2>
-          <p style={{ fontSize: 17, color: '#6b6b8d' }}>Simple monthly task limits, not confusing credits. All prices in GBP. 14-day free trial, no credit card.</p>
+          <p style={{ fontSize: 17, color: '#6b6b8d' }}>Simple monthly task limits, not confusing credits. All prices in GBP. 7-day free trial, no credit card.</p>
         </div>
 
         <div style={{ background: 'rgba(108,58,255,0.06)', borderRadius: 32, padding: 28 }}>
@@ -508,7 +508,7 @@ function FAQ() {
     { q: 'How is this different from ChatGPT or other AI tools?', a: 'ChatGPT is a general-purpose chatbot. AI Employees are specialized workers with real qualifications (HubSpot, Google Ads certs, ACA, ACCA, etc.), permanent memory of your business, cross-team collaboration, autonomous execution, and integration with your actual tools (email, analytics, accounting, social media). They don\'t just chat — they DO the work.' },
     { q: 'Do I need any technical skills?', a: 'None. Everything works through simple chat or voice. No coding, no prompt engineering, no API setup. Tell your employees what you need in plain English and they deliver. The 6-step onboarding wizard takes 2 minutes.' },
     { q: 'How do the employees learn my business?', a: 'Through your Business Profile (100+ fields about your business), Data Hub (upload your documents, emails, competitor info), and Custom Skills (teach them your specific workflows). Plus a 5-layer self-learning pipeline that extracts insights from every task, peer feedback, weekly auto-research, knowledge refreshes, and monthly self-assessments.' },
-    { q: 'What\'s included in the free trial?', a: '14 days of full access at Growth-level (all features, all employees, 5,000 tasks). No credit card required. At the end, choose a plan or your account pauses — no surprise charges. Your data is kept for 30 days in case you come back.' },
+    { q: 'What\'s included in the free trial?', a: '7 days of full access at Growth-level (all features, all employees, 5,000 tasks). No credit card required. At the end, choose a plan or your account pauses — no surprise charges. Your data is kept for 30 days in case you come back.' },
     { q: 'Can I cancel anytime?', a: 'Yes. Cancel from your account settings at any time. No lock-in contracts, no cancellation fees. You keep access until the end of your billing period. We also offer a 30-day money-back guarantee on all paid plans.' },
     { q: 'What integrations are supported?', a: 'Email (Gmail, Outlook, Yahoo, Zoho, iCloud, SMTP), Google Calendar, MailerLite, GA4, YouTube Analytics, Search Console, Stripe, QuickBooks, Xero, Sage, plus webhooks for Zapier, Make, n8n, and Google Workspace (Sheets, Drive, Docs).' },
     { q: 'How do you handle security and privacy?', a: 'Bank-grade encryption, database-level security with complete data isolation between users, GDPR compliant. Your data is never sold or shared. AI models don\'t train on your data. You own everything you create.' },
@@ -556,7 +556,7 @@ function CTA() {
         <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#6C3AFF', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none' }}>
           Get Started Free <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
         </a>
-        <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 13, marginTop: 20 }}>No credit card · 14-day trial · Cancel anytime</p>
+        <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 13, marginTop: 20 }}>No credit card · 7-day trial · Cancel anytime</p>
       </div>
     </section>
   )
