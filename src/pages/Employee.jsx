@@ -219,8 +219,9 @@ export default function Employee() {
             <div>
               <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>{emp.role}</p>
               <h1 style={{ fontSize: 56, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', lineHeight: 1.08, marginBottom: 8 }}>{emp.name}</h1>
-              <p style={{ color: '#9999aa', fontSize: 14, marginBottom: 20 }}>{detail.fullName}</p>
-              <p style={{ color: '#6b6b8d', fontSize: 18, lineHeight: 1.7, marginBottom: 32 }}>{detail.tagline}</p>
+              <p style={{ color: '#9999aa', fontSize: 14, marginBottom: 16 }}>{detail.fullName}</p>
+              <p style={{ color: '#1a1a2e', fontSize: 18, lineHeight: 1.7, marginBottom: 16, fontWeight: 500 }}>{detail.tagline}</p>
+              <p style={{ color: '#6b6b8d', fontSize: 15, lineHeight: 1.7, marginBottom: 28 }}>{emp.description}</p>
 
               {/* Qualifications as tags */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 12 }}>
