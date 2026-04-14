@@ -42,7 +42,7 @@ function Hero() {
           {/* Pop-art office scene — AI generated */}
           <div style={{ position: 'relative' }}>
             <div style={{ borderRadius: 24, overflow: 'hidden', border: '4px solid #1a1a2e', boxShadow: '8px 8px 0 #1a1a2e' }}>
-              <img src="/hero-office-2.png" alt="AI Employees working in pop-art office" style={{ width: '100%', display: 'block' }} />
+              <img src="/hero-office.png" alt="AI Employees working in pop-art office" style={{ width: '100%', display: 'block' }} />
             </div>
             {/* Floating badge */}
             <div style={{ position: 'absolute', bottom: -16, left: -16, background: '#fff', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.12)', border: '3px solid #1a1a2e', padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 12, zIndex: 10 }}>
@@ -177,7 +177,7 @@ function TeamShowcase() {
               <div style={{ padding: 16, background: '#fff' }}>
                 <h3 style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 15 }}>{emp.name}</h3>
                 <p style={{ color: '#6C3AFF', fontSize: 11, fontWeight: 600, marginTop: 2 }}>{emp.role}</p>
-                <p style={{ color: '#9999aa', fontSize: 13, marginTop: 6, lineHeight: 1.5, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{emp.description}</p>
+                <p style={{ color: '#6b6b8d', fontSize: 13, marginTop: 8, lineHeight: 1.6 }}>{emp.description}</p>
               </div>
             </Link>
           ))}
@@ -425,34 +425,58 @@ function Testimonials() {
 /* ============================================
    SECTION 11: PRICING — Gray bg
    ============================================ */
-function PricingPreview() {
-  const plan = plans[1]
+function PricingSection() {
   return (
     <section style={{ background: '#fafafa', padding: '100px 0' }}>
       <div style={cx}>
-        <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto 48px' }}>
+        <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 48px' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Pricing</p>
-          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em' }}>11 AI employees for less than one hour of a freelancer.</h2>
+          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', marginBottom: 12 }}>All 11 employees. Every plan. From £49/mo.</h2>
+          <p style={{ fontSize: 17, color: '#6b6b8d' }}>Less than one hour of a freelancer. All prices in GBP. 14-day free trial, no credit card.</p>
         </div>
-        <div style={{ maxWidth: 480, margin: '0 auto' }}>
-          <div style={{ background: '#fff', borderRadius: 28, padding: 40, border: '2px solid #6C3AFF', boxShadow: '0 8px 40px rgba(108,58,255,0.12)', position: 'relative' }}>
-            <div style={{ position: 'absolute', top: -14, left: '50%', transform: 'translateX(-50%)', background: '#6C3AFF', color: '#fff', fontSize: 13, fontWeight: 600, borderRadius: 100, padding: '6px 20px' }}>{plan.badge}</div>
-            <div style={{ textAlign: 'center', marginBottom: 28, marginTop: 8 }}>
-              <h3 style={{ fontWeight: 700, fontSize: 20, color: '#1a1a2e' }}>{plan.name}</h3>
-              <div style={{ margin: '12px 0' }}><span style={{ fontSize: 64, fontWeight: 900, color: '#1a1a2e' }}>{plan.currency}{plan.price}</span><span style={{ fontSize: 18, color: '#9999aa' }}>/{plan.period}</span></div>
-              <p style={{ color: '#6b6b8d', fontSize: 15 }}>{plan.description}</p>
-            </div>
-            <ul style={{ listStyle: 'none', marginBottom: 28 }}>
-              {plan.features.slice(0, 6).map((f) => (
-                <li key={f} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '8px 0' }}>
-                  <svg width="20" height="20" fill="#00CC66" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-                  <span style={{ color: '#3d3d5c', fontSize: 15 }}>{f}</span>
-                </li>
-              ))}
-            </ul>
-            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textAlign: 'center', background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 16, borderRadius: 14, padding: '16px 0', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>Start Free Trial</a>
+
+        <div style={{ background: 'rgba(108,58,255,0.06)', borderRadius: 32, padding: 28 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+            {plans.map((p) => (
+              <div key={p.name} style={{ background: '#fff', borderRadius: 24, overflow: 'hidden', border: p.highlight ? '2px solid #6C3AFF' : '1px solid rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 16px rgba(0,0,0,0.04)' }}>
+                <div style={{ height: 160, overflow: 'hidden', position: 'relative' }}>
+                  <img src={p.image} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  {p.badge && <div style={{ position: 'absolute', top: 10, right: 10, background: '#6C3AFF', color: '#fff', fontSize: 11, fontWeight: 700, padding: '4px 12px', borderRadius: 8 }}>{p.badge}</div>}
+                </div>
+                <div style={{ padding: 24, flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <h3 style={{ fontWeight: 800, fontSize: 18, color: '#1a1a2e', marginBottom: 4 }}>{p.name}</h3>
+                  <div style={{ marginBottom: 4 }}>
+                    <span style={{ fontSize: 42, fontWeight: 900, color: '#1a1a2e' }}>{p.currency}{p.price}</span>
+                    <span style={{ fontSize: 14, color: '#9999aa' }}>/{p.period}</span>
+                  </div>
+                  <p style={{ fontSize: 12, color: '#00CC66', fontWeight: 600, marginBottom: 12 }}>or {p.currency}{p.annualPrice}/{p.period} annually</p>
+                  <p style={{ fontSize: 13, color: '#6b6b8d', marginBottom: 16, lineHeight: 1.5 }}>{p.description}</p>
+
+                  <div style={{ background: '#fafafa', borderRadius: 10, padding: '8px 12px', marginBottom: 16, display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <span style={{ fontSize: 14 }}>👥</span>
+                    <span style={{ fontWeight: 700, fontSize: 13, color: '#1a1a2e' }}>All 11 AI Employees</span>
+                  </div>
+
+                  <ul style={{ listStyle: 'none', marginBottom: 16, flex: 1 }}>
+                    {p.features.slice(0, 6).map((f) => (
+                      <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 8, padding: '4px 0' }}>
+                        <svg width="14" height="14" fill="#00CC66" viewBox="0 0 20 20" style={{ marginTop: 3, flexShrink: 0 }}><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                        <span style={{ fontSize: 12, color: '#3d3d5c' }}>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textAlign: 'center', background: p.highlight ? '#6C3AFF' : '#fff', color: p.highlight ? '#fff' : '#1a1a2e', fontWeight: 600, fontSize: 14, borderRadius: 12, padding: '12px 0', textDecoration: 'none', border: p.highlight ? 'none' : '2px solid #e0e0e0', boxShadow: p.highlight ? '0 4px 20px rgba(108,58,255,0.3)' : 'none' }}>
+                    {p.cta}
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: 24 }}><Link to="/pricing" style={{ color: '#6C3AFF', fontWeight: 600, textDecoration: 'none', fontSize: 15 }}>See all 3 plans →</Link></div>
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: 24 }}>
+          <Link to="/pricing" style={{ color: '#6C3AFF', fontWeight: 600, textDecoration: 'none', fontSize: 15 }}>See full pricing details & competitor comparison →</Link>
         </div>
       </div>
     </section>
@@ -487,7 +511,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <PainPoints />
+      {/* PainPoints removed — info moved to employee cards */}
       <WhatYouGet />
       <TeamShowcase />
       <CrossReview />
@@ -496,7 +520,7 @@ export default function Home() {
       <Integrations />
       <Stats />
       <Testimonials />
-      <PricingPreview />
+      <PricingSection />
       <CTA />
     </>
   )
