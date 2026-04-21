@@ -1,0 +1,33 @@
+[build]
+  command = "PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install chromium && npm run build:ssg"
+  publish = "dist"
+
+[build.environment]
+  PLAYWRIGHT_BROWSERS_PATH = "0"
+  NODE_VERSION = "22"
+
+# Cache Playwright browsers inside node_modules (which Netlify caches between builds)
+# so Chromium isn't re-downloaded every deploy.
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"

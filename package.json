@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:ssg": "vite build && node scripts/prerender.mjs",
+    "prerender": "node scripts/prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -28,6 +30,8 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
+    "playwright": "^1.59.1",
+    "serve-handler": "^6.1.7",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.4"
   }
