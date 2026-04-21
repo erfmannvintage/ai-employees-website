@@ -19,10 +19,10 @@ const categories = [
     name: 'Your AI Employees',
     icon: '👥',
     qs: [
-      { q: 'Who are the 11 AI employees?', a: 'Cecil (Executive Assistant — email, calendar, MailerLite), Flora (Social Media — 10+ posts/day across 6 platforms), Basil (Customer Support — 24/7, HEARD method), Hugh (Sales — multi-source lead discovery, any industry), Mabel (SEO Blog Writer — hub-and-spoke, AEO, GEO), Rupert (Legal — UK GDPR, contracts, compliance), Poppi (Marketing Strategy — AARRR funnels, team manager), Ava (Analytics — live GA4, attribution, predictive), Raymond (Paid Ads — all 9 Google certs, Meta), Bowie (Research — Oxford/Cambridge, PESTLE, Porter\'s), Angela (CFO — ACA, ACCA, CIMA, Stripe, QuickBooks).' },
+      { q: 'Who are the 11 AI employees?', a: 'Cecil (Executive Assistant — email, calendar, MailerLite), Flora (Social Media — 10+ posts/day across 6 platforms), Basil (Customer Support — 24/7, HEARD method), Hugh (Sales — multi-source lead discovery, any industry), Mabel (SEO Blog Writer — hub-and-spoke, AEO, GEO), Rupert (Legal — UK GDPR, contracts, compliance), Poppi (Marketing Strategy — AARRR funnels, team manager), Ava (Analytics — live GA4, attribution, predictive), Raymond (Paid Ads — all 9 Google certs, Meta), Bowie (Research — Oxford/Cambridge, PESTLE, Porter\'s), Angela (CFO — ACA, ACCA, CIMA, Stripe, QuickBooks). See full CVs on the Team page.' },
       { q: 'Can they work together?', a: 'Yes — cross-team collaboration is a core feature. Every task is cross-reviewed by 1-3 peer employees before reaching your Approval Queue. Flora\'s content gets strategy-checked by Poppi. Hugh\'s outreach gets legal-reviewed by Rupert. Mabel\'s blog gets SEO-checked by Poppi then repurposed by Flora. When a peer flags an issue, the correction is stored permanently in the original employee\'s brain.' },
       { q: 'Do they learn my business?', a: 'Yes, through 3 channels: your Business Profile (100+ fields), Data Hub (upload any file type — documents, PDFs, spreadsheets, images, voice notes, sales call recordings, competitor research, marketing materials), and Custom Skills (teach them YOUR specific workflows). Plus the 5-layer learning pipeline: they learn from every task, peer feedback, weekly auto-research (6 tasks/week), weekly knowledge refresh, and monthly self-assessments. Proficiency auto-upgrades from Foundational to Expert.' },
-      { q: 'Do all plans include all 11 employees?', a: 'Yes — every plan includes all 11 AI employees. The cross-review and content chain systems require the full team to work properly. Plans differ by task limits (500/5,000/unlimited), advanced features (Vibe Mode, content chains, lead discovery, etc.), and user seats (1/3/unlimited).' },
+      { q: 'Do all plans include all 11 employees?', a: 'Yes — every plan includes all 11 AI employees and every integration. The cross-review and content chain systems require the full team to work properly. Plans differ by task limits (500/5,000/unlimited), advanced features (Vibe Mode, content chains, lead discovery, etc.), and user seats (1/3/unlimited). See the pricing page for the full comparison.' },
       { q: 'What tools does each employee have?', a: 'Every employee has: Chat (with Voice + Vibe Mode — attach any file including audio, video, spreadsheets, presentations), Today\'s Tasks, Output & Review, Images (AI generation), Schedule (week grid + deadlines), Calendar (Google Calendar), Work Log, Media Library (images, video, and audio with playback), and Brain (knowledge base editor with Import File — extracts text from Word, Excel, PowerPoint, and PDFs automatically). Some have exclusive tools: Cecil has Email/Compose/MailerLite, Flora has Content Calendar, Hugh has Customer Pipeline, Mabel has Blog CMS, Ava has Analytics, Angela has Finance Dashboard.' },
       { q: 'What are the content chains?', a: '5 automated workflows where one employee\'s completed work triggers another\'s task: Mabel blogs → Flora promotes on social. Flora creates campaign → Hugh uses in outreach. Bowie publishes research → Poppi updates strategy. Hugh finds leads → Cecil drafts welcome emails. Ava reports analytics → Flora adjusts content. These fire automatically and post to Team Chat.' },
     ],
@@ -35,7 +35,7 @@ const categories = [
       { q: 'What analytics integrations are there?', a: 'Ava has live Marketer-level access to Google Analytics 4 — real-time data, not just reports. Plus YouTube Analytics for video performance and Google Search Console for rankings, indexing, and CTR. She does attribution modelling, cohort analysis, predictive audiences, anomaly detection, and builds executive dashboards.' },
       { q: 'What social media platforms are supported?', a: 'Flora posts across TikTok, Instagram, Facebook, X (Twitter), YouTube, and LinkedIn with platform-optimized scheduling. She has mandatory format specs for each platform (dimensions, character limits, hashtag rules). 10+ posts/day with optimal timing. AI-generated branded images for every post. Video production pipeline for TikTok-native explainers and slideshow videos.' },
       { q: 'What accounting tools integrate?', a: 'Angela connects to Stripe, QuickBooks, Xero, and Sage 50 for real-time financial data. Auto-connect on save from your Business Profile. She handles UK Corporation Tax, VAT returns, R&D tax credit claims, and Making Tax Digital (MTD) compliance. Cash flow projections, runway alerts, P&L reports.' },
-      { q: 'Can I connect external tools?', a: 'Yes — the Command Centre lets you build custom automations and create webhook endpoints for Zapier, Make, n8n, and any other tool. Secure signed payloads with automatic failure handling. Plus Google Workspace APIs (Sheets, Drive, Docs) for document creation and data export.' },
+      { q: 'Can I connect external tools?', a: 'Yes — the Command Centre lets you build custom automations and create webhook endpoints for Zapier, Make, n8n, and any other tool. Secure HMAC-signed payloads with automatic failure handling. Plus Google Workspace APIs (Sheets, Drive, Docs) for document creation and data export. See the integrations page for the full list.' },
       { q: 'How does lead discovery work?', a: 'Hugh finds leads from multiple data sources: business directories, mapping services, social media, trade associations, and website enrichment (emails, phones, social links). Works across any industry — from restaurants to real estate to yoga studios. Built-in deduplication prevents duplicates.' },
     ],
   },
@@ -130,6 +130,28 @@ export default function Help() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Related — internal linking for SEO */}
+      <section style={{ background: '#fff', padding: '60px 0' }}>
+        <div style={cx}>
+          <div style={{ textAlign: 'center', marginBottom: 24 }}>
+            <h2 style={{ fontSize: 24, fontWeight: 900, color: '#1a1a2e' }}>Related pages</h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16, maxWidth: 900, margin: '0 auto' }}>
+            {[
+              { to: '/about', t: 'Meet the team', d: '11 AI employees with full CVs.' },
+              { to: '/integrations', t: 'Integrations', d: '60+ tools across 12 categories.' },
+              { to: '/pricing', t: 'Pricing', d: '3 plans from £49/month.' },
+              { to: '/blog', t: 'Blog', d: 'Guides, case studies, strategy.' },
+            ].map((l) => (
+              <Link key={l.to} to={l.to} style={{ background: '#fafafa', borderRadius: 14, padding: 20, textDecoration: 'none', border: '1px solid #eee', display: 'block' }}>
+                <h3 style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 14, marginBottom: 4 }}>{l.t}</h3>
+                <p style={{ color: '#6b6b8d', fontSize: 12, lineHeight: 1.5 }}>{l.d}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

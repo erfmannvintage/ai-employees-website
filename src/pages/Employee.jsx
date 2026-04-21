@@ -17,11 +17,11 @@ const extras = {
   },
   flora: {
     integrations: [
-      { name: 'TikTok · Instagram · Facebook · X · LinkedIn · YouTube', how: 'Publishes natively to each platform via the Late/Zernio API.' },
+      { name: 'TikTok · Instagram · Facebook · X · LinkedIn · YouTube', how: 'Publishes natively to each platform through our social publishing engine.' },
       { name: 'Pinterest · Threads · Bluesky · Reddit · GBP · Telegram · Snapchat · WhatsApp · Discord', how: 'Extended reach — 14 platforms total, each with platform-native formatting.' },
       { name: 'YouTube Analytics (live)', how: 'Tracks video performance, watch time, retention, traffic sources.' },
-      { name: 'Imagen 4 · Gemini 2.5 Flash Image', how: 'Generates branded images at correct aspect ratio per platform (9:16, 4:5, 16:9, 1:1).' },
-      { name: 'Remotion scene library', how: '6 scene types — Hero, Problem, Comparison, Stat, Text Card, CTA — for TikTok-native video.' },
+      { name: 'In-house AI image generation', how: 'Generates branded images at correct aspect ratio per platform (9:16, 4:5, 16:9, 1:1).' },
+      { name: 'Native video scene library', how: '6 scene types — Hero, Problem, Comparison, Stat, Text Card, CTA — for TikTok-native video.' },
       { name: 'Media Library', how: 'Uses your uploaded images, audio, and video clips in posts.' },
       { name: 'Competitor Insights', how: 'Tracks competitor accounts — winning formats, hooks, hashtags, content gaps.' },
     ],
@@ -112,11 +112,11 @@ const extras = {
   },
   bowie: {
     integrations: [
-      { name: 'Google Search (live grounded)', how: 'Cited sources — every insight links to a real URL.' },
-      { name: 'Reddit public JSON', how: 'Deep comment mining (2-3 replies deep) on niche subreddits. Changelog stream cached 24h.' },
-      { name: 'Hacker News Algolia', how: 'Technical industry signals and launch discussions.' },
-      { name: 'Wikidata', how: 'Structured data for trade associations, industry bodies.' },
-      { name: 'gov.uk · ONS · SimilarWeb · Google Trends · Crunchbase · Product Hunt · G2', how: 'Market sizing, traffic estimates, funding signals, product landscape.' },
+      { name: 'Live grounded web research', how: 'Cited sources — every insight links to a real URL.' },
+      { name: 'Community & forum intelligence', how: 'Deep comment mining on niche communities where real pain points live. Auto-discovers relevant discussion spaces for your business type.' },
+      { name: 'Launch & industry signals', how: 'Technical launches, product discussions, changelog alerts across developer and founder channels.' },
+      { name: 'Structured public data', how: 'Trade associations, industry bodies, and verified registries.' },
+      { name: 'Market sizing & traffic intelligence', how: 'Government statistics, traffic estimates, funding data, product landscape across leading research platforms.' },
     ],
     fileTypes: ['Industry reports (PDF)', 'Market data (XLSX)', 'Conference recordings (MP3)', 'Competitor pitch decks (PPTX)'],
     methodologies: ['PESTLE analysis', "Porter's Five Forces", 'TAM / SAM / SOM sizing', 'SWOT', 'Jobs-to-be-Done', 'Blue Ocean Strategy', 'Business Model Canvas'],

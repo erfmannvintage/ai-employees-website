@@ -42,7 +42,7 @@ export default function Pricing() {
             All 11 Employees. Every Plan. No Credits.
           </h1>
           <p style={{ fontSize: 18, color: '#6b6b8d', maxWidth: 650, margin: '0 auto 8px' }}>
-            Unlike competitors who use confusing credit systems, we use simple monthly task limits. All plans include all 11 AI employees — because your team needs the full squad to collaborate properly.
+            Unlike competitors who use confusing credit systems, we use simple monthly task limits. All plans include <Link to="/about" style={{ color: '#6C3AFF', fontWeight: 600, textDecoration: 'none' }}>all 11 AI employees</Link> and every <Link to="/integrations" style={{ color: '#6C3AFF', fontWeight: 600, textDecoration: 'none' }}>integration</Link> — because your team needs the full squad to collaborate properly.
           </p>
           <p style={{ fontSize: 15, color: '#9999aa' }}>All prices in GBP. 7-day free trial. No credit card required.</p>
         </div>

@@ -14,7 +14,7 @@ export default function About() {
             The Team Behind <span style={{ color: '#6C3AFF' }}>Sidekicc</span>
           </h1>
           <p style={{ fontSize: 18, color: '#6b6b8d', maxWidth: 560, margin: '0 auto' }}>
-            Every business deserves a world-class team — regardless of budget.
+            Every business deserves a world-class team — regardless of budget. See <Link to="/integrations" style={{ color: '#6C3AFF', fontWeight: 600, textDecoration: 'none' }}>every integration</Link> they're connected to, or jump straight to <Link to="/pricing" style={{ color: '#6C3AFF', fontWeight: 600, textDecoration: 'none' }}>pricing</Link>.
           </p>
         </div>
       </section>

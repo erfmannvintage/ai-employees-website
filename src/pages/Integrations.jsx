@@ -8,8 +8,8 @@ const categories = [
     color: '#0066FF',
     blurb: 'Cecil manages every inbox. Basil replies to customers. Hugh runs outreach. Unlimited accounts, any provider.',
     items: [
-      { name: 'Gmail', detail: 'Read, triage, draft, send — OAuth or App Password. Cecil · Basil · Hugh.' },
-      { name: 'Outlook · Office 365', detail: 'Via IMAP/SMTP. Any number of accounts.' },
+      { name: 'Gmail', detail: 'Read, triage, draft, send. Cecil · Basil · Hugh.' },
+      { name: 'Outlook · Office 365', detail: 'Any number of accounts.' },
       { name: 'Yahoo · Zoho · iCloud · Custom SMTP', detail: 'Any provider works — no restrictions.' },
       { name: 'Google Calendar', detail: 'Create events, block focus time, resolve conflicts. Cecil.' },
       { name: 'MailerLite', detail: 'Campaigns, automations, segments, A/B tests. Cecil · Hugh.' },
@@ -21,7 +21,7 @@ const categories = [
     color: '#FF1493',
     blurb: 'Flora publishes natively to every platform. Each post formatted for that platform\'s algorithm, dimensions, and audience.',
     items: [
-      { name: 'TikTok', detail: '9:16 native video with Remotion scene library.' },
+      { name: 'TikTok', detail: '9:16 native video with our in-house scene library.' },
       { name: 'Instagram', detail: 'Feed posts (1:1), Reels (9:16), carousels (4:5), Stories.' },
       { name: 'Facebook', detail: 'Pages, groups, link previews, carousels.' },
       { name: 'X / Twitter', detail: 'Threads, media posts, polls.' },
@@ -29,8 +29,8 @@ const categories = [
       { name: 'YouTube', detail: 'Shorts + long-form with live Analytics access.' },
       { name: 'Pinterest', detail: 'Pin creation with alt text + destination URLs.' },
       { name: 'Threads', detail: 'Meta\'s text-first platform.' },
-      { name: 'Bluesky', detail: 'AT Protocol posting.' },
-      { name: 'Reddit', detail: 'Subreddit-aware posting via Flora + Bowie.' },
+      { name: 'Bluesky', detail: 'Decentralised microblogging.' },
+      { name: 'Reddit', detail: 'Subreddit-aware posting.' },
       { name: 'Google Business Profile', detail: 'Posts, updates, offers — local SEO.' },
       { name: 'Telegram · Snapchat · WhatsApp · Discord', detail: 'Extended distribution for communities.' },
     ],
@@ -64,14 +64,14 @@ const categories = [
     color: '#FF6600',
     blurb: 'Hugh finds leads, runs outreach, logs activity — all with no paid lead data required.',
     items: [
-      { name: 'HubSpot CRM (free forever tier)', detail: 'Contacts, companies, deals, pipeline, notes. Cost: £0.' },
+      { name: 'HubSpot CRM', detail: 'Contacts, companies, deals, pipeline, notes.' },
       { name: 'Companies House', detail: 'UK directors, filings, SIC codes.' },
-      { name: 'OpenStreetMap Overpass', detail: 'Global business lookup, 33 industry mappings.' },
+      { name: 'Global business directory data', detail: '33 industry mappings covered.' },
       { name: 'Google Places', detail: 'Local business data + reviews.' },
-      { name: 'Wikidata', detail: 'Trade associations, industry bodies.' },
-      { name: 'Social + Directory scraping', detail: 'IG/TikTok/FB profiles, vertical directories.' },
+      { name: 'Public trade association sources', detail: 'Industry bodies and professional registers.' },
+      { name: 'Social + Directory intelligence', detail: 'Profiles across major social networks and vertical directories.' },
       { name: 'Website enrichment', detail: 'Auto-extracts emails, phones, socials.' },
-      { name: 'Optional: Hunter.io · Apollo.io', detail: 'Bring your own key if you want premium enrichment.' },
+      { name: 'Optional: bring-your-own enrichment keys', detail: 'Plug in premium enrichment if you already have it.' },
     ],
   },
   {
@@ -80,7 +80,7 @@ const categories = [
     blurb: 'Basil monitors and responds. Hugh reads prospect reviews before outreach. Mabel mines them for blog angles.',
     items: [
       { name: 'Google Places reviews', detail: 'Any business, up to 5 recent reviews.' },
-      { name: 'Yelp Fusion', detail: '500 free calls/day — any business.' },
+      { name: 'Yelp', detail: 'Any business — read and respond.' },
       { name: 'Trustpilot', detail: 'Public read of any business.' },
     ],
   },
@@ -100,7 +100,7 @@ const categories = [
   {
     name: 'Legal & Compliance Sources',
     color: '#6C3AFF',
-    blurb: 'Rupert accesses 5 authoritative UK legal databases every week — not general-purpose LLM knowledge.',
+    blurb: 'Rupert accesses 5 authoritative UK legal databases every week — not general-purpose AI knowledge.',
     items: [
       { name: 'gov.uk', detail: 'Primary UK government guidance.' },
       { name: 'ICO (Information Commissioner)', detail: 'Enforcement actions, GDPR updates.' },
@@ -115,20 +115,19 @@ const categories = [
     color: '#00CED1',
     blurb: 'Bowie has an Oxford MPhil and Cambridge MBA — and cites a real URL for every insight.',
     items: [
-      { name: 'Google Search (grounded)', detail: 'Live web with source citations.' },
-      { name: 'Reddit public JSON', detail: 'Deep comment mining, subreddit discovery, changelog alerts.' },
-      { name: 'Hacker News (Algolia)', detail: 'Technical industry signals, launch discussions.' },
-      { name: 'ONS · SimilarWeb · Crunchbase · Product Hunt · G2', detail: 'Market sizing, traffic, funding, product landscape.' },
+      { name: 'Live grounded web research', detail: 'Every insight cited to a real source URL.' },
+      { name: 'Community & forum intelligence', detail: 'Deep comment mining on niche communities for real pain points.' },
+      { name: 'Launch & industry signals', detail: 'Technical launches and discussions across developer/founder channels.' },
+      { name: 'Market, traffic & funding data', detail: 'Market sizing, competitor traffic estimates, funding rounds, product landscape.' },
     ],
   },
   {
-    name: 'AI & Content Production',
+    name: 'AI-Generated Media',
     color: '#7B2FBE',
-    blurb: 'All AI services run through a secure server-side proxy — your keys never touch the browser.',
+    blurb: 'Flora produces branded visuals, TikTok-native video, and voiceovers — all in-house through our production pipeline.',
     items: [
-      { name: 'Gemini 2.5 Flash', detail: 'Chat, reasoning, file extraction.' },
-      { name: 'Imagen 4 · Gemini 2.5 Flash Image', detail: 'Branded images at correct aspect ratio per platform.' },
-      { name: 'Remotion', detail: '6-scene video library for TikTok-native output.' },
+      { name: 'AI image generation', detail: 'Branded visuals at correct aspect ratio per platform (9:16, 4:5, 16:9, 1:1).' },
+      { name: 'Native video creation', detail: 'Six scene types for TikTok, Reels, and Shorts — not slideshow templates.' },
       { name: 'AI voiceover', detail: 'Text-to-speech on Flora\'s video scripts.' },
     ],
   },
@@ -143,26 +142,15 @@ const categories = [
     ],
   },
   {
-    name: 'Platform Infrastructure',
+    name: 'Mobile Apps',
     color: '#1a1a2e',
-    blurb: 'Built on enterprise-grade infrastructure with complete data isolation per subscriber.',
+    blurb: 'Approve work, chat with employees, review leads — from your pocket.',
     items: [
-      { name: 'Supabase', detail: 'Postgres + Auth + Row-Level Security per user.' },
-      { name: 'Netlify Functions', detail: 'Secure proxy for every third-party API call.' },
-      { name: 'Capacitor 8 (iOS + Android)', detail: 'Native mobile app, coming soon to App Store + Google Play.' },
+      { name: 'iOS app', detail: 'Native experience for iPhone and iPad.' },
+      { name: 'Android app', detail: 'Native experience for Android phones and tablets.' },
+      { name: 'Progressive Web App', detail: 'Install from any browser with native-like performance.' },
     ],
   },
-]
-
-const queued = [
-  'ElevenLabs voice clone — Flora narrates in your cloned voice',
-  'Cal.com — meeting scheduling',
-  'Twilio — WhatsApp + SMS',
-  'Perplexity Sonar — extra grounded web research for Bowie',
-  'Reddit Ads API — bundle with Meta/Google/TikTok for Raymond',
-  'Slack · Discord · Teams — one-way notifications',
-  'Notion · Airtable · ClickUp — external workspace sync',
-  'Ecommerce pack — eBay, Etsy, Shopify, Royal Mail / ShipStation',
 ]
 
 export default function Integrations() {
@@ -227,31 +215,13 @@ export default function Integrations() {
         </div>
       </section>
 
-      {/* Coming soon */}
-      <section style={{ background: '#fff', padding: '80px 0' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 32px' }}>
-          <div style={{ background: 'rgba(108,58,255,0.04)', borderRadius: 24, padding: 40, border: '1px solid rgba(108,58,255,0.08)' }}>
-            <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 13, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>On the Roadmap</p>
-            <h2 style={{ fontSize: 28, fontWeight: 900, color: '#1a1a2e', marginBottom: 20 }}>Coming soon</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 10 }}>
-              {queued.map((q) => (
-                <div key={q} style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}>
-                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#6C3AFF', marginTop: 7, flexShrink: 0 }} />
-                  <span style={{ fontSize: 14, color: '#3d3d5c', lineHeight: 1.5 }}>{q}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Security note */}
-      <section style={{ background: '#fafafa', padding: '60px 0' }}>
+      <section style={{ background: '#fff', padding: '60px 0' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 32px', textAlign: 'center' }}>
           <p style={{ color: '#00CC66', fontWeight: 600, fontSize: 13, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Security by Design</p>
           <h2 style={{ fontSize: 28, fontWeight: 900, color: '#1a1a2e', marginBottom: 12 }}>Your keys never touch the browser.</h2>
           <p style={{ fontSize: 15, color: '#6b6b8d', lineHeight: 1.7 }}>
-            Every third-party API call goes through a secure Netlify Functions proxy. CORS is locked to known origins. An action whitelist means only approved calls fire. Row-Level Security in Postgres isolates every subscriber's data. OAuth tokens are encrypted at rest. Webhook payloads are HMAC signed.
+            Every third-party API call goes through a secure server-side proxy. CORS is locked to known origins. An action whitelist means only approved calls fire. Database-level isolation separates every subscriber's data. OAuth tokens are encrypted at rest. Webhook payloads are HMAC signed.
           </p>
         </div>
       </section>

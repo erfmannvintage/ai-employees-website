@@ -23,9 +23,9 @@ export default function Navbar() {
             <span className="font-bold text-lg" style={{ color: '#1a1a2e' }}>Sidekicc</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center" style={{ gap: 6 }}>
             {links.map((l) => (
-              <Link key={l.to} to={l.to} className="no-underline px-4 py-2 rounded-lg text-[15px] font-medium transition-colors" style={{ color: loc.pathname === l.to ? '#6C3AFF' : '#6b6b8d' }}>
+              <Link key={l.to} to={l.to} className="no-underline rounded-lg text-[14px] font-medium transition-colors" style={{ padding: '8px 12px', color: loc.pathname === l.to ? '#6C3AFF' : '#6b6b8d', whiteSpace: 'nowrap' }}>
                 {l.label}
               </Link>
             ))}

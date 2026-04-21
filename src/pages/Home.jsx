@@ -29,7 +29,7 @@ function Hero() {
             You're the CEO, marketer, sales rep, support agent, content creator, bookkeeper, and legal reviewer — all at once. <strong style={{ color: '#1a1a2e' }}>Your competitors aren't doing this anymore.</strong> They've automated.
           </p>
           <p style={{ fontSize: 17, color: '#4a4a6a', lineHeight: 1.7, marginBottom: 36, maxWidth: 520 }}>
-            Sidekicc gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. While you sleep. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong> — less than one hour of a freelancer.
+            Sidekicc gives you <Link to="/about" style={{ color: '#1a1a2e', fontWeight: 700, textDecoration: 'underline', textDecorationColor: 'rgba(108,58,255,0.3)' }}>11 specialized AI employees</Link> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. Connected to <Link to="/integrations" style={{ color: '#1a1a2e', fontWeight: 700, textDecoration: 'underline', textDecorationColor: 'rgba(108,58,255,0.3)' }}>the tools you already use</Link>. From <Link to="/pricing" style={{ color: '#1a1a2e', fontWeight: 700, textDecoration: 'underline', textDecorationColor: 'rgba(108,58,255,0.3)' }}>£49/mo</Link> — less than one hour of a freelancer.
           </p>
           <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
             <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
@@ -165,7 +165,7 @@ function TeamShowcase() {
           <p style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 600, fontSize: 14, marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Your AI Team</p>
           <h2 style={{ fontSize: 48, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.12 }}>11 employees. 9 domains. 30+ certifications.</h2>
           <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginTop: 16 }}>
-            Cecil manages your inbox. Flora runs socials. Hugh closes deals. Mabel writes SEO content. Rupert reviews contracts. Poppi orchestrates strategy. Ava tracks analytics. Raymond manages ads. Bowie researches competitors. Angela handles finances. Basil supports customers.
+            <Link to="/employee/cecil" style={{ color: '#fff', textDecoration: 'underline' }}>Cecil</Link> manages your inbox. <Link to="/employee/flora" style={{ color: '#fff', textDecoration: 'underline' }}>Flora</Link> runs socials. <Link to="/employee/hugh" style={{ color: '#fff', textDecoration: 'underline' }}>Hugh</Link> closes deals. <Link to="/employee/mabel" style={{ color: '#fff', textDecoration: 'underline' }}>Mabel</Link> writes SEO content. <Link to="/employee/rupert" style={{ color: '#fff', textDecoration: 'underline' }}>Rupert</Link> reviews contracts. <Link to="/employee/poppi" style={{ color: '#fff', textDecoration: 'underline' }}>Poppi</Link> orchestrates strategy. <Link to="/employee/ava" style={{ color: '#fff', textDecoration: 'underline' }}>Ava</Link> tracks analytics. <Link to="/employee/raymond" style={{ color: '#fff', textDecoration: 'underline' }}>Raymond</Link> manages ads. <Link to="/employee/bowie" style={{ color: '#fff', textDecoration: 'underline' }}>Bowie</Link> researches competitors. <Link to="/employee/angela" style={{ color: '#fff', textDecoration: 'underline' }}>Angela</Link> handles finances. <Link to="/employee/basil" style={{ color: '#fff', textDecoration: 'underline' }}>Basil</Link> supports customers.
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
@@ -290,7 +290,7 @@ function MobileApp() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}>
           <div>
             <div style={{ display: 'inline-block', background: 'rgba(255,255,255,0.15)', borderRadius: 100, padding: '6px 16px', marginBottom: 20 }}>
-              <span style={{ color: '#fff', fontWeight: 600, fontSize: 13 }}>📱 Coming Soon</span>
+              <span style={{ color: '#fff', fontWeight: 600, fontSize: 13 }}>📱 Mobile Apps</span>
             </div>
             <h2 style={{ fontSize: 44, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: 20 }}>
               Your AI team works while you're on the go.
@@ -312,19 +312,19 @@ function MobileApp() {
             {/* Store badges */}
             <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
               {/* Apple App Store badge */}
-              <div style={{ background: '#000', borderRadius: 10, padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 10, opacity: 0.7 }}>
+              <div style={{ background: '#000', borderRadius: 10, padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 10 }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                 <div>
-                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.7)' }}>Coming soon on</div>
+                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.7)' }}>Download on the</div>
                   <div style={{ fontSize: 16, fontWeight: 600, color: '#fff' }}>App Store</div>
                 </div>
               </div>
 
               {/* Google Play badge */}
-              <div style={{ background: '#000', borderRadius: 10, padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 10, opacity: 0.7 }}>
+              <div style={{ background: '#000', borderRadius: 10, padding: '10px 20px', display: 'flex', alignItems: 'center', gap: 10 }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35zm13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27zm.91-.91L19.65 12 17.72 10.79l-2.54 2.54 2.54 2.54zM6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
                 <div>
-                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.7)' }}>Coming soon on</div>
+                  <div style={{ fontSize: 9, color: 'rgba(255,255,255,0.7)' }}>Get it on</div>
                   <div style={{ fontSize: 16, fontWeight: 600, color: '#fff' }}>Google Play</div>
                 </div>
               </div>
@@ -572,7 +572,7 @@ function FAQ() {
     { q: 'How do the employees learn my business?', a: 'Three ways: your Business Profile (100+ fields), Data Hub (upload any file — documents, PDFs, Excel, PowerPoint, images, voice notes, sales call recordings), and Custom Skills (teach them your workflows). You can also import files directly into any employee\'s Brain — text is extracted automatically from Word, Excel, PowerPoint, and PDFs. Plus a 5-layer self-learning pipeline: task insights, peer feedback, weekly auto-research, knowledge refreshes, and monthly self-assessments. The longer you use them, the smarter they get.' },
     { q: 'What\'s included in the free trial?', a: '7 days of full access at Growth-level (all features, all employees, 5,000 tasks). No credit card required. At the end, choose a plan or your account pauses — no surprise charges. Your data is kept for 30 days in case you come back.' },
     { q: 'Can I cancel anytime?', a: 'Yes. Cancel from your account settings at any time. No lock-in contracts, no cancellation fees. You keep access until the end of your billing period. We also offer a 30-day money-back guarantee on all paid plans.' },
-    { q: 'What integrations are supported?', a: 'Email (Gmail, Outlook, Yahoo, Zoho, iCloud, SMTP), Google Calendar, MailerLite, GA4, YouTube Analytics, Search Console, Stripe, QuickBooks, Xero, Sage, plus webhooks for Zapier, Make, n8n, and Google Workspace (Sheets, Drive, Docs).' },
+    { q: 'What integrations are supported?', a: '60+ integrations across email (Gmail, Outlook, Yahoo, Zoho, iCloud, SMTP), Google Calendar, MailerLite, GA4, YouTube Analytics, Search Console, Stripe, QuickBooks, Xero, FreeAgent, Sage, HubSpot CRM, plus webhooks for Zapier, Make, n8n, and Google Workspace (Sheets, Drive, Docs). See the full list on the integrations page.' },
     { q: 'How do you handle security and privacy?', a: 'Bank-grade encryption, database-level security with complete data isolation between users, GDPR compliant. Your data is never sold or shared. AI models don\'t train on your data. You own everything you create.' },
   ]
 
