@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -43,6 +44,11 @@ function resetConsent() {
 export default function Cookies() {
   return (
     <div>
+      <SEO
+        title="Cookie Policy — Sidekicc"
+        description="What cookies Sidekicc uses and why. PECR-compliant: strictly necessary cookies only until you consent. Change your choices anytime."
+        path="/cookies"
+      />
       <section style={{ background: '#fff', padding: '80px 0 40px' }}>
         <div style={{ ...cx, textAlign: 'center' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Legal</p>

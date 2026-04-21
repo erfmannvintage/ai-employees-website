@@ -79,7 +79,7 @@ export default function Help() {
     <div>
       <SEO
         title="Help Centre — Sidekicc Support & FAQs"
-        description="25+ answers across getting started, the 11 AI employees, features, integrations, billing, and security. Can't find your answer? Contact us — we respond within 24 hours."
+        description="25+ answers on getting started, the 11 AI employees, features, integrations, billing, and security. We respond within 24 hours."
         path="/help"
         jsonLd={helpJsonLd}
       />

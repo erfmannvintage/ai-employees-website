@@ -1,14 +1,20 @@
 import { useState } from 'react'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
 
-  const inputStyle = { width: '100%', padding: '12px 16px', border: '1px solid #ddd', borderRadius: 12, fontSize: 15, outline: 'none', background: '#fff', color: '#1a1a2e' }
+  const inputStyle = { width: '100%', padding: '12px 16px', border: '1px solid #ddd', borderRadius: 12, fontSize: 15, background: '#fff', color: '#1a1a2e' }
 
   return (
     <div>
+      <SEO
+        title="Contact Sidekicc — hello@sidekicc.com"
+        description="Questions, partnership enquiries, or support? Get in touch with Sidekicc — we respond within 24 hours."
+        path="/contact"
+      />
       <section style={{ background: '#fff', padding: '80px 0' }}>
         <div style={{ ...cx, textAlign: 'center' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Contact</p>

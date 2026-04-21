@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -17,6 +17,7 @@ import Refund from './pages/Refund'
 import Employee from './pages/Employee'
 import Integrations from './pages/Integrations'
 import Cookies from './pages/Cookies'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
@@ -30,7 +31,6 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/pricing" element={<Pricing />} />
-              <Route path="/compare" element={<Navigate to="/pricing" replace />} />
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
@@ -41,6 +41,7 @@ export default function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/employee/:slug" element={<Employee />} />
               <Route path="/integrations" element={<Integrations />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />

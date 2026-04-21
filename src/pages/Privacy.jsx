@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -185,6 +186,11 @@ ICO — ico.org.uk/make-a-complaint/ — 0303 123 1113.`,
 export default function Privacy() {
   return (
     <div>
+      <SEO
+        title="Privacy Policy — Sidekicc"
+        description="How Sidekicc collects, uses, and protects your data. UK GDPR, DPA 2018, and PECR compliant. Your rights, our sub-processors, and how to contact us."
+        path="/privacy"
+      />
       {/* Hero */}
       <section style={{ background: '#fff', padding: '80px 0 40px' }}>
         <div style={{ ...cx, textAlign: 'center' }}>

@@ -16,8 +16,8 @@ export default function Blog() {
   return (
     <div>
       <SEO
-        title="Blog — AI Workforce Strategy and Case Studies | Sidekicc"
-        description="Guides, case studies, and deep-dives on running your business with AI employees. SEO, paid ads, content strategy, compliance — written for founders and small-business owners."
+        title="Blog — AI Workforce Strategy & Case Studies | Sidekicc"
+        description="Guides, case studies, and deep-dives on running your business with AI employees. Written for founders and small-business owners."
         path="/blog"
       />
       <section style={{ background: '#fff', padding: '80px 0' }}>

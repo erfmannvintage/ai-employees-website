@@ -9,10 +9,9 @@
 # Cache Playwright browsers inside node_modules (which Netlify caches between builds)
 # so Chromium isn't re-downloaded every deploy.
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# No SPA fallback rewrite — every route is prerendered, so Netlify's Pretty URLs
+# handles /pricing -> /pricing/index.html directly. If a route isn't prerendered,
+# a 404 is correct (and we'd rather know about it than silently serve the shell).
 
 [[headers]]
   for = "/robots.txt"

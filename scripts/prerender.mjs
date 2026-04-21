@@ -20,6 +20,8 @@ const PORT = 8765
 
 // Prerender `/` LAST — writing to dist/index.html changes what serve-handler
 // falls back to, which would poison subsequent crawls.
+// Also emit a 404 page (rendered via the catch-all route in App) to dist/404.html
+// so Netlify serves it for unknown URLs.
 const routes = [
   '/pricing',
   '/about',
@@ -42,7 +44,8 @@ const routes = [
   '/employee/raymond',
   '/employee/bowie',
   '/employee/angela',
-  '/', // must be last
+  '/404', // triggers catch-all NotFound route
+  '/', // must be last — writes dist/index.html
 ]
 
 console.log(`Prerendering ${routes.length} routes from ${DIST}…`)
@@ -77,10 +80,10 @@ for (const route of routes) {
     await page.waitForTimeout(500)
 
     const html = await page.content()
-    const out =
-      route === '/'
-        ? path.join(DIST, 'index.html')
-        : path.join(DIST, route, 'index.html')
+    let out
+    if (route === '/') out = path.join(DIST, 'index.html')
+    else if (route === '/404') out = path.join(DIST, '404.html')
+    else out = path.join(DIST, route, 'index.html')
     await mkdir(path.dirname(out), { recursive: true })
     await writeFile(out, html, 'utf8')
     console.log(`  ✓ ${route.padEnd(28)} → ${path.relative(DIST, out)}`)

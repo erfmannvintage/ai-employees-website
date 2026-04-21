@@ -367,8 +367,8 @@ function ContentChains() {
             <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: 16 }}>5 workflows that run your pipeline automatically.</h2>
             <p style={{ fontSize: 15, color: '#6b6b8d', lineHeight: 1.7, marginBottom: 24 }}>When one employee finishes, the next one starts. No manual handoffs. Posts to Team Chat so everyone sees.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-              {chains.map((c, i) => (
-                <div key={i} style={{ background: '#fff', borderRadius: 12, padding: '14px 18px', border: '1px solid #e8dfc8' }}>
+              {chains.map((c) => (
+                <div key={`${c.from}-${c.to}`} style={{ background: '#fff', borderRadius: 12, padding: '14px 18px', border: '1px solid #e8dfc8' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
                     <span style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 14 }}>{c.from}</span>
                     <span style={{ color: '#FF6600', fontWeight: 700 }}>→</span>

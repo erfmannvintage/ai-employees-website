@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -252,6 +253,11 @@ Legal & contracts — legal@sidekicc.com`,
 export default function Terms() {
   return (
     <div>
+      <SEO
+        title="Terms of Service — Sidekicc"
+        description="Your agreement with Sidekicc. Subscription, billing, AI output disclaimers, acceptable use, Vibe Mode liability, governing law — Consumer Rights Act 2015 compliant."
+        path="/terms"
+      />
       {/* Hero */}
       <section style={{ background: '#fff', padding: '80px 0 40px' }}>
         <div style={{ ...cx, textAlign: 'center' }}>
