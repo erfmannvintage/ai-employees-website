@@ -32,8 +32,8 @@ export default function Footer() {
           {/* Brand + socials */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <div style={{ width: 36, height: 36, background: '#6C3AFF', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 12 }}>AI</div>
-              <span style={{ fontWeight: 700, fontSize: 17 }}>AI Employees</span>
+              <div style={{ width: 36, height: 36, background: '#6C3AFF', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 14 }}>S</div>
+              <span style={{ fontWeight: 700, fontSize: 17 }}>Sidekicc</span>
             </div>
             <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 14, lineHeight: 1.7, marginBottom: 24, maxWidth: 280 }}>
               11 specialized AI employees handling marketing, sales, support, content, analytics, legal, ads, research, and finance.
@@ -59,9 +59,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* AI Employees */}
+          {/* Your Team */}
           <div>
-            <h4 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 20 }}>AI Employees</h4>
+            <h4 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 20 }}>Your Team</h4>
             <ul style={{ listStyle: 'none' }}>
               {employees.slice(0, 6).map((e) => (
                 <li key={e.name} style={{ marginBottom: 10 }}>
@@ -112,10 +112,10 @@ export default function Footer() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '20px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{ width: 24, height: 24, background: '#6C3AFF', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 8 }}>AI</div>
-            <span style={{ fontWeight: 600, fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>AI Employees</span>
+            <div style={{ width: 24, height: 24, background: '#6C3AFF', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 10 }}>S</div>
+            <span style={{ fontWeight: 600, fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>Sidekicc</span>
           </div>
-          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>&copy; {new Date().getFullYear()} AI Employees. All rights reserved.</p>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>&copy; {new Date().getFullYear()} Sidekicc. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -74,9 +74,9 @@ export default function Contact() {
               <div style={{ background: '#fff', borderRadius: 20, padding: 24, border: '1px solid #eee' }}>
                 <h3 style={{ fontWeight: 700, color: '#1a1a2e', marginBottom: 10 }}>Email Us</h3>
                 <p style={{ fontSize: 15, color: '#6b6b8d', marginBottom: 4 }}>General enquiries:</p>
-                <p style={{ fontSize: 15, fontWeight: 600, color: '#6C3AFF' }}>hello@aiemployees.com</p>
+                <p style={{ fontSize: 15, fontWeight: 600, color: '#6C3AFF' }}>hello@sidekicc.com</p>
                 <p style={{ fontSize: 15, color: '#6b6b8d', marginTop: 10, marginBottom: 4 }}>Support:</p>
-                <p style={{ fontSize: 15, fontWeight: 600, color: '#6C3AFF' }}>support@aiemployees.com</p>
+                <p style={{ fontSize: 15, fontWeight: 600, color: '#6C3AFF' }}>support@sidekicc.com</p>
               </div>
               <div style={{ background: '#fff', borderRadius: 20, padding: 24, border: '1px solid #eee' }}>
                 <h3 style={{ fontWeight: 700, color: '#1a1a2e', marginBottom: 10 }}>Response Time</h3>

@@ -18,8 +18,8 @@ export default function Navbar() {
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px' }}>
         <div className="flex items-center justify-between" style={{ height: 72 }}>
           <Link to="/" className="flex items-center gap-2.5 no-underline">
-            <div className="flex items-center justify-center rounded-xl text-white font-bold text-xs" style={{ width: 36, height: 36, background: '#6C3AFF' }}>AI</div>
-            <span className="font-bold text-lg" style={{ color: '#1a1a2e' }}>AI Employees</span>
+            <div className="flex items-center justify-center rounded-xl text-white font-bold text-sm" style={{ width: 36, height: 36, background: '#6C3AFF' }}>S</div>
+            <span className="font-bold text-lg" style={{ color: '#1a1a2e' }}>Sidekicc</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-1">

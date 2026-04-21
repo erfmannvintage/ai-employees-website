@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function Refund() {
   const sections = [
     { t: 'Eligibility', c: 'Within 30 days of first payment. First subscription period only. Free trials not eligible. Renewals: pro-rata within 7 days.' },
-    { t: 'How to Request', c: 'Email billing@aiemployees.com. Processed in 5-10 business days to original payment method.' },
+    { t: 'How to Request', c: 'Email billing@sidekicc.com. Processed in 5-10 business days to original payment method.' },
     { t: 'After Refund', c: 'Account paused. Data retained 30 days. After that, inactive data may be deleted.' },
     { t: 'Exceptions', c: 'Terms violations, refund policy abuse, chargebacks without contacting us first.' },
     { t: 'Cancellation', c: 'Cancel anytime from account settings. Access continues until end of billing period.' },

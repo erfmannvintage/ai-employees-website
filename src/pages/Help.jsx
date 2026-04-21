@@ -46,7 +46,7 @@ const categories = [
       { q: 'How does the free trial work?', a: '7-day full access to your chosen plan. No credit card required. At the end of the trial, choose a plan to continue or your account pauses — no surprise charges, no data loss. Your data is retained for 30 days in case you resubscribe.' },
       { q: 'Can I change plans?', a: 'Upgrade or downgrade at any time. Changes take effect on your next billing cycle. If you upgrade, you get immediate access to additional employees and features.' },
       { q: 'Is there annual billing?', a: 'Yes — save 20% with annual billing compared to monthly. Contact us for enterprise custom pricing.' },
-      { q: 'What\'s the refund policy?', a: '30-day money-back guarantee on all paid plans. Not satisfied within 30 days of your first payment? Contact billing@aiemployees.com for a full refund. No questions asked, no hoops to jump through.' },
+      { q: 'What\'s the refund policy?', a: '30-day money-back guarantee on all paid plans. Not satisfied within 30 days of your first payment? Contact billing@sidekicc.com for a full refund. No questions asked, no hoops to jump through.' },
     ],
   },
   {
@@ -74,7 +74,7 @@ export default function Help() {
             Help Centre
           </h1>
           <p style={{ fontSize: 17, color: '#6b6b8d', maxWidth: 500, margin: '0 auto' }}>
-            Everything you need to know about AI Employees.
+            Everything you need to know about Sidekicc.
             Can't find your answer? <Link to="/contact" style={{ color: '#6C3AFF', fontWeight: 600, textDecoration: 'none' }}>Contact us</Link>.
           </p>
         </div>

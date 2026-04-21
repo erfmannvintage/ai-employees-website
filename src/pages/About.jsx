@@ -11,7 +11,7 @@ export default function About() {
         <div style={{ ...cx, textAlign: 'center' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Our Story</p>
           <h1 style={{ fontSize: 48, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', marginBottom: 16 }}>
-            The Team Behind <span style={{ color: '#6C3AFF' }}>AI Employees</span>
+            The Team Behind <span style={{ color: '#6C3AFF' }}>Sidekicc</span>
           </h1>
           <p style={{ fontSize: 18, color: '#6b6b8d', maxWidth: 560, margin: '0 auto' }}>
             Every business deserves a world-class team — regardless of budget.

@@ -11,7 +11,7 @@ function Hero() {
     <section style={{ position: 'relative', minHeight: '85vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
       {/* Full-width pop-art background */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <img src="/hero-office.png" alt="AI Employees pop-art office" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
+        <img src="/hero-office.png" alt="Sidekicc pop-art office" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
         {/* Gradient overlay — dark left for text readability, fades right to show image */}
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 35%, rgba(255,255,255,0.6) 60%, rgba(255,255,255,0.1) 100%)' }} />
       </div>
@@ -29,7 +29,7 @@ function Hero() {
             You're the CEO, marketer, sales rep, support agent, content creator, bookkeeper, and legal reviewer — all at once. <strong style={{ color: '#1a1a2e' }}>Your competitors aren't doing this anymore.</strong> They've automated.
           </p>
           <p style={{ fontSize: 17, color: '#4a4a6a', lineHeight: 1.7, marginBottom: 36, maxWidth: 520 }}>
-            AI Employees gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. While you sleep. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong> — less than one hour of a freelancer.
+            Sidekicc gives you <strong style={{ color: '#1a1a2e' }}>11 specialized AI employees</strong> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. While you sleep. From <strong style={{ color: '#1a1a2e' }}>£49/mo</strong> — less than one hour of a freelancer.
           </p>
           <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
             <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
@@ -50,7 +50,7 @@ function Hero() {
       {/* Floating badge bottom right */}
       <div style={{ position: 'absolute', bottom: 32, right: 48, background: 'rgba(255,255,255,0.95)', borderRadius: 16, boxShadow: '0 8px 30px rgba(0,0,0,0.15)', border: '3px solid #1a1a2e', padding: '14px 24px', display: 'flex', alignItems: 'center', gap: 12, zIndex: 10 }}>
         <div style={{ width: 44, height: 44, background: '#00CC66', borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 800, fontSize: 16 }}>11</div>
-        <div><div style={{ fontWeight: 700, fontSize: 15, color: '#1a1a2e' }}>AI Employees</div><div style={{ fontSize: 12, color: '#6b6b8d' }}>Active & learning</div></div>
+        <div><div style={{ fontWeight: 700, fontSize: 15, color: '#1a1a2e' }}>Your AI Team</div><div style={{ fontSize: 12, color: '#6b6b8d' }}>Active & learning</div></div>
       </div>
     </section>
   )
@@ -334,7 +334,7 @@ function MobileApp() {
           {/* Image */}
           <div>
             <div style={{ borderRadius: 24, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '3px solid rgba(255,255,255,0.2)' }}>
-              <img src="/mobile-app.png" alt="AI Employees on the go" style={{ width: '100%', display: 'block' }} />
+              <img src="/mobile-app.png" alt="Sidekicc on the go" style={{ width: '100%', display: 'block' }} />
             </div>
           </div>
         </div>
@@ -451,7 +451,7 @@ function Stats() {
    ============================================ */
 function Testimonials() {
   const t = [
-    { q: "I replaced 3 freelancers with AI Employees. My marketing runs 24/7 and the quality is genuinely better. The cross-review system catches things I'd miss.", n: 'Sarah K.', r: 'E-commerce Founder' },
+    { q: "I replaced 3 freelancers with Sidekicc. My marketing runs 24/7 and the quality is genuinely better. The cross-review system catches things I'd miss.", n: 'Sarah K.', r: 'E-commerce Founder' },
     { q: "Hugh closed more leads in his first week than my previous outreach tool did in a month. The 7-source lead discovery is insane — found prospects I didn't know existed.", n: 'Marcus T.', r: 'SaaS Founder' },
     { q: "Having Ava connected to our GA4 live and Angela managing QuickBooks means I actually understand my numbers. The daily action plans are a game-changer.", n: 'Priya R.', r: 'Agency Owner' },
   ]
@@ -566,8 +566,8 @@ function PricingSection() {
    ============================================ */
 function FAQ() {
   const faqs = [
-    { q: 'What exactly is AI Employees?', a: 'A platform that gives you 11 specialized AI employees — each one a certified expert in their domain. They handle your marketing, sales, support, content, analytics, legal, advertising, research, and finance. They collaborate with each other, cross-review work, and learn your business over time. It\'s like hiring a full department for a fraction of the cost.' },
-    { q: 'How is this different from ChatGPT or other AI tools?', a: 'ChatGPT is a general-purpose chatbot. AI Employees are specialized workers with real qualifications (HubSpot, Google Ads certs, ACA, ACCA, etc.), permanent memory of your business, cross-team collaboration, autonomous execution, and integration with your actual tools (email, analytics, accounting, social media). They don\'t just chat — they DO the work.' },
+    { q: 'What exactly is Sidekicc?', a: 'A platform that gives you 11 specialized AI employees — each one a certified expert in their domain. They handle your marketing, sales, support, content, analytics, legal, advertising, research, and finance. They collaborate with each other, cross-review work, and learn your business over time. It\'s like hiring a full department for a fraction of the cost.' },
+    { q: 'How is this different from ChatGPT or other AI tools?', a: 'ChatGPT is a general-purpose chatbot. Sidekicc\'s AI employees are specialized workers with real qualifications (HubSpot, Google Ads certs, ACA, ACCA, etc.), permanent memory of your business, cross-team collaboration, autonomous execution, and integration with your actual tools (email, analytics, accounting, social media). They don\'t just chat — they DO the work.' },
     { q: 'Do I need any technical skills?', a: 'None. Everything works through simple chat or voice. No coding, no prompt engineering, no API setup. Tell your employees what you need in plain English and they deliver. The 6-step onboarding wizard takes 2 minutes.' },
     { q: 'How do the employees learn my business?', a: 'Three ways: your Business Profile (100+ fields), Data Hub (upload any file — documents, PDFs, Excel, PowerPoint, images, voice notes, sales call recordings), and Custom Skills (teach them your workflows). You can also import files directly into any employee\'s Brain — text is extracted automatically from Word, Excel, PowerPoint, and PDFs. Plus a 5-layer self-learning pipeline: task insights, peer feedback, weekly auto-research, knowledge refreshes, and monthly self-assessments. The longer you use them, the smarter they get.' },
     { q: 'What\'s included in the free trial?', a: '7 days of full access at Growth-level (all features, all employees, 5,000 tasks). No credit card required. At the end, choose a plan or your account pauses — no surprise charges. Your data is kept for 30 days in case you come back.' },

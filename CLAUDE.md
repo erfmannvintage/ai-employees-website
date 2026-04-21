@@ -1,7 +1,8 @@
-# AI Employees Marketing Website — Design System
+# Sidekicc Marketing Website — Design System
 
 ## Brand
-- **Purpose**: Convert visitors into free trial signups at artifactly-ai-employees.netlify.app
+- **Name**: Sidekicc (domain: www.sidekicc.com). Product = 11 AI employees. Keep "AI employees" as the generic noun when describing the team; use "Sidekicc" for the brand/product.
+- **Purpose**: Convert visitors into free trial signups at artifactly-ai-employees.netlify.app (app URL stays the same for now)
 - **Audience**: Business owners/entrepreneurs who need help with marketing, sales, support, finance
 - **Tone**: Professional, confident, trustworthy — but with personality from the comic-art characters
 - **Primary action**: "Get Started Free" → links to the app

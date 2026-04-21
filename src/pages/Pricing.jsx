@@ -4,8 +4,8 @@ import { plans } from '../data/employees'
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
 const competitors = [
-  { name: 'AI Employees', sub: 'Starter £49', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (500)', crossCollab: true, contentChains: false, vibeMode: false, video: false, blogCms: false, leadDiscovery: false, liveAnalytics: false, legal: true, finance: true, ads: true, research: true, autoResearch: false, selfLearning: true, webhooks: false, emailAll: true, trial: '7 days' },
-  { name: 'AI Employees', sub: 'Growth £99', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (5,000)', crossCollab: true, contentChains: true, vibeMode: true, video: true, blogCms: true, leadDiscovery: true, liveAnalytics: true, legal: true, finance: true, ads: true, research: true, autoResearch: true, selfLearning: true, webhooks: true, emailAll: true, trial: '7 days' },
+  { name: 'Sidekicc', sub: 'Starter £49', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (500)', crossCollab: true, contentChains: false, vibeMode: false, video: false, blogCms: false, leadDiscovery: false, liveAnalytics: false, legal: true, finance: true, ads: true, research: true, autoResearch: false, selfLearning: true, webhooks: false, emailAll: true, trial: '7 days' },
+  { name: 'Sidekicc', sub: 'Growth £99', us: true, employees: '11 (all plans)', taskModel: 'Simple monthly (5,000)', crossCollab: true, contentChains: true, vibeMode: true, video: true, blogCms: true, leadDiscovery: true, liveAnalytics: true, legal: true, finance: true, ads: true, research: true, autoResearch: true, selfLearning: true, webhooks: true, emailAll: true, trial: '7 days' },
   { name: 'Sintra.ai', sub: '~£77/mo', us: false, employees: '12+ helpers', taskModel: 'Credits (350/mo — runs out fast)', crossCollab: false, contentChains: false, vibeMode: false, video: false, blogCms: false, leadDiscovery: false, liveAnalytics: false, legal: false, finance: false, ads: true, research: false, autoResearch: false, selfLearning: false, webhooks: false, emailAll: false, trial: 'None' },
   { name: 'Marblism', sub: '~£19-35/mo', us: false, employees: '6 employees', taskModel: 'Simple monthly', crossCollab: false, contentChains: false, vibeMode: false, video: false, blogCms: true, leadDiscovery: false, liveAnalytics: false, legal: true, finance: false, ads: false, research: false, autoResearch: false, selfLearning: false, webhooks: false, emailAll: false, trial: '7 days' },
 ]
@@ -129,7 +129,7 @@ export default function Pricing() {
       {/* Value comparison */}
       <section style={{ background: '#fafafa', padding: '60px 0' }}>
         <div style={cx}>
-          <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', textAlign: 'center', marginBottom: 12 }}>What would this cost without AI Employees?</h2>
+          <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', textAlign: 'center', marginBottom: 12 }}>What would this cost without Sidekicc?</h2>
           <p style={{ fontSize: 17, color: '#6b6b8d', textAlign: 'center', maxWidth: 600, margin: '0 auto 40px' }}>Hiring freelancers or agencies for the same roles costs £8,000-£25,000/month.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 16 }}>
             {[
@@ -250,7 +250,7 @@ export default function Pricing() {
           <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', textAlign: 'center', marginBottom: 40 }}>Pricing Questions</h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
             {[
-              { q: 'Why do all plans have all 11 employees?', a: 'Because your marketing strategist needs your sales director, your SEO writer needs your social media manager, and your CFO needs your legal advisor. The cross-review matrix and content chains require the full team. Removing employees breaks the collaboration system that makes AI Employees unique.' },
+              { q: 'Why do all plans have all 11 employees?', a: 'Because your marketing strategist needs your sales director, your SEO writer needs your social media manager, and your CFO needs your legal advisor. The cross-review matrix and content chains require the full team. Removing employees breaks the collaboration system that makes Sidekicc unique.' },
               { q: 'What\'s the difference between plans then?', a: 'Task limits (500 vs 5,000 vs unlimited), and which CAPABILITIES are unlocked. Starter gives you Chat + Voice. Growth adds Vibe Mode (fully autonomous work), content chains, campaign templates, lead discovery, all integrations, AI image/video gen, and auto-research. Enterprise adds unlimited everything + white-label.' },
               { q: 'What counts as a "task"?', a: 'Any piece of output an employee produces: a social post, a blog article, a lead discovery batch, a financial report, a contract review, an analytics dashboard. Each output = 1 task. A conversation in chat that doesn\'t produce output doesn\'t count.' },
               { q: 'Why don\'t you use credits?', a: 'Because credit systems are confusing and punish active users. On some platforms, your monthly credits can vanish in a couple of hours. We use simple monthly task limits — you know exactly what you get. 500, 5,000, or unlimited. No surprises.' },

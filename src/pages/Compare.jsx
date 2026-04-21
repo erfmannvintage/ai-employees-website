@@ -1,6 +1,6 @@
 
 const competitors = [
-  { name: 'AI Employees', us: true, employees: '11', price: 'From $97', trial: '7 days', crossCollab: true, video: true, blog: true, email: true, analytics: true, legal: true, finance: true, leads: true, ads: true, research: true, training: true, whiteLabel: true },
+  { name: 'Sidekicc', us: true, employees: '11', price: 'From £49', trial: '7 days', crossCollab: true, video: true, blog: true, email: true, analytics: true, legal: true, finance: true, leads: true, ads: true, research: true, training: true, whiteLabel: true },
   { name: 'Sintra.ai', us: false, employees: '15+', price: '$97', trial: 'None', crossCollab: false, video: false, blog: false, email: true, analytics: true, legal: false, finance: false, leads: true, ads: true, research: false, training: false, whiteLabel: false },
   { name: 'Marblism', us: false, employees: '6', price: 'From $20', trial: '7 days', crossCollab: false, video: false, blog: false, email: false, analytics: false, legal: false, finance: false, leads: false, ads: false, research: false, training: false, whiteLabel: false },
   { name: 'Monday', us: false, employees: '0', price: '$9/seat', trial: '7 days', crossCollab: false, video: false, blog: false, email: true, analytics: true, legal: false, finance: false, leads: true, ads: false, research: false, training: false, whiteLabel: false },
@@ -53,7 +53,7 @@ export default function Compare() {
       <section className="py-20 section-neon">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-black text-4xl sm:text-5xl uppercase text-black mb-4">If You're Reading This, You're Already Ahead.</h2>
-          <p className="text-black/60 text-lg mb-8">Try AI Employees free for 7 days.</p>
+          <p className="text-black/60 text-lg mb-8">Try Sidekicc free for 7 days.</p>
           <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-4 bg-black text-neon font-black uppercase border-3 border-black shadow-[4px_4px_0_rgba(0,0,0,0.3)] hover:shadow-[2px_2px_0_rgba(0,0,0,0.3)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
             Meet Your AI Team
           </a>
