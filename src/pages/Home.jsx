@@ -403,7 +403,7 @@ function Integrations() {
         <div style={{ textAlign: 'center', maxWidth: 700, margin: '0 auto 60px' }}>
           <p style={{ color: '#0066FF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Integrations</p>
           <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', lineHeight: 1.12 }}>Connected to the tools you already use.</h2>
-          <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7, marginTop: 16 }}>All integrations provided at platform level — you never touch an API key. For personal services like Gmail, just click "Connect."</p>
+          <p style={{ fontSize: 17, color: '#6b6b8d', lineHeight: 1.7, marginTop: 16 }}>All integrations provided at platform level — you never touch an API key. For personal services like Gmail, just click "Connect." <Link to="/integrations" style={{ color: '#0066FF', fontWeight: 600, textDecoration: 'none' }}>See the full list →</Link></p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
           {integrations.map((i) => (

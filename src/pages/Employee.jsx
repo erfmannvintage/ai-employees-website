@@ -1,6 +1,141 @@
 import { useParams, Link } from 'react-router-dom'
 import { employees } from '../data/employees'
 
+// Per-employee integrations, file types, and methodologies — sourced from the live app
+const extras = {
+  cecil: {
+    integrations: [
+      { name: 'Gmail', how: 'Reads, triages, drafts, and sends email — Inbox Zero every day.' },
+      { name: 'Google Calendar', how: 'Creates events, blocks focus time, resolves conflicts, sends invites.' },
+      { name: 'MailerLite', how: 'Runs newsletters, drip sequences, automations, segments, and A/B tests.' },
+      { name: 'Google Sheets · Drive · Docs', how: 'Pulls data, drafts docs, attaches files to replies.' },
+      { name: 'HubSpot meeting scheduler', how: 'Shares booking links so prospects self-schedule.' },
+      { name: 'Outlook · Yahoo · Zoho · iCloud · SMTP', how: 'Connect unlimited email accounts — any provider.' },
+    ],
+    fileTypes: ['Meeting notes', 'Voice memos', 'PDF · DOCX · TXT · MD', 'CSV contact lists'],
+    methodologies: ['Inbox Zero', 'OHIO (Only Handle It Once)', 'GTD', 'Eisenhower Matrix', 'AIDA / PAS copywriting', 'CAN-SPAM · GDPR · PECR compliance'],
+  },
+  flora: {
+    integrations: [
+      { name: 'TikTok · Instagram · Facebook · X · LinkedIn · YouTube', how: 'Publishes natively to each platform via the Late/Zernio API.' },
+      { name: 'Pinterest · Threads · Bluesky · Reddit · GBP · Telegram · Snapchat · WhatsApp · Discord', how: 'Extended reach — 14 platforms total, each with platform-native formatting.' },
+      { name: 'YouTube Analytics (live)', how: 'Tracks video performance, watch time, retention, traffic sources.' },
+      { name: 'Imagen 4 · Gemini 2.5 Flash Image', how: 'Generates branded images at correct aspect ratio per platform (9:16, 4:5, 16:9, 1:1).' },
+      { name: 'Remotion scene library', how: '6 scene types — Hero, Problem, Comparison, Stat, Text Card, CTA — for TikTok-native video.' },
+      { name: 'Media Library', how: 'Uses your uploaded images, audio, and video clips in posts.' },
+      { name: 'Competitor Insights', how: 'Tracks competitor accounts — winning formats, hooks, hashtags, content gaps.' },
+    ],
+    fileTypes: ['Images (JPG · PNG · WEBP)', 'Audio (MP3 · WAV · M4A · OGG)', 'Video clips', 'Voice notes with ideas'],
+    methodologies: ['6-scene video architecture', 'Anti-repetition engine', 'Platform-native styling', 'Owner voice replication', 'Trend-aligned scheduling'],
+  },
+  basil: {
+    integrations: [
+      { name: 'Gmail', how: 'Reads customer enquiries, drafts empathetic replies, escalates when needed.' },
+      { name: 'Google Places reviews', how: 'Monitors and responds to up to 5 recent Google reviews per location.' },
+      { name: 'Yelp Fusion', how: '500 free calls/day — reads and responds to reviews.' },
+      { name: 'Trustpilot', how: 'Public read of any business — responds to positive and negative reviews.' },
+      { name: 'Churn health scoring', how: '5-stage Behavioural Decay model flags at-risk customers before they leave.' },
+    ],
+    fileTypes: ['Customer call recordings (MP3/WAV)', 'Support voice notes', 'Knowledge base docs', 'Ticket exports (CSV)'],
+    methodologies: ['HEARD method (Hear · Empathise · Apologise · Resolve · Diagnose)', 'BANT qualification', 'CSAT · NPS · CES measurement', 'P1-P4 priority tiers', '5-stage churn detection'],
+  },
+  hugh: {
+    integrations: [
+      { name: 'Lead Discovery Engine', how: 'Pulls prospects from 7 free sources — no paid APIs needed.' },
+      { name: 'Companies House', how: 'UK company records with directors, filings, SIC codes.' },
+      { name: 'OpenStreetMap Overpass', how: 'Global business lookup — 33 industry mappings covered.' },
+      { name: 'Google Places', how: 'Local business data + review intelligence before outreach.' },
+      { name: 'Wikidata · Social scraping · Directory scraping', how: 'Trade associations, Instagram/TikTok/Facebook profiles, vertical directories.' },
+      { name: 'Website enrichment', how: 'Scrapes emails, phone numbers, and social handles from prospect sites.' },
+      { name: 'HubSpot CRM (free tier)', how: 'Contacts, companies, deals, pipeline stages, unlimited engagement notes.' },
+      { name: 'Gmail · MailerLite', how: 'Multi-touch outreach sequences across email providers.' },
+    ],
+    fileTypes: ['Sales call recordings (MP3/WAV)', 'Competitor spreadsheets (XLSX · CSV)', 'Pitch decks (PPTX · PPT)', 'Prospect list imports (CSV)'],
+    methodologies: ['SPIN Selling', 'Challenger Sale', 'MEDDIC', 'CHAMP', 'Signal-based selling', '33 industry playbooks'],
+  },
+  mabel: {
+    integrations: [
+      { name: 'Google Search Console (live)', how: 'Real-time rankings, CTR, indexing issues, content decay detection.' },
+      { name: 'Blog CMS', how: 'Writes and publishes direct — 2 posts/week (Mon + Thu) auto-saved.' },
+      { name: 'Media Library', how: 'Sources visuals and attributes them in blog posts.' },
+      { name: 'Review mining engine', how: 'Turns customer complaints into "top problems" blog angles.' },
+    ],
+    fileTypes: ['Keyword spreadsheets (XLSX · CSV)', 'Research PDFs', 'Competitor blog posts (HTML · MD)', 'Topic briefs (DOCX)'],
+    methodologies: ['Hub-and-spoke topical authority', 'AEO (Answer Engine Optimisation)', 'GEO (Generative Engine Optimisation)', 'E-E-A-T signals', 'FAQ snippet schema', 'Internal linking strategy'],
+  },
+  rupert: {
+    integrations: [
+      { name: 'gov.uk (live grounded search)', how: 'Latest UK government guidance — tax, employment, data.' },
+      { name: 'ICO (Information Commissioner)', how: 'Enforcement actions, GDPR updates, data breach reporting rules.' },
+      { name: 'legislation.gov.uk', how: 'Primary source for UK statutes — Consumer Rights Act, DPA 2018, etc.' },
+      { name: 'ASA (Advertising Standards)', how: 'Ad copy and campaign review against current ASA rulings.' },
+      { name: 'Companies House', how: 'Director records, filings, ownership verification.' },
+      { name: 'HMRC · judiciary.uk', how: 'Tax guidance and case law for ongoing compliance.' },
+    ],
+    fileTypes: ['Contracts (PDF · DOCX)', 'Regulatory documents (PDF)', 'Compliance spreadsheets (XLSX)', 'Policy templates (DOCX)'],
+    methodologies: ['UK GDPR · DPA 2018', 'EU AI Act', 'Consumer Rights Act 2015', 'PECR / ePrivacy', 'WCAG 2.2 accessibility', 'ASA advertising codes'],
+  },
+  poppi: {
+    integrations: [
+      { name: 'Google Search (live grounded)', how: 'Real-time competitive intel and market moves.' },
+      { name: 'Boardroom (team chat)', how: 'Assigns tasks to Flora, Hugh, Mabel, Raymond, Bowie, Cecil, Ava.' },
+      { name: 'Competitor Insights', how: 'Listed competitor accounts auto-tracked across platforms.' },
+      { name: 'HubSpot pipeline read', how: 'Pipeline value + stage breakdown inform campaign priorities.' },
+      { name: 'Live finance snapshot', how: 'Stripe MRR and QuickBooks P&L feed into spend decisions.' },
+      { name: 'Campaign templates', how: 'Launches Waitlist · New Subscriber · Free Trial · Retention · Win-Back · Custom.' },
+    ],
+    fileTypes: ['Presentations (PPTX · PPT)', 'Marketing reports (PDF)', 'Voice notes with campaign ideas', 'Brand guidelines (DOCX · PDF)'],
+    methodologies: ['AARRR pirate funnels', 'ICP framework', 'Jobs-to-be-Done', '6 campaign templates', 'Multi-channel orchestration', 'Brand positioning'],
+  },
+  ava: {
+    integrations: [
+      { name: 'GA4 (Marketer-level live access)', how: 'Real-time traffic, conversions, attribution — not 30-day exports.' },
+      { name: 'YouTube Analytics', how: 'Watch time, retention curves, audience demographics, traffic sources.' },
+      { name: 'Google Search Console', how: 'Queries, clicks, impressions, CTR, average position, indexing.' },
+      { name: 'BigQuery', how: 'Custom SQL on raw GA4 event data for deep dives.' },
+      { name: 'Looker Studio', how: 'Builds executive dashboards with your KPIs.' },
+    ],
+    fileTypes: ['Historical data (XLSX · CSV)', 'Benchmark reports (PDF)', 'Raw event exports (JSON)', 'Dashboard screenshots'],
+    methodologies: ['Attribution modelling (data-driven · last-click · first-click)', 'Cohort analysis', 'Predictive audiences', 'Anomaly detection', 'GA4 event audits', 'Daily metrics framework'],
+  },
+  raymond: {
+    integrations: [
+      { name: 'Google Ads (all 9 certifications)', how: 'Search, Display, Video, Shopping, Apps, Measurement, AI-Powered Performance, AI-Powered Shopping, Creative.' },
+      { name: 'Meta Ads', how: 'Facebook + Instagram campaigns across all placements.' },
+      { name: 'Google Keyword Planner', how: 'Search volume, competition, suggested bids.' },
+      { name: 'Meta Ad Library', how: 'Studies what competitors are actually spending on.' },
+      { name: 'GA4 integration', how: 'Conversion tracking, attribution, custom audiences for retargeting.' },
+      { name: 'Review mining engine', how: 'Grounds ad hooks in real customer pain points, not guesses.' },
+    ],
+    fileTypes: ['Campaign reports (XLSX · CSV)', 'Ad screenshots (PNG · JPG)', 'Creative briefs (PPTX)', 'Audience exports (CSV)'],
+    methodologies: ['TOFU / MOFU / BOFU funnel', '5-pillar architecture (targeting · creative · bidding · landing · measurement)', 'A/B testing framework', 'ROAS optimisation', 'Budget allocation models'],
+  },
+  bowie: {
+    integrations: [
+      { name: 'Google Search (live grounded)', how: 'Cited sources — every insight links to a real URL.' },
+      { name: 'Reddit public JSON', how: 'Deep comment mining (2-3 replies deep) on niche subreddits. Changelog stream cached 24h.' },
+      { name: 'Hacker News Algolia', how: 'Technical industry signals and launch discussions.' },
+      { name: 'Wikidata', how: 'Structured data for trade associations, industry bodies.' },
+      { name: 'gov.uk · ONS · SimilarWeb · Google Trends · Crunchbase · Product Hunt · G2', how: 'Market sizing, traffic estimates, funding signals, product landscape.' },
+    ],
+    fileTypes: ['Industry reports (PDF)', 'Market data (XLSX)', 'Conference recordings (MP3)', 'Competitor pitch decks (PPTX)'],
+    methodologies: ['PESTLE analysis', "Porter's Five Forces", 'TAM / SAM / SOM sizing', 'SWOT', 'Jobs-to-be-Done', 'Blue Ocean Strategy', 'Business Model Canvas'],
+  },
+  angela: {
+    integrations: [
+      { name: 'Stripe (live)', how: 'MRR · ARR · churn · ARPU · cancelled-last-30 · subscribers-by-plan.' },
+      { name: 'QuickBooks Online', how: 'Live P&L, balance sheet, assets, liabilities, cash, AR, AP.' },
+      { name: 'Xero', how: 'Live YTD P&L, balance sheet, cash, outstanding invoices.' },
+      { name: 'FreeAgent', how: 'UK sole trader P&L + invoices.' },
+      { name: 'Sage', how: 'Traditional UK bookkeeping integration.' },
+      { name: 'HMRC · gov.uk (live search)', how: 'Corporation Tax, VAT, R&D credit rates refreshed weekly.' },
+      { name: 'HubSpot pipeline cross-check', how: 'Reconciles closed-won deal value vs Stripe actual revenue.' },
+    ],
+    fileTypes: ['Bank statements (CSV)', 'Financial reports (XLSX)', 'Tax documents (PDF)', 'Receipts (JPG · PNG · PDF)', 'Invoices (PDF · DOCX)'],
+    methodologies: ['Corporation Tax planning', 'VAT returns', 'R&D Tax Credits', 'Capital Allowances', 'Dividend/salary split optimisation', 'SEIS / EIS advance assurance', 'MTD (Making Tax Digital) compliance', 'Monthly management accounts'],
+  },
+}
+
 const detailed = {
   cecil: {
     fullName: 'Cecil Hartington-Smythe', tagline: 'Your right hand. I manage your calendar, emails, and daily operations so you can focus on growing your business.',
@@ -200,6 +335,7 @@ export default function Employee() {
   const { slug } = useParams()
   const emp = employees.find((e) => e.name.toLowerCase() === slug)
   const detail = detailed[slug]
+  const extra = extras[slug]
 
   if (!emp || !detail) {
     return (
@@ -293,6 +429,60 @@ export default function Employee() {
           </div>
         </div>
       </section>
+
+      {/* Integrations & Tools */}
+      {extra && (
+        <section style={{ background: '#fff', padding: '100px 0' }}>
+          <div style={cx}>
+            <div style={{ textAlign: 'center', marginBottom: 48 }}>
+              <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Connected To</p>
+              <h2 style={{ fontSize: 36, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em' }}>{emp.name}'s integrations & tools</h2>
+              <p style={{ fontSize: 16, color: '#6b6b8d', marginTop: 12, maxWidth: 640, margin: '12px auto 0' }}>Everything live or ready to connect. All API keys managed server-side — you never touch credentials.</p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+              {extra.integrations.map((intg) => (
+                <div key={intg.name} style={{ background: '#fafafa', borderRadius: 16, padding: 24, border: '1px solid #eee', borderLeft: '4px solid #6C3AFF' }}>
+                  <h3 style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 15, marginBottom: 6 }}>{intg.name}</h3>
+                  <p style={{ color: '#6b6b8d', fontSize: 14, lineHeight: 1.6 }}>{intg.how}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Files & Methodologies — two column */}
+      {extra && (
+        <section style={{ background: '#fafafa', padding: '80px 0' }}>
+          <div style={cx}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40 }}>
+              <div style={{ background: '#fff', borderRadius: 24, padding: 32, border: '1px solid #eee' }}>
+                <p style={{ color: '#00CC66', fontWeight: 600, fontSize: 13, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Works With</p>
+                <h3 style={{ fontSize: 24, fontWeight: 900, color: '#1a1a2e', marginBottom: 20 }}>File types {emp.name} uses</h3>
+                <p style={{ color: '#6b6b8d', fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>Upload anything relevant — text is extracted automatically, audio is transcribed, and everything is stored permanently in {emp.name}'s Brain.</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {extra.fileTypes.map((f) => (
+                    <span key={f} style={{ padding: '8px 14px', fontSize: 13, fontWeight: 600, color: '#1a1a2e', background: '#fafafa', border: '1px solid #e8e8f0', borderRadius: 10 }}>{f}</span>
+                  ))}
+                </div>
+              </div>
+              <div style={{ background: '#fff', borderRadius: 24, padding: 32, border: '1px solid #eee' }}>
+                <p style={{ color: '#FF6600', fontWeight: 600, fontSize: 13, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.08em' }}>Applies</p>
+                <h3 style={{ fontSize: 24, fontWeight: 900, color: '#1a1a2e', marginBottom: 20 }}>Methodologies & frameworks</h3>
+                <p style={{ color: '#6b6b8d', fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>Every output from {emp.name} is grounded in industry-standard frameworks — not generic LLM guesses.</p>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                  {extra.methodologies.map((m) => (
+                    <li key={m} style={{ display: 'flex', alignItems: 'flex-start', gap: 10, padding: '6px 0' }}>
+                      <svg width="14" height="14" fill="#FF6600" viewBox="0 0 20 20" style={{ marginTop: 4, flexShrink: 0 }}><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                      <span style={{ fontSize: 14, color: '#3d3d5c', lineHeight: 1.5 }}>{m}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Ideal For — full width coloured container */}
       <section style={{ background: '#fff', padding: '80px 0' }}>
