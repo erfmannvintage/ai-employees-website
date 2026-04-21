@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { plans } from '../data/employees'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -31,9 +32,35 @@ const compRows = [
   { key: 'webhooks', label: 'Webhooks (Zapier, Make, n8n)', t: 'bool' },
 ]
 
+const pricingJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Sidekicc AI Workforce',
+  description: '11 specialist AI employees for small business — marketing, sales, support, content, analytics, legal, ads, research, finance.',
+  brand: { '@type': 'Brand', name: 'Sidekicc' },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'GBP',
+    lowPrice: '39',
+    highPrice: '199',
+    offerCount: '3',
+    offers: [
+      { '@type': 'Offer', name: 'Starter', price: '49', priceCurrency: 'GBP', description: 'All 11 AI Employees. 500 tasks/month. Chat + Voice. 1 seat.' },
+      { '@type': 'Offer', name: 'Growth', price: '99', priceCurrency: 'GBP', description: 'All 11 AI Employees. 5,000 tasks/month. Vibe Mode + content chains + every integration. 3 seats.' },
+      { '@type': 'Offer', name: 'Enterprise', price: '199', priceCurrency: 'GBP', description: 'Unlimited tasks, white-label, dedicated account manager. Unlimited seats.' },
+    ],
+  },
+}
+
 export default function Pricing() {
   return (
     <div>
+      <SEO
+        title="Pricing — Sidekicc from £49/month, 7-day Free Trial"
+        description="Three simple plans. All 11 AI employees included in every tier. Starter £49, Growth £99, Enterprise £199. No credits. 7-day free trial, no credit card."
+        path="/pricing"
+        jsonLd={pricingJsonLd}
+      />
       {/* Hero */}
       <section style={{ background: '#fff', padding: '80px 0' }}>
         <div style={{ ...cx, textAlign: 'center' }}>

@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom'
 import { employees } from '../data/employees'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
 export default function About() {
   return (
     <div>
+      <SEO
+        title="Meet the 11 AI Employees — Sidekicc Team"
+        description="Meet Cecil, Flora, Basil, Hugh, Mabel, Rupert, Poppi, Ava, Raymond, Bowie, and Angela — the 11 AI employees that run your business. Full CVs, certifications, and specialties."
+        path="/about"
+      />
       {/* Hero */}
       <section style={{ background: '#fff', padding: '80px 0' }}>
         <div style={{ ...cx, textAlign: 'center' }}>

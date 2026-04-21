@@ -1,0 +1,35 @@
+# Sidekicc
+
+> Sidekicc is a UK-based AI workforce SaaS that gives small and medium businesses eleven specialist AI employees for a flat monthly fee starting at £49. Each employee handles a specific business function — marketing, sales, support, content, analytics, legal, advertising, research, or finance — with persistent memory of the subscriber's business, cross-team collaboration, live integrations with the tools they already use, and autonomous execution once trusted.
+
+Sidekicc differs from general-purpose AI chatbots and credit-based AI agent platforms in three ways: (1) eleven distinct specialists with named personas and real professional qualifications, not a prompt-engineering tool; (2) flat predictable pricing with simple monthly task limits, not credit meters that run out; (3) cross-employee peer review, content chain automation, and live third-party data grounding — so outputs come from real data, not general knowledge. Launched 2026 in the United Kingdom.
+
+## Core pages
+- [Home](https://sidekicc.com/): Overview of the eleven AI employees, how they work together, pricing, and the 7-day free trial.
+- [Team](https://sidekicc.com/about): Full CVs for every AI employee with skills, experience, integrations, methodologies, and who they're for.
+- [Pricing](https://sidekicc.com/pricing): Three plans — Starter £49/mo, Growth £99/mo, Enterprise £199/mo. Feature matrix versus competitors.
+- [Integrations](https://sidekicc.com/integrations): 60+ integrations across 12 categories — email, social, analytics, paid ads, CRM, reviews, finance, legal sources, research, AI media, automation, mobile.
+
+## The eleven AI employees
+- [Cecil](https://sidekicc.com/employee/cecil): Executive assistant — Gmail, Google Calendar, MailerLite, Inbox Zero, email campaigns.
+- [Flora](https://sidekicc.com/employee/flora): Social media manager — 14 platforms, native video, AI images, platform-optimised posting.
+- [Basil](https://sidekicc.com/employee/basil): Customer support — HEARD method, 24/7 replies, review monitoring, churn detection.
+- [Hugh](https://sidekicc.com/employee/hugh): Sales director — multi-source lead discovery, HubSpot CRM, SPIN/Challenger/MEDDIC.
+- [Mabel](https://sidekicc.com/employee/mabel): SEO blog writer — hub-and-spoke, AEO/GEO, live Search Console, 2 posts per week.
+- [Rupert](https://sidekicc.com/employee/rupert): Legal advisor — UK GDPR, Consumer Rights Act, EU AI Act, PECR, contract review.
+- [Poppi](https://sidekicc.com/employee/poppi): Marketing strategist and team manager — AARRR, ICP, campaign orchestration.
+- [Ava](https://sidekicc.com/employee/ava): Analytics director — live GA4, attribution, cohort analysis, predictive audiences.
+- [Raymond](https://sidekicc.com/employee/raymond): Paid ads manager — all 9 Google Ads certifications plus Meta Ads.
+- [Bowie](https://sidekicc.com/employee/bowie): Research analyst — Oxford MPhil, Cambridge MBA, PESTLE, Porter's Five Forces, TAM/SAM/SOM.
+- [Angela](https://sidekicc.com/employee/angela): Chief Financial Officer — ACA, ACCA, CIMA Strategic, Stripe, QuickBooks, Xero, UK tax.
+
+## Reference
+- [Blog](https://sidekicc.com/blog): Guides, case studies, and strategy for running a business with AI employees.
+- [Help Centre](https://sidekicc.com/help): 25+ answers across getting started, employees, features, billing, security.
+- [Contact](https://sidekicc.com/contact): hello@sidekicc.com for general enquiries.
+
+## Optional
+- [Privacy Policy](https://sidekicc.com/privacy): UK GDPR, DPA 2018, PECR compliant.
+- [Terms of Service](https://sidekicc.com/terms): Consumer Rights Act 2015, DMCC Act 2024 compliant.
+- [Cookie Policy](https://sidekicc.com/cookies): PECR-compliant cookie use and preferences.
+- [Refund Policy](https://sidekicc.com/refund): 30-day money-back guarantee.

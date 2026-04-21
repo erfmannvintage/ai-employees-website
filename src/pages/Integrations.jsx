@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -158,6 +159,11 @@ export default function Integrations() {
 
   return (
     <div>
+      <SEO
+        title="Integrations — 60+ Tools Connected to Sidekicc"
+        description="Gmail, Google Calendar, MailerLite, GA4, YouTube, Search Console, Stripe, QuickBooks, Xero, FreeAgent, Sage, HubSpot, 14 social platforms. 60+ integrations, no per-integration fees."
+        path="/integrations"
+      />
       {/* Hero */}
       <section style={{ background: '#fff', padding: '80px 0 40px' }}>
         <div style={{ ...cx, textAlign: 'center' }}>

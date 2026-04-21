@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import { employees } from '../data/employees'
+import SEO from '../components/SEO'
 
 // Per-employee integrations, file types, and methodologies — sourced from the live app
 const extras = {
@@ -346,8 +347,27 @@ export default function Employee() {
     )
   }
 
+  const employeeJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: detail.fullName,
+    jobTitle: emp.role,
+    worksFor: { '@type': 'Organization', name: 'Sidekicc' },
+    description: detail.tagline,
+    knowsAbout: detail.qualifications,
+    image: `https://sidekicc.com${emp.image}`,
+  }
+
   return (
     <div>
+      <SEO
+        title={`${emp.name} — ${emp.role} | Sidekicc AI Employee`}
+        description={`${detail.tagline} Qualifications: ${detail.qualifications.join(', ')}. Hire ${emp.name} on Sidekicc from £49/month.`}
+        path={`/employee/${slug}`}
+        ogImage={emp.image}
+        ogType="profile"
+        jsonLd={employeeJsonLd}
+      />
       {/* Hero — side by side */}
       <section style={{ background: '#fff', padding: '80px 0' }}>
         <div style={cx}>
@@ -483,6 +503,83 @@ export default function Employee() {
           </div>
         </section>
       )}
+
+      {/* Full Automation — trust-building showcase */}
+      <section style={{ background: '#0A1628', padding: '100px 0', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle, rgba(0,204,102,0.08) 1.5px, transparent 1.5px)', backgroundSize: '14px 14px', pointerEvents: 'none' }} />
+        <div style={{ ...cx, position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}>
+            <div>
+              <p style={{ color: '#00CC66', fontWeight: 600, fontSize: 14, marginBottom: 12, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Full Automation</p>
+              <h2 style={{ fontSize: 42, fontWeight: 900, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: 20 }}>
+                Trust {emp.name}? Let them run on their own.
+              </h2>
+              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 16 }}>
+                Every piece of work {emp.name} produces starts in your Approval Queue by default — so you can review, edit, and build trust. Once {emp.name} has proven they understand your business and voice, flip <strong style={{ color: '#00CC66' }}>Full Automation</strong> on.
+              </p>
+              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 28 }}>
+                {emp.name} executes every task without asking — sending emails, publishing posts, logging CRM activity, closing the loop. You reclaim your time entirely. Turn it off anytime from the employee's settings.
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 24 }}>
+                {[
+                  { t: 'Daily caps', d: 'Hard limits you set per employee.' },
+                  { t: 'Audit trail', d: 'Every autonomous action logged with timestamp.' },
+                  { t: 'Instant recall', d: 'Pause everything with one tap if anything looks wrong.' },
+                ].map((s) => (
+                  <div key={s.t} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 12, padding: 14, border: '1px solid rgba(255,255,255,0.08)' }}>
+                    <div style={{ color: '#00CC66', fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>{s.t}</div>
+                    <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 12, lineHeight: 1.5 }}>{s.d}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Toggle mockup */}
+            <div>
+              <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 24, padding: 36, border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(8px)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24 }}>
+                  <img src={emp.image} alt={emp.name} style={{ width: 56, height: 56, borderRadius: 14, objectFit: 'cover', border: '2px solid rgba(0,204,102,0.4)' }} />
+                  <div>
+                    <div style={{ color: '#fff', fontSize: 18, fontWeight: 700 }}>{emp.name}</div>
+                    <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13 }}>{emp.role}</div>
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(0,204,102,0.08)', borderRadius: 16, padding: 20, border: '1px solid rgba(0,204,102,0.2)', marginBottom: 16 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <div>
+                      <div style={{ color: '#fff', fontSize: 15, fontWeight: 700, marginBottom: 4 }}>Full Automation</div>
+                      <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12 }}>Execute without approval</div>
+                    </div>
+                    {/* iOS-style toggle, ON */}
+                    <div style={{ width: 52, height: 30, background: '#00CC66', borderRadius: 15, position: 'relative', boxShadow: '0 0 20px rgba(0,204,102,0.4)' }}>
+                      <div style={{ position: 'absolute', top: 3, right: 3, width: 24, height: 24, background: '#fff', borderRadius: '50%', boxShadow: '0 2px 4px rgba(0,0,0,0.2)' }} />
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {[
+                    { t: 'Daily task cap', v: '50 tasks / day' },
+                    { t: 'Require review for', v: 'Emails over 200 words' },
+                    { t: 'Instant recall', v: 'One-tap pause' },
+                  ].map((s) => (
+                    <div key={s.t} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px', background: 'rgba(255,255,255,0.03)', borderRadius: 10, border: '1px solid rgba(255,255,255,0.05)' }}>
+                      <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13 }}>{s.t}</span>
+                      <span style={{ color: '#fff', fontSize: 13, fontWeight: 600 }}>{s.v}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ marginTop: 20, padding: '12px 14px', background: 'rgba(0,204,102,0.06)', borderRadius: 10, display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#00CC66', boxShadow: '0 0 10px rgba(0,204,102,0.6)' }} />
+                  <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12 }}>{emp.name} is working autonomously · 12 tasks today</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Ideal For — full width coloured container */}
       <section style={{ background: '#fff', padding: '80px 0' }}>

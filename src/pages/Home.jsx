@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { employees, plans } from '../data/employees'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -627,9 +628,43 @@ function CTA() {
   )
 }
 
+const homeJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Sidekicc',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web, iOS, Android',
+    description: 'Sidekicc gives small businesses 11 specialist AI employees for marketing, sales, support, content, analytics, legal, advertising, research, and finance. From £49/month.',
+    offers: [
+      { '@type': 'Offer', name: 'Starter', price: '49', priceCurrency: 'GBP' },
+      { '@type': 'Offer', name: 'Growth', price: '99', priceCurrency: 'GBP' },
+      { '@type': 'Offer', name: 'Enterprise', price: '199', priceCurrency: 'GBP' },
+    ],
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '127' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'What exactly is Sidekicc?', acceptedAnswer: { '@type': 'Answer', text: 'Sidekicc is a SaaS platform that gives you 11 specialist AI employees — Cecil, Flora, Basil, Hugh, Mabel, Rupert, Poppi, Ava, Raymond, Bowie, and Angela — each one a certified expert in their domain, handling marketing, sales, support, content, analytics, legal, advertising, research, and finance. They collaborate with each other, cross-review work, and learn your business over time.' } },
+      { '@type': 'Question', name: 'How is Sidekicc different from ChatGPT?', acceptedAnswer: { '@type': 'Answer', text: "ChatGPT is a general-purpose chatbot. Sidekicc's AI employees are specialised workers with real qualifications (HubSpot, Google Ads, ACA, ACCA, etc.), permanent memory of your business, cross-team collaboration, autonomous execution, and integration with your actual tools. They don't just chat — they DO the work." } },
+      { '@type': 'Question', name: "What's included in the free trial?", acceptedAnswer: { '@type': 'Answer', text: '7 days of full access at Growth-level (all features, all employees, 5,000 tasks). No credit card required. At the end, choose a plan or your account pauses — no surprise charges.' } },
+      { '@type': 'Question', name: 'Can I cancel anytime?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Cancel from your account settings at any time. No lock-in contracts, no cancellation fees. You keep access until the end of your billing period. 30-day money-back guarantee on all paid plans.' } },
+      { '@type': 'Question', name: 'How much does Sidekicc cost?', acceptedAnswer: { '@type': 'Answer', text: 'Three plans: Starter £49/mo, Growth £99/mo (most popular), Enterprise £199/mo. All plans include all 11 AI employees and every integration. Annual billing saves 20%.' } },
+    ],
+  },
+]
+
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Sidekicc — 11 AI Employees for Your Business from £49/mo"
+        description="Hire 11 specialist AI employees to run your marketing, sales, support, content, analytics, legal, ads, research, and finance. From £49/month. 7-day free trial, no credit card."
+        path="/"
+        jsonLd={homeJsonLd}
+      />
       <Hero />
       {/* PainPoints removed — info moved to employee cards */}
       <WhatYouGet />

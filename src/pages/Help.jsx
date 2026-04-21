@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -64,8 +65,24 @@ const categories = [
 export default function Help() {
   const [openId, setOpenId] = useState(null)
 
+  const helpJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: categories.flatMap((cat) => cat.qs.map((q) => ({
+      '@type': 'Question',
+      name: q.q,
+      acceptedAnswer: { '@type': 'Answer', text: q.a },
+    }))),
+  }
+
   return (
     <div>
+      <SEO
+        title="Help Centre — Sidekicc Support & FAQs"
+        description="25+ answers across getting started, the 11 AI employees, features, integrations, billing, and security. Can't find your answer? Contact us — we respond within 24 hours."
+        path="/help"
+        jsonLd={helpJsonLd}
+      />
       {/* Hero */}
       <section style={{ background: '#fff', padding: '80px 0' }}>
         <div style={{ ...cx, textAlign: 'center' }}>

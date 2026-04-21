@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
@@ -14,6 +15,11 @@ const posts = [
 export default function Blog() {
   return (
     <div>
+      <SEO
+        title="Blog — AI Workforce Strategy and Case Studies | Sidekicc"
+        description="Guides, case studies, and deep-dives on running your business with AI employees. SEO, paid ads, content strategy, compliance — written for founders and small-business owners."
+        path="/blog"
+      />
       <section style={{ background: '#fff', padding: '80px 0' }}>
         <div style={{ ...cx, textAlign: 'center' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Blog</p>

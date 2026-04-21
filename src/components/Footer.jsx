@@ -98,7 +98,7 @@ export default function Footer() {
           <div>
             <h4 style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 20 }}>Legal</h4>
             <ul style={{ listStyle: 'none' }}>
-              {[{ to: '/terms', l: 'Terms of Service' }, { to: '/privacy', l: 'Privacy Policy' }, { to: '/refund', l: 'Refund Policy' }].map((x) => (
+              {[{ to: '/terms', l: 'Terms of Service' }, { to: '/privacy', l: 'Privacy Policy' }, { to: '/cookies', l: 'Cookie Policy' }, { to: '/refund', l: 'Refund Policy' }].map((x) => (
                 <li key={x.to} style={{ marginBottom: 10 }}>
                   <Link to={x.to} style={{ color: 'rgba(255,255,255,0.55)', fontSize: 14, textDecoration: 'none' }}>{x.l}</Link>
                 </li>
