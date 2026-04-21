@@ -448,34 +448,49 @@ function Stats() {
 }
 
 /* ============================================
-   SECTION 10: TESTIMONIALS — White bg, pink container
+   SECTION 10: WHY SIDEKICC — benefit-focused, no fake testimonials
    ============================================ */
-function Testimonials() {
-  const t = [
-    { q: "I replaced 3 freelancers with Sidekicc. My marketing runs 24/7 and the quality is genuinely better. The cross-review system catches things I'd miss.", n: 'Sarah K.', r: 'E-commerce Founder' },
-    { q: "Hugh closed more leads in his first week than my previous outreach tool did in a month. The 7-source lead discovery is insane — found prospects I didn't know existed.", n: 'Marcus T.', r: 'SaaS Founder' },
-    { q: "Having Ava connected to our GA4 live and Angela managing QuickBooks means I actually understand my numbers. The daily action plans are a game-changer.", n: 'Priya R.', r: 'Agency Owner' },
+function WhySidekicc() {
+  const reasons = [
+    {
+      title: 'Replace three freelancers with one subscription',
+      body: 'A social media manager (£2,000-£3,500/mo), an SEO writer (£1,500-£3,000/mo), and a bookkeeper (£800-£1,500/mo) add up to £4,300-£8,000 every month. Sidekicc covers all of that plus eight more roles — from £49.',
+    },
+    {
+      title: 'Every plan includes every employee',
+      body: 'Cross-review and content chains need the full team. You get Cecil, Flora, Basil, Hugh, Mabel, Rupert, Poppi, Ava, Raymond, Bowie, and Angela on Starter, Growth, and Enterprise. We differentiate by capability, not by gating employees.',
+    },
+    {
+      title: 'Simple monthly tasks, never credits',
+      body: "Credit systems disappear in a couple of hours on some platforms — users describe it as being punished for using the product. Sidekicc uses flat monthly task limits: 500, 5,000, or unlimited. You know exactly what you get.",
+    },
+    {
+      title: 'Grounded in real data, not general knowledge',
+      body: "Live GA4, YouTube Analytics, Search Console, Stripe, QuickBooks, Xero, FreeAgent, HubSpot, Companies House, HMRC. Plus real customer reviews and community conversations. Outputs cite real URLs — no hallucinated claims.",
+    },
+    {
+      title: 'Autonomous once you trust them',
+      body: "Everything starts in your Approval Queue so you can build trust. Flip Full Automation on per employee when you're confident and they execute without asking. Turn it off anytime. Daily caps, audit trail, instant recall built in.",
+    },
+    {
+      title: 'UK-native — built for how you actually work',
+      body: "Corporation Tax, VAT, R&D credits, SEIS/EIS, MTD compliance, UK GDPR, ICO guidance, ASA rules, Companies House lookups. Most competitors are US-only. Sidekicc works with your stack and your regulator from day one.",
+    },
   ]
 
   return (
     <section style={{ background: '#fff', padding: '100px 0' }}>
       <div style={cx}>
-        <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <p style={{ color: '#FF1493', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Testimonials</p>
-          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em' }}>Loved by business owners</h2>
+        <div style={{ textAlign: 'center', marginBottom: 48, maxWidth: 700, marginLeft: 'auto', marginRight: 'auto' }}>
+          <p style={{ color: '#FF1493', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Why Sidekicc</p>
+          <h2 style={{ fontSize: 44, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em' }}>Six reasons subscribers choose us over the alternatives.</h2>
         </div>
         <div style={{ background: 'rgba(255,20,147,0.04)', borderRadius: 32, padding: 28 }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-            {t.map((x) => (
-              <div key={x.n} style={{ background: '#fff', borderRadius: 20, padding: 28, boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
-                <div style={{ display: 'flex', gap: 2, marginBottom: 16 }}>
-                  {[...Array(5)].map((_, i) => <svg key={i} width="18" height="18" fill="#FFD700" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}
-                </div>
-                <p style={{ color: '#3d3d5c', fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>"{x.q}"</p>
-                <div style={{ borderTop: '1px solid #eee', paddingTop: 16 }}>
-                  <div style={{ fontWeight: 600, color: '#1a1a2e', fontSize: 14 }}>{x.n}</div>
-                  <div style={{ fontSize: 12, color: '#9999aa' }}>{x.r}</div>
-                </div>
+            {reasons.map((r) => (
+              <div key={r.title} style={{ background: '#fff', borderRadius: 20, padding: 28, boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
+                <h3 style={{ fontWeight: 800, color: '#1a1a2e', fontSize: 17, marginBottom: 10, lineHeight: 1.35 }}>{r.title}</h3>
+                <p style={{ color: '#3d3d5c', fontSize: 14, lineHeight: 1.65 }}>{r.body}</p>
               </div>
             ))}
           </div>
@@ -641,7 +656,9 @@ const homeJsonLd = [
       { '@type': 'Offer', name: 'Growth', price: '99', priceCurrency: 'GBP' },
       { '@type': 'Offer', name: 'Enterprise', price: '199', priceCurrency: 'GBP' },
     ],
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '127' },
+    // aggregateRating intentionally omitted — will be added when real reviews exist.
+    // Publishing fabricated review counts violates both the DMCC Act 2024 and
+    // Google's review-snippet policy.
   },
   {
     '@context': 'https://schema.org',
@@ -675,7 +692,7 @@ export default function Home() {
       <MobileApp />
       <Integrations />
       <Stats />
-      <Testimonials />
+      <WhySidekicc />
       <PricingSection />
       <FAQ />
       <CTA />
