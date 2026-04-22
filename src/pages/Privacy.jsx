@@ -97,6 +97,7 @@ CRM relay (your choice) — HubSpot — US/DE.
 Error monitoring — production observability provider — US/EU.
 Product analytics (privacy-friendly) — analytics provider — EU.
 Marketing-site session analytics — Microsoft Clarity (Microsoft Corporation) — US/EU. Used on sidekicc.com only (not in the signed-in product). Masks sensitive fields by default. Transfers covered under the EU-US Data Privacy Framework.
+Marketing-site traffic analytics — Google Analytics 4 (Google LLC / Google Ireland Ltd) — EU/US. IP anonymisation enforced by default in GA4; Google Signals disabled. Used on sidekicc.com only. Transfers covered under the EU-US Data Privacy Framework.
 Customer support — helpdesk provider — EU.
 
 Named sub-processor identities and contractual DPAs are available on request to privacy@sidekicc.com for B2B subscribers and data protection authorities.

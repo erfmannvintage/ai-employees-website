@@ -20,6 +20,8 @@ const categories = [
     lawfulBasis: 'Consent (PECR reg. 6). Off unless you opt in.',
     cookies: [
       { name: '_plausible', duration: '30 days', purpose: 'Privacy-friendly aggregate analytics (no IP tracking, no cross-site profiling).' },
+      { name: '_ga', duration: '2 years', purpose: 'Google Analytics 4 — distinguishes unique visitors.' },
+      { name: '_ga_J14ZG2WH5V', duration: '2 years', purpose: 'Google Analytics 4 — session and campaign state for this property.' },
       { name: '_clck', duration: '1 year', purpose: 'Microsoft Clarity — persistent anonymised visitor ID for session recordings and heatmaps.' },
       { name: '_clsk', duration: '1 day', purpose: 'Microsoft Clarity — session-level key tying page views in a single visit together.' },
       { name: 'CLID / MUID / ANONCHK / SM', duration: 'Session – 1 year', purpose: 'Microsoft Clarity — set by clarity.ms to identify the browser and prevent abuse.' },
