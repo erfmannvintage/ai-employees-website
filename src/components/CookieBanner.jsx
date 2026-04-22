@@ -48,6 +48,15 @@ function writeConsent(choices) {
   const payload = { version: CONSENT_VERSION, choices, ts: new Date().toISOString() }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
   window.__cookieConsent = payload
+  if (typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
+      ad_storage: choices.marketing ? 'granted' : 'denied',
+      ad_user_data: choices.marketing ? 'granted' : 'denied',
+      ad_personalization: choices.marketing ? 'granted' : 'denied',
+      analytics_storage: choices.analytics ? 'granted' : 'denied',
+      personalization_storage: choices.analytics ? 'granted' : 'denied',
+    })
+  }
   window.dispatchEvent(new CustomEvent('sidekicc:cookieConsent', { detail: payload }))
 }
 
