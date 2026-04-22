@@ -16,10 +16,13 @@ const categories = [
   },
   {
     name: 'Analytics',
-    purpose: 'Measure aggregate usage — which pages are visited, how long, which features are used — so we can improve the product. Data is anonymised.',
+    purpose: 'Measure aggregate usage — which pages are visited, how long, which features are used, where visitors click and scroll — so we can improve the product. Sensitive fields (passwords, typed form text) are masked by default.',
     lawfulBasis: 'Consent (PECR reg. 6). Off unless you opt in.',
     cookies: [
       { name: '_plausible', duration: '30 days', purpose: 'Privacy-friendly aggregate analytics (no IP tracking, no cross-site profiling).' },
+      { name: '_clck', duration: '1 year', purpose: 'Microsoft Clarity — persistent anonymised visitor ID for session recordings and heatmaps.' },
+      { name: '_clsk', duration: '1 day', purpose: 'Microsoft Clarity — session-level key tying page views in a single visit together.' },
+      { name: 'CLID / MUID / ANONCHK / SM', duration: 'Session – 1 year', purpose: 'Microsoft Clarity — set by clarity.ms to identify the browser and prevent abuse.' },
     ],
   },
   {
@@ -53,7 +56,7 @@ export default function Cookies() {
         <div style={{ ...cx, textAlign: 'center' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Legal</p>
           <h1 style={{ fontSize: 48, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', marginBottom: 12 }}>Cookie Policy</h1>
-          <p style={{ fontSize: 15, color: '#9999aa' }}>Last updated: 21 April 2026 · Governed by PECR + UK GDPR.</p>
+          <p style={{ fontSize: 15, color: '#9999aa' }}>Last updated: 22 April 2026 · Governed by PECR + UK GDPR.</p>
         </div>
       </section>
 

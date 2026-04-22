@@ -28,6 +28,7 @@ Content you upload — documents (.pdf, .docx, .xlsx, .pptx, .txt, .md, .csv, .j
 Integration data — OAuth tokens, API credentials, and data pulled from the services you connect (email providers, Google Workspace, MailerLite, GA4, YouTube Analytics, Google Search Console, Stripe, QuickBooks Online, Xero, FreeAgent, Sage, HubSpot, Companies House, social publishing, and any webhook destinations you configure). See the integrations page for the full list.
 Billing data — name, billing address, VAT status, payment confirmation (card data never touches our servers — handled by Stripe).
 Usage data — pages viewed, actions taken, task outputs, feature usage, error logs, approximate location (IP-derived), device/browser info.
+Session recordings and heatmaps (marketing site only) — with your consent, we use Microsoft Clarity on sidekicc.com to record anonymised session playback, scroll depth, clicks, and heatmaps so we can improve navigation and conversion. Typed text in form fields, passwords, and images are automatically masked; no data from your signed-in product account (app.sidekicc.com) is recorded.
 Communications — support tickets, feature requests, survey responses.
 Cookies and similar technologies — see our Cookie Policy.`,
   },
@@ -95,6 +96,7 @@ Newsletter & campaign email — MailerLite — EU.
 CRM relay (your choice) — HubSpot — US/DE.
 Error monitoring — production observability provider — US/EU.
 Product analytics (privacy-friendly) — analytics provider — EU.
+Marketing-site session analytics — Microsoft Clarity (Microsoft Corporation) — US/EU. Used on sidekicc.com only (not in the signed-in product). Masks sensitive fields by default. Transfers covered under the EU-US Data Privacy Framework.
 Customer support — helpdesk provider — EU.
 
 Named sub-processor identities and contractual DPAs are available on request to privacy@sidekicc.com for B2B subscribers and data protection authorities.
@@ -196,7 +198,7 @@ export default function Privacy() {
         <div style={{ ...cx, textAlign: 'center' }}>
           <p style={{ color: '#6C3AFF', fontWeight: 600, fontSize: 14, marginBottom: 12 }}>Legal</p>
           <h1 style={{ fontSize: 48, fontWeight: 900, color: '#1a1a2e', letterSpacing: '-0.02em', marginBottom: 12 }}>Privacy Policy</h1>
-          <p style={{ fontSize: 15, color: '#9999aa' }}>Last updated: 21 April 2026 · Version 2.0 · Governed by UK GDPR, Data Protection Act 2018, PECR.</p>
+          <p style={{ fontSize: 15, color: '#9999aa' }}>Last updated: 22 April 2026 · Version 2.1 · Governed by UK GDPR, Data Protection Act 2018, PECR.</p>
         </div>
       </section>
 
