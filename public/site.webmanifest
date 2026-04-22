@@ -1,0 +1,16 @@
+{
+  "name": "Sidekicc",
+  "short_name": "Sidekicc",
+  "description": "11 AI employees for your business — marketing, sales, support, content, analytics, legal, ads, research, finance.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFE066",
+  "theme_color": "#4F46E5",
+  "lang": "en-GB",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

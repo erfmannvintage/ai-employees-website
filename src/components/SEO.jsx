@@ -6,7 +6,7 @@ export default function SEO({
   title,
   description,
   path = '/',
-  ogImage = '/hero-office.png',
+  ogImage = '/og-image.png',
   ogType = 'website',
   jsonLd,
   noindex = false,
