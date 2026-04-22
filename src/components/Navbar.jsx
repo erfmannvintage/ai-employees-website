@@ -18,8 +18,8 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl" style={{ borderBottom: '1px solid #eee' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px' }}>
         <div className="flex items-center justify-between" style={{ height: 72 }}>
-          <Link to="/" className="flex items-center gap-2.5 no-underline">
-            <div className="flex items-center justify-center rounded-xl text-white font-bold text-sm" style={{ width: 36, height: 36, background: '#6C3AFF' }}>S</div>
+          <Link to="/" className="flex items-center gap-2.5 no-underline" aria-label="Sidekicc home">
+            <img src="/favicon.svg" alt="" width="36" height="36" style={{ display: 'block' }} />
             <span className="font-bold text-lg" style={{ color: '#1a1a2e' }}>Sidekicc</span>
           </Link>
 

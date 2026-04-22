@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Brand + socials */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <div style={{ width: 36, height: 36, background: '#6C3AFF', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 14 }}>S</div>
+              <img src="/favicon.svg" alt="" width="36" height="36" style={{ display: 'block' }} />
               <span style={{ fontWeight: 700, fontSize: 17 }}>Sidekicc</span>
             </div>
             <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 14, lineHeight: 1.7, marginBottom: 24, maxWidth: 280 }}>
@@ -112,7 +112,7 @@ export default function Footer() {
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '20px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{ width: 24, height: 24, background: '#6C3AFF', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontWeight: 700, fontSize: 10 }}>S</div>
+            <img src="/favicon.svg" alt="" width="24" height="24" style={{ display: 'block' }} />
             <span style={{ fontWeight: 600, fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>Sidekicc</span>
           </div>
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>&copy; {new Date().getFullYear()} Sidekicc. All rights reserved.</p>
