@@ -25,6 +25,8 @@ Sidekicc differs from general-purpose AI chatbots and credit-based AI agent plat
 
 ## Reference
 - [Blog](https://sidekicc.com/blog): Guides, case studies, and strategy for running a business with AI employees.
+- [The ROI of an AI Workforce: Breaking Down the Numbers](https://sidekicc.com/blog/ai-workforce-roi-breakdown): Cost comparison between Sidekicc and freelancers/agencies/in-house hires with actual GBP numbers, monthly output volumes, and realistic time-saved hours.
+- [Replacing 3 Freelancers with Sidekicc: The Step-by-Step Playbook](https://sidekicc.com/blog/replace-freelancers-with-ai-playbook): 6–8 week migration plan for moving social, SEO, and paid-ads freelancer retainers onto Sidekicc, with honest caveats on where a human freelancer still wins.
 - [Help Centre](https://sidekicc.com/help): 25+ answers across getting started, employees, features, billing, security.
 - [Contact](https://sidekicc.com/contact): hello@sidekicc.com for general enquiries.
 

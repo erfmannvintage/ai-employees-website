@@ -28,6 +28,7 @@ const routes = [
   '/integrations',
   '/blog',
   '/blog/ai-workforce-roi-breakdown',
+  '/blog/replace-freelancers-with-ai-playbook',
   '/help',
   '/contact',
   '/privacy',

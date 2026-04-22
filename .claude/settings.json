@@ -9,7 +9,9 @@
       "Bash(netlify deploy *)",
       "WebFetch(domain:www.bing.com)",
       "Bash(netlify api *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(curl -sL --compressed \"https://sidekicc.com/blog/ai-workforce-roi-breakdown\")",
+      "Read(//tmp/**)"
     ]
   }
 }
