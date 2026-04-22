@@ -27,6 +27,7 @@ const routes = [
   '/about',
   '/integrations',
   '/blog',
+  '/blog/ai-workforce-roi-breakdown',
   '/help',
   '/contact',
   '/privacy',

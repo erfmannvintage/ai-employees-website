@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { posts as livePosts } from '../data/blogPosts'
 
 const cx = { maxWidth: 1200, margin: '0 auto', padding: '0 32px' }
 
-const posts = [
-  { title: 'Why 77% of Businesses Fail at AI (And How to Be the 5%)', excerpt: 'The AI adoption gap is massive. Most businesses know AI is transformational but can\'t figure out how to implement it. Here\'s what the successful 5% do differently — and how Sidekicc closes the gap.', cat: 'AI Strategy', date: 'Apr 10, 2026', time: '6 min', color: '#6C3AFF' },
-  { title: 'The Complete Guide to AI-Powered Marketing in 2026', excerpt: 'From content creation to ad optimization to analytics — how AI is reshaping every aspect of marketing. Includes Poppi\'s AARRR funnel framework and Flora\'s 10-post-per-day strategy.', cat: 'Marketing', date: 'Apr 8, 2026', time: '8 min', color: '#0066FF' },
-  { title: 'How to Replace 3 Freelancers with Sidekicc (Case Study)', excerpt: 'A real-world case study showing how one e-commerce founder replaced freelance writers, social managers, and data analysts — saving £4,200/month while increasing output.', cat: 'Case Study', date: 'Apr 5, 2026', time: '5 min', color: '#00CC66' },
-  { title: 'SEO in the Age of AI: What Google Actually Wants', excerpt: 'Google\'s algorithms have evolved. Here\'s what Mabel (our SEO AI) has learned about AEO, GEO, and hub-and-spoke content architecture for ranking in 2026.', cat: 'SEO', date: 'Apr 2, 2026', time: '7 min', color: '#7B2FBE' },
-  { title: 'The ROI of an AI Workforce: Breaking Down the Numbers', excerpt: 'We did the math. Here\'s exactly how much time and money businesses save when they deploy 11 AI employees vs. hiring freelancers or agencies. The numbers are dramatic.', cat: 'Business', date: 'Mar 28, 2026', time: '6 min', color: '#FF6600' },
-  { title: 'Building a Content Pipeline That Runs on Autopilot', excerpt: 'How to set up Flora, Mabel, and Poppi to create, cross-review, and publish content across every channel — using the 5 automated content chains.', cat: 'Content', date: 'Mar 24, 2026', time: '5 min', color: '#FF1493' },
+// Live posts (with real /blog/:slug pages) come first. The rest are teaser
+// cards that show the planned content calendar — clicking one drops onto the
+// blog index with a gentle "coming soon" treatment.
+const comingSoon = [
+  { title: 'Why 77% of Businesses Fail at AI (And How to Be the 5%)', excerpt: 'The AI adoption gap is massive. Most businesses know AI is transformational but can\'t figure out how to implement it. Here\'s what the successful 5% do differently — and how Sidekicc closes the gap.', cat: 'AI Strategy', date: 'Coming soon', time: '6 min', color: '#6C3AFF' },
+  { title: 'The Complete Guide to AI-Powered Marketing in 2026', excerpt: 'From content creation to ad optimization to analytics — how AI is reshaping every aspect of marketing. Includes Poppi\'s AARRR funnel framework and Flora\'s 10-post-per-day strategy.', cat: 'Marketing', date: 'Coming soon', time: '8 min', color: '#0066FF' },
+  { title: 'How to Replace 3 Freelancers with Sidekicc (Case Study)', excerpt: 'A real-world case study showing how one e-commerce founder replaced freelance writers, social managers, and data analysts — saving £4,200/month while increasing output.', cat: 'Case Study', date: 'Coming soon', time: '5 min', color: '#00CC66' },
+  { title: 'SEO in the Age of AI: What Google Actually Wants', excerpt: 'Google\'s algorithms have evolved. Here\'s what Mabel (our SEO AI) has learned about AEO, GEO, and hub-and-spoke content architecture for ranking in 2026.', cat: 'SEO', date: 'Coming soon', time: '7 min', color: '#7B2FBE' },
+  { title: 'Building a Content Pipeline That Runs on Autopilot', excerpt: 'How to set up Flora, Mabel, and Poppi to create, cross-review, and publish content across every channel — using the 5 automated content chains.', cat: 'Content', date: 'Coming soon', time: '5 min', color: '#FF1493' },
 ]
 
 export default function Blog() {
@@ -33,8 +36,27 @@ export default function Blog() {
       <section style={{ background: '#fafafa', padding: '80px 0' }}>
         <div style={cx}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-            {posts.map((p) => (
-              <article key={p.title} style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', border: '1px solid #eee', cursor: 'pointer', transition: 'all 0.3s' }}>
+            {livePosts.map((p) => (
+              <Link key={p.slug} to={`/blog/${p.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+                <article style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', border: '1px solid #eee', cursor: 'pointer', transition: 'all 0.3s', height: '100%' }}>
+                  <div style={{ height: 6, background: p.color }} />
+                  <div style={{ padding: 24 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
+                      <span style={{ padding: '4px 10px', fontSize: 11, fontWeight: 600, color: '#fff', background: p.color, borderRadius: 8 }}>{p.cat}</span>
+                      <span style={{ fontSize: 12, color: '#9999aa' }}>{p.time}</span>
+                    </div>
+                    <h2 style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 18, lineHeight: 1.4, marginBottom: 10 }}>{p.title}</h2>
+                    <p style={{ fontSize: 14, color: '#6b6b8d', lineHeight: 1.6, marginBottom: 16 }}>{p.excerpt}</p>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: 12, color: '#9999aa' }}>{p.date}</span>
+                      <span style={{ fontSize: 14, fontWeight: 600, color: '#6C3AFF' }}>Read →</span>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+            {comingSoon.map((p) => (
+              <article key={p.title} style={{ background: '#fff', borderRadius: 20, overflow: 'hidden', border: '1px solid #eee', opacity: 0.62 }}>
                 <div style={{ height: 6, background: p.color }} />
                 <div style={{ padding: 24 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
@@ -44,8 +66,7 @@ export default function Blog() {
                   <h2 style={{ fontWeight: 700, color: '#1a1a2e', fontSize: 18, lineHeight: 1.4, marginBottom: 10 }}>{p.title}</h2>
                   <p style={{ fontSize: 14, color: '#6b6b8d', lineHeight: 1.6, marginBottom: 16 }}>{p.excerpt}</p>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: 12, color: '#9999aa' }}>{p.date}</span>
-                    <span style={{ fontSize: 14, fontWeight: 600, color: '#6C3AFF' }}>Read →</span>
+                    <span style={{ fontSize: 12, color: '#9999aa', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>{p.date}</span>
                   </div>
                 </div>
               </article>

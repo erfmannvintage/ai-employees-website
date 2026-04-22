@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Pricing from './pages/Pricing'
 import About from './pages/About'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
 import Help from './pages/Help'
 import Privacy from './pages/Privacy'
@@ -33,6 +34,7 @@ export default function App() {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/help" element={<Help />} />
               <Route path="/privacy" element={<Privacy />} />

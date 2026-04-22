@@ -6,7 +6,10 @@
       "Read(//c/c/Users/chadb/Ai Employees Website/**)",
       "Bash(curl -sL -o /dev/null -w '%{http_code}' https://ai-employees-website.netlify.app__TRACKED_VAR__)",
       "Bash(PLAYWRIGHT_BROWSERS_PATH=0 npm run build:ssg)",
-      "Bash(netlify deploy *)"
+      "Bash(netlify deploy *)",
+      "WebFetch(domain:www.bing.com)",
+      "Bash(netlify api *)",
+      "Bash(npm run *)"
     ]
   }
 }
