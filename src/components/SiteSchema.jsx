@@ -5,7 +5,7 @@ const organization = {
   '@type': 'Organization',
   name: 'Sidekicc',
   url: 'https://sidekicc.com',
-  logo: 'https://sidekicc.com/logo.png',
+  logo: 'https://sidekicc.com/logo-mark.svg',
   description: 'Sidekicc provides 11 AI employees that handle marketing, sales, support, content, analytics, legal, advertising, research, and finance for small and medium businesses.',
   sameAs: [],
   address: { '@type': 'PostalAddress', addressCountry: 'GB' },
