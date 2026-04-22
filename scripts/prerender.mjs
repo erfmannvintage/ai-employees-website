@@ -80,6 +80,25 @@ for (const route of routes) {
     await page.waitForLoadState('domcontentloaded')
     await page.waitForTimeout(500)
 
+    // Mark Helmet-managed <head> tags with data-rh="true" so react-helmet-async
+    // recognises them on hydration and assumes ownership instead of injecting
+    // duplicates. Without this, Bing / Google JS-rendering crawlers see two
+    // <title>, <meta description>, and <link canonical> tags on every page.
+    await page.evaluate(() => {
+      const selectors = [
+        'head > title',
+        'head > meta[name="description"]',
+        'head > meta[name="robots"]',
+        'head > meta[property^="og:"]',
+        'head > meta[name^="twitter:"]',
+        'head > link[rel="canonical"]',
+        'head > script[type="application/ld+json"]',
+      ]
+      document.querySelectorAll(selectors.join(',')).forEach((el) => {
+        el.setAttribute('data-rh', 'true')
+      })
+    })
+
     const html = await page.content()
     let out
     if (route === '/') out = path.join(DIST, 'index.html')
