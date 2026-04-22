@@ -238,7 +238,7 @@ export default function Integrations() {
         <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 32px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <h2 style={{ fontSize: 40, fontWeight: 900, color: '#fff', marginBottom: 16 }}>One subscription. Every integration.</h2>
           <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', marginBottom: 32 }}>From £49/month. No per-integration fees. No seat minimums. No credits to run out.</p>
-          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#6C3AFF', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none' }}>
+          <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#6C3AFF', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none' }}>
             Start Free Trial
           </a>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, marginTop: 16 }}>

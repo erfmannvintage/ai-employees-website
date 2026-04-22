@@ -19,7 +19,7 @@ export default function Footer() {
             <h3 style={{ fontSize: 24, fontWeight: 800 }}>Ready to hire your AI workforce?</h3>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 15, marginTop: 4 }}>Start your free trial today. No credit card required.</p>
           </div>
-          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 12, padding: '14px 28px', textDecoration: 'none' }}>
+          <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 15, borderRadius: 12, padding: '14px 28px', textDecoration: 'none' }}>
             Get Started Free
             <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
           </a>

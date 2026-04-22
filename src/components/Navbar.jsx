@@ -32,8 +32,8 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="no-underline text-[15px] font-medium px-4 py-2" style={{ color: '#6b6b8d' }}>Sign In</a>
-            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="no-underline text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5" style={{ background: '#6C3AFF', padding: '10px 24px', boxShadow: '0 4px 15px rgba(108,58,255,0.3)' }}>
+            <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" className="no-underline text-[15px] font-medium px-4 py-2" style={{ color: '#6b6b8d' }}>Sign In</a>
+            <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" className="no-underline text-white text-sm font-semibold rounded-xl transition-all hover:-translate-y-0.5" style={{ background: '#6C3AFF', padding: '10px 24px', boxShadow: '0 4px 15px rgba(108,58,255,0.3)' }}>
               Get Started Free
             </a>
           </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" className="block no-underline text-center text-white text-sm font-semibold rounded-xl mt-3" style={{ background: '#6C3AFF', padding: '12px 24px' }}>
+          <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" className="block no-underline text-center text-white text-sm font-semibold rounded-xl mt-3" style={{ background: '#6C3AFF', padding: '12px 24px' }}>
             Get Started Free
           </a>
         </div>

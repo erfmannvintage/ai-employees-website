@@ -33,7 +33,7 @@ function Hero() {
             Sidekicc gives you <Link to="/about" style={{ color: '#1a1a2e', fontWeight: 700, textDecoration: 'underline', textDecorationColor: 'rgba(108,58,255,0.3)' }}>11 specialized AI employees</Link> — 30+ certifications, 80+ frameworks — handling marketing, sales, support, content, analytics, legal, ads, research, and finance. Connected to <Link to="/integrations" style={{ color: '#1a1a2e', fontWeight: 700, textDecoration: 'underline', textDecorationColor: 'rgba(108,58,255,0.3)' }}>the tools you already use</Link>. From <Link to="/pricing" style={{ color: '#1a1a2e', fontWeight: 700, textDecoration: 'underline', textDecorationColor: 'rgba(108,58,255,0.3)' }}>£49/mo</Link> — less than one hour of a freelancer.
           </p>
           <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
-            <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
+            <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#6C3AFF', color: '#fff', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', boxShadow: '0 4px 20px rgba(108,58,255,0.3)' }}>
               Get Started Free <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </a>
             <Link to="/pricing" style={{ display: 'inline-flex', alignItems: 'center', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 36px', textDecoration: 'none', color: '#1a1a2e', border: '2px solid rgba(0,0,0,0.15)', background: 'rgba(255,255,255,0.8)', backdropFilter: 'blur(4px)' }}>View Pricing</Link>
@@ -560,7 +560,7 @@ function PricingSection() {
                     ))}
                   </ul>
 
-                  <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textAlign: 'center', background: p.highlight ? '#6C3AFF' : '#fff', color: p.highlight ? '#fff' : '#1a1a2e', fontWeight: 600, fontSize: 14, borderRadius: 12, padding: '12px 0', textDecoration: 'none', border: p.highlight ? 'none' : '2px solid #e0e0e0', boxShadow: p.highlight ? '0 4px 20px rgba(108,58,255,0.3)' : 'none' }}>
+                  <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" style={{ display: 'block', textAlign: 'center', background: p.highlight ? '#6C3AFF' : '#fff', color: p.highlight ? '#fff' : '#1a1a2e', fontWeight: 600, fontSize: 14, borderRadius: 12, padding: '12px 0', textDecoration: 'none', border: p.highlight ? 'none' : '2px solid #e0e0e0', boxShadow: p.highlight ? '0 4px 20px rgba(108,58,255,0.3)' : 'none' }}>
                     {p.cta}
                   </a>
                 </div>
@@ -634,7 +634,7 @@ function CTA() {
         <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.5)', maxWidth: 480, margin: '0 auto 40px' }}>
           Right now, while you're reading this, someone in your industry is deploying AI to find your customers, create your content, and close your deals. The question isn't whether to start — it's whether you can afford to wait.
         </p>
-        <a href="https://artifactly-ai-employees.netlify.app" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#6C3AFF', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none' }}>
+        <a href="https://app.sidekicc.com" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#fff', color: '#6C3AFF', fontWeight: 600, fontSize: 17, borderRadius: 14, padding: '18px 40px', textDecoration: 'none' }}>
           Get Started Free <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
         </a>
         <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: 13, marginTop: 20 }}>No credit card · 7-day trial · Cancel anytime</p>

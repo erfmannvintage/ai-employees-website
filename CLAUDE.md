@@ -2,7 +2,7 @@
 
 ## Brand
 - **Name**: Sidekicc (domain: www.sidekicc.com). Product = 11 AI employees. Keep "AI employees" as the generic noun when describing the team; use "Sidekicc" for the brand/product.
-- **Purpose**: Convert visitors into free trial signups at artifactly-ai-employees.netlify.app (app URL stays the same for now)
+- **Purpose**: Convert visitors into free trial signups at app.sidekicc.com (rebranded from the old artifactly-ai-employees.netlify.app subdomain).
 - **Audience**: Business owners/entrepreneurs who need help with marketing, sales, support, finance
 - **Tone**: Professional, confident, trustworthy — but with personality from the comic-art characters
 - **Primary action**: "Get Started Free" → links to the app
